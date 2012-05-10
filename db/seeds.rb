@@ -22,7 +22,7 @@ Bank.create :nom => "Bank"
 InvoiceStatus.create :label => "Invoiced"
 InvoiceStatus.create :label => "Paid"
 InvoiceStatus.create :label => "Received"
-InvoiceStatus.create(label => "Withdrew"
+InvoiceStatus.create :label => "Withdrew"
 
 PaymentMode.create :label => "Danny"
 PaymentMode.create :label => "Cash"
