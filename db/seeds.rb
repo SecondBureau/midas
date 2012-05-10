@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.create(email: 'romain@secondbureau.com', password: 'secret')
+User.create(email: 'danny@secondbureau.com', password: 'secret')
 
 Category.create(:label => 'Salary')
 Category.create(:label => 'Rental')
@@ -27,7 +27,7 @@ InvoiceStatus.create(label => 'Withdrew')
 PaymentMode.create(:label => 'Danny')
 PaymentMode.create(:label => 'Cash')
 PaymentMode.create(:label => 'Gilles')
-PaymentMode.create(:label => 'Bank €')
+PaymentMode.create(:label => 'Bank Euro')
 
 ToAccountant.create(:label => 'Yes')
 ToAccountant.create(:label => 'No')
