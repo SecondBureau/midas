@@ -25,8 +25,6 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem "exchange", ">=0.2.6"
-
 gem 'jquery-rails'
 
 
