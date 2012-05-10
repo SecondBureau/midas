@@ -1,0 +1,101 @@
+body {
+	font-family:Arial, Verdana;
+}
+
+a {
+	color:black;
+	text-decoration: none;
+}
+
+a:hover {
+	color:blue;
+}
+
+table, th, td {
+	border:1px solid #EEE;
+	font-size:12px;
+	border-spacing: 0;
+	padding:5px;
+	border-collapse: collapse;
+}
+
+table {
+	width:100%;
+}
+
+th {
+	background:#EEE;
+}
+
+tr:nth-child(2n+1) td {
+	background:#FCFCFC;
+}
+
+.table_year {
+	background:#d8e4f5;
+	font-weight: bold;
+}
+
+.cell_border_left {
+	border-left:1px solid #AAA;
+}
+.cell_border_right {
+	border-right:1px solid #AAA;
+}
+.total_cell {
+	background:#f1f4f9;
+	font-weight: bold;
+}
+.month_cell {
+	background:#FAFAFA;
+	width:100px;
+	text-align: right;
+}
+.money_cell {
+	text-align: right;
+}
+.cell_colspan_header {
+	border-bottom:1px solid #E5E5E5;
+}
+
+#container {
+	clear:both;
+}
+
+.filter {
+	background:#CCC;
+	padding:5px;
+	margin-bottom: 20px;
+	-moz-border-radius: 5px;
+	text-align: center;
+}
+
+#menu {
+	color:white;
+	background:#000;
+	padding:5px;
+	margin-bottom: 20px;
+	-moz-border-radius: 5px;
+	font-size:20px;
+}
+#menu a{
+	margin-left:10px;
+	margin-right:10px;
+	color:#DDD;
+}
+#menu a:hover {
+	color:#FFF;
+}
+
+.field {
+	margin-bottom: 5px;
+}
+.field > label {
+	float:left;
+	width:200px;
+	font-size: 14px;
+}
+.field > input {
+	-moz-border-radius: 5px;
+	border:1px solid #CCC;
+}

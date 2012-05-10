@@ -1,0 +1,47 @@
+
+<%= link_to 'New Invoice', new_invoice_path %>
+<br><br>
+
+<div class="filter">
+<%=form_tag ('/invoices/filter') do %>
+	<%=select_year(@date_year, :prompt => 'Choose year')%>
+	<%=select_month(@date_month, :prompt => 'Choose month')%>
+	<%=submit_tag "Filter"%>
+<% end %>
+</div>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Payment mode</th>
+    <th>Amount</th>
+    <th>Invoice status</th>
+    <th>Cheque number</th>
+    <th>Invoice number</th>
+    <th>To accountant</th>
+    <th>Bank</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @invoices.each do |invoice| %>
+  <tr>
+    <td class="cell_border_right month_cell"><%= invoice.date.strftime("%Y-%m-%d") %></td>
+    <td><%= invoice.description %></td>
+    <td><%= invoice.category.label %></td>
+    <td><%= invoice.payment_mode.label %></td>
+    <td><%= invoice.amount %></td>
+    <td><%= invoice.invoice_status.label %></td>
+    <td><%= invoice.cheque_number %></td>
+    <td><%= invoice.invoice_number %></td>
+    <td><%= invoice.to_accountant.label %></td>
+    <td><%= invoice.bank.name %></td>
+    <td><%= link_to 'Show', invoice %></td>
+    <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
+    <td><%= link_to 'Destroy', invoice, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+

@@ -1,0 +1,72 @@
+<div class="filter">
+<%=form_tag ('/invoices/cashflow/filter') do %>
+	<%=select_year(@date_year, :prompt => 'Choose year')%>
+	<%=select_month(@date_month, :prompt => 'Choose month')%>
+	<%=submit_tag "Filter"%>
+<% end %>
+</div>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Description</th>
+    <th>Invoice status</th>
+    <th>Cheque number</th>
+    <th>Invoice number</th>
+    <th>To accountant</th>
+    <th class="cell_border_right">Bank</th>
+	<% @payment_modes.each do |payment_mode| %>
+		<th class="cell_border_right cell_colspan_header" colspan="2"><%=payment_mode.label%></th>
+	<% end %>
+	<th colspan="2" class="cell_colspan_header">Balance</th>
+  </tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th class="cell_border_right"></th>
+	<% @payment_modes.each do |payment_mode| %>
+		<th class="cell_border_left">Inflow</th>
+		<th class="cell_border_right">Outflow</th>
+	<% end %>
+	<th>Cash</th>
+	<th>Bank</th>
+  </tr>
+
+<%
+balance_cash = @total[:cash].to_f
+%>
+<% @invoices.each do |invoice| %>
+  <tr>
+    <td class="cell_border_right month_cell"><%= invoice.date.strftime("%Y-%m-%d") %></td>
+    <td><%= invoice.description %></td>
+    <td><%= invoice.invoice_status.label %></td>
+    <td><%= invoice.cheque_number %></td>
+    <td><%= invoice.invoice_number %></td>
+    <td><%= invoice.to_accountant.label %></td>
+    <td class="cell_border_right"><%= invoice.bank.name %></td>
+	<% @payment_modes.each do |payment_mode| %>
+		<td class="cell_border_left money_cell">
+			<% if invoice.payment_mode == payment_mode && invoice.category.label == "Income" %>
+				<%=invoice.amount%>
+				<% balance_cash = balance_cash + invoice.amount.to_f %>
+			<% else %>
+				<span style="color:#BBB;">0.0</span>
+			<% end %>
+		</td>
+		<td class="cell_border_right money_cell">
+			<% if invoice.payment_mode == payment_mode && invoice.category.label != "Income" %>
+				<%=invoice.amount%>
+				<% balance_cash = balance_cash + invoice.amount.to_f %>
+			<% else %>
+				<span style="color:#BBB;">0.0</span>
+			<% end %>
+		</td>
+	<% end %>
+	<td class="total_cell money_cell"><%=balance_cash%></td>
+	<td class="total_cell money_cell"></td>
+  </tr>
+<% end %>
+</table>
+

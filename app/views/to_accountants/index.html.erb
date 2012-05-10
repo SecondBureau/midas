@@ -1,0 +1,23 @@
+<h1>Listing to_accountants</h1>
+
+<table>
+  <tr>
+    <th>Label</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @to_accountants.each do |to_accountant| %>
+  <tr>
+    <td><%= to_accountant.label %></td>
+    <td><%= link_to 'Show', to_accountant %></td>
+    <td><%= link_to 'Edit', edit_to_accountant_path(to_accountant) %></td>
+    <td><%= link_to 'Destroy', to_accountant, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New To accountant', new_to_accountant_path %>

@@ -1,0 +1,95 @@
+<table>
+	<tr>
+		<th class="cell_border_right">Month</th>
+		<% @categories.each do |category| %>
+		<th class="cell_border_right cell_colspan_header" colspan="2"><%=category.label%></th>
+		<% end %>
+		<th class="cell_border_left cell_colspan_header" colspan="2">Total</th>
+	</tr>
+	<tr>
+		<th class="cell_border_right"></th>
+		<% @categories.each do |payment_mode| %>
+		<th class="cell_border_left">Month</th>
+		<th class="cell_border_right">Balance</th>
+		<% end %>
+		<th class="cell_border_left">Month</th>
+		<th>Balance</th>
+	</tr>
+	
+	<%
+	
+	calculations = Hash.new
+	total_year = Hash.new
+	year = 0
+	
+	@tab_months.each do |month, values|
+		total_line = 0
+		
+		if year == 0 
+			year = Date.parse(month).year
+		elsif year != 0 && year != Date.parse(month).year
+			%>	
+			<tr class="table_year">
+				<td class="cell_border_right money_cell"><%=year%></td>
+				<% @categories.each do |category| %>
+					<td class="cell_border_left money_cell"><%=total_year[year.to_s+category.id.to_s].to_f%></td>
+					<td class="cell_border_right money_cell"><%=total_year[(year).to_s+"balance"+category.id.to_s]%></td>
+				<% end %>
+				<td class="cell_border_left money_cell"><%=total_year[(year)]%></td>
+				<td class="money_cell"><%=total_year[(year).to_s+"balance"]%></td>
+			<tr>
+			<%
+			#total_year = Hash.new
+			year = Date.parse(month).year
+		end
+	%>
+	<tr>
+		<td class="cell_border_right month_cell"><%=Date.parse(month).strftime("%B %Y")%></td>
+		<% @categories.each do |category| %>
+			<td class="cell_border_left money_cell">
+			<% if values[category.id].nil? %>
+				0.0
+				<% total_year[year.to_s+category.id.to_s] = total_year[year.to_s+category.id.to_s].to_f + 0 %>
+			<% else %>
+				<%=values[category.id].to_f%>
+				<%
+				total_year[year.to_s+category.id.to_s] = total_year[year.to_s+category.id.to_s].to_f + values[category.id].to_f
+				%>
+			<% end %>
+			<%
+			total_line=total_line+values[category.id].to_f
+			%></td>
+			<td class="cell_border_right money_cell">
+			<% if calculations[category.id].nil? %>
+				0.0
+			<% else %>
+				<%=calculations[category.id].to_f%>
+			<% end %>
+			</td>
+			<%
+			total_year[(year).to_s+"balance"+category.id.to_s] = calculations[category.id]
+			calculations[category.id] = calculations[category.id].to_f + values[category.id].to_f
+			%>
+		<% end %>
+		<td class="cell_border_left total_cell money_cell"><%=total_line%>
+		<%
+		total_year[(year)] = total_year[(year)].to_f + total_line.to_f
+		%>
+		</td>
+		<%
+		calculations["total"] = total_line + calculations["total"].to_f
+		total_year[(year).to_s+"balance"] = calculations["total"]
+		%>
+		<td class="total_cell money_cell"><%=calculations["total"]%></td>
+	</tr>
+	<% end %>
+	<tr class="table_year">
+		<td class="cell_border_right money_cell"><%=year%></td>
+		<% @categories.each do |category| %>
+			<td class="cell_border_left money_cell"><%=total_year[year.to_s+category.id.to_s].to_f%></td>
+			<td class="cell_border_right money_cell"><%=total_year[(year).to_s+"balance"+category.id.to_s]%></td>
+		<% end %>
+		<td class="cell_border_left money_cell"><%=total_year[(year)]%></td>
+		<td class="money_cell"><%=total_year[(year).to_s+"balance"]%></td>
+	<tr>
+</table>
