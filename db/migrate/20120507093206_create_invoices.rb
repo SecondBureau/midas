@@ -5,7 +5,7 @@ class CreateInvoices < ActiveRecord::Migration
       t.references :category
       t.references :payment_mode
       t.string :description
-      t.decimal :amount
+      t.float :amount
       t.references :invoice_status
       t.string :cheque_number
       t.string :invoice_number
