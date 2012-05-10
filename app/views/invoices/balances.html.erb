@@ -28,14 +28,14 @@
 			year = Date.parse(month).year
 		elsif year != 0 && year != Date.parse(month).year
 			%>	
-			<tr class="table_year money_cell">
-				<td class="cell_border_right money_cell"><%=year%></td>
+			<tr class="">
+				<td class="cell_border_right cell_money cell_year"><%=year%></td>
 				<% @payment_modes.each do |payment_mode| %>
-					<td class="cell_border_left money_cell"><%=total_year[year.to_s+payment_mode.id.to_s].to_f%></td>
-					<td class="cell_border_right money_cell"><%=total_year[(year).to_s+"balance"+payment_mode.id.to_s]%></td>
+					<td class="cell_border_left cell_money cell_year"><%=total_year[year.to_s+payment_mode.id.to_s].to_f%></td>
+					<td class="cell_border_right cell_money cell_year"><%=total_year[(year).to_s+"balance"+payment_mode.id.to_s]%></td>
 				<% end %>
-				<td class="cell_border_left money_cell"><%=total_year[(year)]%></td>
-				<td class="money_cell"><%=total_year[(year).to_s+"balance"]%></td>
+				<td class="cell_border_left cell_money cell_year"><%=total_year[(year)]%></td>
+				<td class="cell_money cell_year"><%=total_year[(year).to_s+"balance"]%></td>
 			<tr>
 			<%
 			#total_year = Hash.new
@@ -45,7 +45,7 @@
 	<tr>
 		<td class="cell_border_right month_cell"><%=Date.parse(month).strftime("%B %Y")%></td>
 		<% @payment_modes.each do |payment_mode| %>
-			<td class="cell_border_left money_cell">
+			<td class="cell_border_left cell_money">
 			<% if values[payment_mode.id].nil? %>
 				0.0
 				<% total_year[year.to_s+payment_mode.id.to_s] = total_year[year.to_s+payment_mode.id.to_s].to_f + 0 %>
@@ -58,7 +58,7 @@
 			<%
 			total_line=total_line+values[payment_mode.id].to_f
 			%></td>
-			<td class="cell_border_right money_cell">
+			<td class="cell_border_right cell_money">
 			<% if calculations[payment_mode.id].nil? %>
 				0.0
 			<% else %>
@@ -70,7 +70,7 @@
 			calculations[payment_mode.id] = calculations[payment_mode.id].to_f + values[payment_mode.id].to_f
 			%>
 		<% end %>
-		<td class="cell_border_left total_cell money_cell"><%=total_line%>
+		<td class="cell_border_left total_cell cell_money"><%=total_line%>
 		<%
 		total_year[(year)] = total_year[(year)].to_f + total_line.to_f
 		%>
@@ -79,16 +79,16 @@
 		calculations["total"] = total_line + calculations["total"].to_f
 		total_year[(year).to_s+"balance"] = calculations["total"]
 		%>
-		<td class="total_cell money_cell"><%=calculations["total"]%></td>
+		<td class="total_cell cell_money"><%=calculations["total"]%></td>
 	</tr>
 	<% end %>
-	<tr class="table_year">
-		<td class="cell_border_right money_cell"><%=year%></td>
+	<tr>
+		<td class="cell_border_right cell_money cell_year"><%=year%></td>
 		<% @payment_modes.each do |payment_mode| %>
-			<td class="cell_border_left money_cell"><%=total_year[year.to_s+payment_mode.id.to_s].to_f%></td>
-			<td class="cell_border_right money_cell"><%=total_year[(year).to_s+"balance"+payment_mode.id.to_s]%></td>
+			<td class="cell_border_left cell_money cell_year"><%=total_year[year.to_s+payment_mode.id.to_s].to_f%></td>
+			<td class="cell_border_right cell_money cell_year"><%=total_year[(year).to_s+"balance"+payment_mode.id.to_s]%></td>
 		<% end %>
-		<td class="cell_border_left money_cell"><%=total_year[(year)]%></td>
-		<td class="money_cell"><%=total_year[(year).to_s+"balance"]%></td>
+		<td class="cell_border_left cell_money cell_year"><%=total_year[(year)]%></td>
+		<td class="cell_money"><%=total_year[(year).to_s+"balance"]%></td>
 	<tr>
 </table>

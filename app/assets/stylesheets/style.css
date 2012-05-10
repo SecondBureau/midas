@@ -31,8 +31,8 @@ tr:nth-child(2n+1) td {
 	background:#FCFCFC;
 }
 
-.table_year {
-	background:#d8e4f5;
+.cell_year {
+	background:#d8e4f5!important;
 	font-weight: bold;
 }
 
@@ -43,7 +43,7 @@ tr:nth-child(2n+1) td {
 	border-right:1px solid #AAA;
 }
 .total_cell {
-	background:#f1f4f9;
+	background:#f1f4f9!important;
 	font-weight: bold;
 }
 .month_cell {
@@ -51,7 +51,7 @@ tr:nth-child(2n+1) td {
 	width:100px;
 	text-align: right;
 }
-.money_cell {
+.cell_money {
 	text-align: right;
 }
 .cell_colspan_header {
@@ -95,7 +95,25 @@ tr:nth-child(2n+1) td {
 	width:200px;
 	font-size: 14px;
 }
-.field > input {
+.field > input, input {
 	-moz-border-radius: 5px;
 	border:1px solid #CCC;
+	padding:5px;
+}
+
+.field > select, select {
+	-moz-border-radius: 5px;
+	border:1px solid #CCC;
+	padding:5px;
+}
+
+#login-form {
+	margin-top:100px;
+	width:300px;
+	text-align:center;
+	margin-left:auto;
+	margin-right:auto;
+}
+#login-form > input {
+	margin-bottom:10px;
 }

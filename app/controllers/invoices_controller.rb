@@ -36,8 +36,8 @@ class InvoicesController < ApplicationController
 	
 	# By month and payment mode
 	def balances
-		#@amount = Invoice.sum("amount").group("date")
-		@amounts = Invoice.select("date, sum(amount) as total_amount, payment_mode_id, payment_modes.label AS payment_mode_label").joins(:payment_mode).group("strftime('%Y%m', date)", "payment_mode_id").order("date ASC")
+	
+		@amounts = Invoice.select("date, sum(amount*rate) as total_amount, payment_mode_id, payment_modes.label AS payment_mode_label").joins(:payment_mode).group("strftime('%Y%m', date)", "payment_mode_id").order("date ASC")
 		
 		@tab_months = Hash.new 
 		
@@ -58,7 +58,7 @@ class InvoicesController < ApplicationController
 	
 	# By month and category
 	def categories
-		@amounts = Invoice.select("date, sum(amount) as total_amount, category_id, categories.label AS category_label").joins(:category).group("strftime('%Y%m', date)", "category_id").order("date ASC")
+		@amounts = Invoice.select("date, sum(amount*rate) as total_amount, category_id, categories.label AS category_label").joins(:category).group("strftime('%Y%m', date)", "category_id").order("date ASC")
 		
 		@tab_months = Hash.new 
 		
@@ -87,7 +87,7 @@ class InvoicesController < ApplicationController
 			date = DateTime.new(@date_year, @date_month, 1)
 			
 			@invoices = Invoice.order("date DESC").where(:date => date..(date+1.month))
-			@total = Invoice.select("sum(amount) as cash").where("date < ?", date).first
+			@total = Invoice.select("sum(amount*rate) as cash").where("date < ?", date).first
 		else
 			date = DateTime.new()
 			if (!params[:date][:year].nil? && !params[:date][:year].empty? && !params[:date][:month].nil? && !params[:date][:month].empty?)

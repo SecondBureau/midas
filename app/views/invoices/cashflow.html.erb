@@ -47,7 +47,7 @@ balance_cash = @total[:cash].to_f
     <td><%= invoice.to_accountant.label %></td>
     <td class="cell_border_right"><%= invoice.bank.name %></td>
 	<% @payment_modes.each do |payment_mode| %>
-		<td class="cell_border_left money_cell">
+		<td class="cell_border_left cell_money">
 			<% if invoice.payment_mode == payment_mode && invoice.category.label == "Income" %>
 				<%=invoice.amount%>
 				<% balance_cash = balance_cash + invoice.amount.to_f %>
@@ -55,7 +55,7 @@ balance_cash = @total[:cash].to_f
 				<span style="color:#BBB;">0.0</span>
 			<% end %>
 		</td>
-		<td class="cell_border_right money_cell">
+		<td class="cell_border_right cell_money">
 			<% if invoice.payment_mode == payment_mode && invoice.category.label != "Income" %>
 				<%=invoice.amount%>
 				<% balance_cash = balance_cash + invoice.amount.to_f %>
@@ -64,8 +64,8 @@ balance_cash = @total[:cash].to_f
 			<% end %>
 		</td>
 	<% end %>
-	<td class="total_cell money_cell"><%=balance_cash%></td>
-	<td class="total_cell money_cell"></td>
+	<td class="total_cell cell_money"><%=balance_cash%></td>
+	<td class="total_cell cell_money"></td>
   </tr>
 <% end %>
 </table>

@@ -32,6 +32,10 @@
     <%= f.text_field :amount %>
   </div>
   <div class="field">
+    <%= f.label :rate %>
+    <%= f.text_field :rate %>
+  </div>
+  <div class="field">
     <%= f.label :invoice_status %>
     <%= collection_select(:invoice, :invoice_status_id, InvoiceStatus.order('label ASC'), :id, :label) %>
   </div>

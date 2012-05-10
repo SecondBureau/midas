@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120509062157) do
+ActiveRecord::Schema.define(:version => 20120510074746) do
 
   create_table "banks", :force => true do |t|
     t.string   "name"
@@ -42,8 +42,9 @@ ActiveRecord::Schema.define(:version => 20120509062157) do
     t.string   "invoice_number"
     t.integer  "to_accountant_id"
     t.integer  "bank_id"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+    t.float    "rate",              :default => 1.0
   end
 
   add_index "invoices", ["bank_id"], :name => "index_invoices_on_bank_id"
