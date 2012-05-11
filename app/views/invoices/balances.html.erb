@@ -66,7 +66,7 @@
 			<% end %>
 			</td>
 			<%
-			total_year[(year).to_s+"balance"+payment_mode.id.to_s] = calculations[payment_mode.id]
+			total_year[(year).to_s+"balance"+payment_mode.id.to_s] = calculations[payment_mode.id].to_f + 0
 			calculations[payment_mode.id] = calculations[payment_mode.id].to_f + values[payment_mode.id].to_f
 			%>
 		<% end %>
