@@ -5,7 +5,7 @@ class InvoicesController < ApplicationController
 
 		@date_month = 0
 		@date_year = 0
-	
+		
 		if params[:date].nil?
 			@invoices = Invoice.order("date DESC").all
 		else
@@ -119,6 +119,9 @@ class InvoicesController < ApplicationController
   # GET /invoices/new.json
   def new
     @invoice = Invoice.new
+    
+    Exchange::Configuration.cache = :no_cache
+    @rate_eur_to_cny = 1.eur.to_cny
 
     respond_to do |format|
       format.html # new.html.erb
@@ -129,11 +132,9 @@ class InvoicesController < ApplicationController
   # GET /invoices/1/edit
   def edit
     @invoice = Invoice.find(params[:id])
-    # We don't to see the "minus" in front of the amount
+    # We don't want to see the "minus" in front of the amount
     @invoice[:amount] = @invoice[:amount].abs
-    #if @invoice[:amount] < 0
-    #	@invoice[:amount] = @invoice[:amount] - @invoice[:amount]*2
-    #end
+
   end
 
   # POST /invoices

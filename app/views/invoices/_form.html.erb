@@ -36,6 +36,10 @@
     <%= f.text_field :rate %>
   </div>
   <div class="field">
+    <label>Current exchange rate € / ¥</label>
+    <input value="<%=@rate_eur_to_cny.value %>" type="text">
+  </div>
+  <div class="field">
     <%= f.label :invoice_status %>
     <%= collection_select(:invoice, :invoice_status_id, InvoiceStatus.order('label ASC'), :id, :label) %>
   </div>
