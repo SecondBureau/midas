@@ -13,7 +13,7 @@
     <td><%= invoice_status.label %></td>
     <td><%= link_to 'Show', invoice_status %></td>
     <td><%= link_to 'Edit', edit_invoice_status_path(invoice_status) %></td>
-    <td><%= link_to 'Destroy', invoice_status, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Delete?', {:action=>:destroy, :id=>invoice_status.id}, :confirm=>"Are you sure", :method=>:delete %></td>
   </tr>
 <% end %>
 </table>

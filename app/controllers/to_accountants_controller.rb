@@ -45,7 +45,7 @@ class ToAccountantsController < ApplicationController
 
     respond_to do |format|
       if @to_accountant.save
-        format.html { redirect_to @to_accountant, notice: 'To accountant was successfully created.' }
+        format.html { redirect_to to_accountants_url, notice: 'To accountant was successfully created.' }
         format.json { render json: @to_accountant, status: :created, location: @to_accountant }
       else
         format.html { render action: "new" }
@@ -61,7 +61,7 @@ class ToAccountantsController < ApplicationController
 
     respond_to do |format|
       if @to_accountant.update_attributes(params[:to_accountant])
-        format.html { redirect_to @to_accountant, notice: 'To accountant was successfully updated.' }
+        format.html { redirect_to to_accountants_url, notice: 'To accountant was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

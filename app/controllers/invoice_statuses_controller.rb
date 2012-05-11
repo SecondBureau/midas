@@ -46,7 +46,7 @@ class InvoiceStatusesController < ApplicationController
     respond_to do |format|
       if @invoice_status.save
         format.html { redirect_to @invoice_status, notice: 'Invoice status was successfully created.' }
-        format.json { render json: @invoice_status, status: :created, location: @invoice_status }
+        format.json { render json: invoice_statuses_url, status: :created, location: @invoice_status }
       else
         format.html { render action: "new" }
         format.json { render json: @invoice_status.errors, status: :unprocessable_entity }
@@ -61,7 +61,7 @@ class InvoiceStatusesController < ApplicationController
 
     respond_to do |format|
       if @invoice_status.update_attributes(params[:invoice_status])
-        format.html { redirect_to @invoice_status, notice: 'Invoice status was successfully updated.' }
+        format.html { redirect_to invoice_statuses_url, notice: 'Invoice status was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

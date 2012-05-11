@@ -13,7 +13,7 @@
     <td><%= payment_mode.label %></td>
     <td><%= link_to 'Show', payment_mode %></td>
     <td><%= link_to 'Edit', edit_payment_mode_path(payment_mode) %></td>
-    <td><%= link_to 'Destroy', payment_mode, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Delete?', {:action=>:destroy, :id=>payment_mode.id}, :confirm=>"Are you sure", :method=>:delete %></td>
   </tr>
 <% end %>
 </table>

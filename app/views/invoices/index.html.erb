@@ -40,7 +40,7 @@
     <td><%= invoice.bank.name %></td>
     <td><%= link_to 'Show', invoice %></td>
     <td><%= link_to 'Edit', edit_invoice_path(invoice) %></td>
-    <td><%= link_to 'Destroy', invoice, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Delete?', {:action=>:destroy, :id=>invoice.id}, :confirm=>"Are you sure", :method=>:delete %></td>
   </tr>
 <% end %>
 </table>

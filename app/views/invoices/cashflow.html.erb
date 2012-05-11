@@ -37,6 +37,7 @@
 <%
 balance_cash = @total[:cash].to_f
 %>
+  <tr><td colspan="<%=(@payment_modes.count*2)+9%>" align="right"><b>Cash at the first of the month : <%=@total[:cash].to_f%></b></td></tr>
 <% @invoices.each do |invoice| %>
   <tr>
     <td class="cell_border_right month_cell"><%= invoice.date.strftime("%Y-%m-%d") %></td>

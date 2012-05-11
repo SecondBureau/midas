@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(:version => 20120510074746) do
     t.integer  "category_id"
     t.integer  "payment_mode_id"
     t.string   "description"
-    t.decimal  "amount"
+    t.float    "amount"
     t.integer  "invoice_status_id"
     t.string   "cheque_number"
     t.string   "invoice_number"

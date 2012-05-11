@@ -45,7 +45,8 @@ class BanksController < ApplicationController
 
     respond_to do |format|
       if @bank.save
-        format.html { redirect_to @bank, notice: 'Bank was successfully created.' }
+        #format.html { redirect_to @bank, notice: 'Bank was successfully created.' }
+        format.html { redirect_to banks_url, notice: 'Bank was successfully created.' }
         format.json { render json: @bank, status: :created, location: @bank }
       else
         format.html { render action: "new" }
@@ -61,7 +62,7 @@ class BanksController < ApplicationController
 
     respond_to do |format|
       if @bank.update_attributes(params[:bank])
-        format.html { redirect_to @bank, notice: 'Bank was successfully updated.' }
+        format.html { redirect_to banks_url, notice: 'Bank was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

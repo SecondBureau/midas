@@ -20,7 +20,7 @@ Midas::Application.routes.draw do
   resources :to_accountants
   
   # Index and login/logout
-  match '/', :controller => 'application', :action => 'index'
+  match '/', :controller => 'invoices', :action => 'index'
   get '/logout', :controller => 'application', :action => 'logout'
   match '/login', :controller => 'application', :action => 'login'
   get '/trylogin', :controller => 'application', :action => 'trylogin'

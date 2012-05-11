@@ -17,7 +17,7 @@ Category.create :label => "Equipment"
 Category.create :label => "Travel"
 Category.create :label => "Income"
 
-Bank.create :nom => "Bank"
+Bank.create :name => "Bank"
 
 InvoiceStatus.create :label => "Invoiced"
 InvoiceStatus.create :label => "Paid"

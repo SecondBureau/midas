@@ -3,7 +3,7 @@
 <head>
   <title>Midas</title>
   <%= stylesheet_link_tag "style" %>
-
+  <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -20,7 +20,6 @@
 		
 	</div>
 	<div id="menu" style="clear:both">
-		<%=link_to "Index", '/'%>
 		<%=link_to "Listing of invoices", :controller => 'invoices', :action => 'index' %>
 		<%=link_to "Balances", :controller => 'invoices', :action => 'balances' %>
 		<%=link_to "By categories", :controller => 'invoices', :action => 'categories' %>

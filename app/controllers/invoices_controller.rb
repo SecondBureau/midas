@@ -37,7 +37,7 @@ class InvoicesController < ApplicationController
 	# By month and payment mode
 	def balances
 	
-		@amounts = Invoice.select("date, sum(amount*rate) as total_amount, payment_mode_id, payment_modes.label AS payment_mode_label").joins(:payment_mode).group("strftime('%Y%m', date)", "payment_mode_id").order("date ASC")
+		@amounts = Invoice.select("date, sum(amount*rate) as total_amount, payment_mode_id, payment_modes.label AS payment_mode_label").joins(:payment_mode).group("extract(year from date), extract(month from date)","payment_mode_id", "date", "payment_modes.label").order("date ASC")
 		
 		@tab_months = Hash.new 
 		
@@ -58,7 +58,7 @@ class InvoicesController < ApplicationController
 	
 	# By month and category
 	def categories
-		@amounts = Invoice.select("date, sum(amount*rate) as total_amount, category_id, categories.label AS category_label").joins(:category).group("strftime('%Y%m', date)", "category_id").order("date ASC")
+		@amounts = Invoice.select("date, sum(amount*rate) as total_amount, category_id, categories.label AS category_label").joins(:category).group("extract(year from date), extract(month from date)", "category_id", "date", "categories.label").order("date ASC")
 		
 		@tab_months = Hash.new 
 		
@@ -86,7 +86,7 @@ class InvoicesController < ApplicationController
 			
 			date = DateTime.new(@date_year, @date_month, 1)
 			
-			@invoices = Invoice.order("date DESC").where(:date => date..(date+1.month))
+			@invoices = Invoice.order("date ASC").where(:date => date..(date+1.month))
 			@total = Invoice.select("sum(amount*rate) as cash").where("date < ?", date).first
 		else
 			date = DateTime.new()
@@ -94,7 +94,7 @@ class InvoicesController < ApplicationController
 				
 				date = DateTime.new(params[:date][:year].to_i, params[:date][:month].to_i, 1)
 				
-				@invoices = Invoice.order("date DESC").where(:date => date..(date+1.month))
+				@invoices = Invoice.order("date ASC").where(:date => date..(date+1.month))
 				@total = Invoice.select("sum(amount) as cash").where("date < ?", date).first
 				@date_month = params[:date][:month].to_i
 				@date_year = params[:date][:year].to_i
@@ -138,7 +138,7 @@ class InvoicesController < ApplicationController
 
     respond_to do |format|
       if @invoice.save
-        format.html { redirect_to @invoice, notice: 'Invoice was successfully created.' }
+        format.html { redirect_to invoices_url, notice: 'Invoice was successfully created.' }
         format.json { render json: @invoice, status: :created, location: @invoice }
       else
         format.html { render action: "new" }
@@ -154,7 +154,7 @@ class InvoicesController < ApplicationController
 
     respond_to do |format|
       if @invoice.update_attributes(params[:invoice])
-        format.html { redirect_to @invoice, notice: 'Invoice was successfully updated.' }
+        format.html { redirect_to invoices_url, notice: 'Invoice was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

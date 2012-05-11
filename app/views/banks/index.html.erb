@@ -13,7 +13,7 @@
     <td><%= bank.name %></td>
     <td><%= link_to 'Show', bank %></td>
     <td><%= link_to 'Edit', edit_bank_path(bank) %></td>
-    <td><%= link_to 'Destroy', bank, confirm: 'Are you sure?', method: :delete %></td>
+    <td><%= link_to 'Delete?', bank, :confirm=>"Are you sure", :method=>:delete %></td>
   </tr>
 <% end %>
 </table>

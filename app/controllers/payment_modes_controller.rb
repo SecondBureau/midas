@@ -45,7 +45,7 @@ class PaymentModesController < ApplicationController
 
     respond_to do |format|
       if @payment_mode.save
-        format.html { redirect_to @payment_mode, notice: 'Payment mode was successfully created.' }
+        format.html { redirect_to payment_modes_url, notice: 'Payment mode was successfully created.' }
         format.json { render json: @payment_mode, status: :created, location: @payment_mode }
       else
         format.html { render action: "new" }
@@ -61,7 +61,7 @@ class PaymentModesController < ApplicationController
 
     respond_to do |format|
       if @payment_mode.update_attributes(params[:payment_mode])
-        format.html { redirect_to @payment_mode, notice: 'Payment mode was successfully updated.' }
+        format.html { redirect_to payment_modes_url, notice: 'Payment mode was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
