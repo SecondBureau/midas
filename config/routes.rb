@@ -1,12 +1,16 @@
 Midas::Application.routes.draw do
   resources :users
 
-  resources :invoices
+  match '/invoices' => 'invoices#index', :via => :post
   
-  match '/invoices/filter', :controller => 'invoices', :action => 'index'
-  match '/balances', :controller => 'invoices', :action => 'balances'
-  match '/bycategories', :controller => 'invoices', :action => 'categories'
-  match '/cashflow', :controller => 'invoices', :action => 'cashflow'
+  resources :invoices do 
+  collection do
+    get 'balances' 
+    get 'categories'
+    get 'cashflow'
+  end
+  end
+  
   match '/invoices/cashflow/filter', :controller => 'invoices', :action => 'cashflow'
 
   resources :banks

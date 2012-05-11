@@ -1,6 +1,6 @@
 <div class="filter">
 <%= link_to 'New Invoice', new_invoice_path, :class=>'button' %>
-<%=form_tag ('/invoices/filter') do %>
+<%=form_tag ('/invoices') do %>
 	<%=select_year(@date_year, :prompt => 'Choose year')%>
 	<%=select_month(@date_month, :prompt => 'Choose month')%>
 	<%=submit_tag "Filter"%>

@@ -20,9 +20,9 @@
 		
 	</div>
 	<div id="menu" style="clear:both">
-		<%=link_to "Listing of invoices", :controller => 'invoices', :action => 'index' %>
-		<%=link_to "Balances", :controller => 'invoices', :action => 'balances' %>
-		<%=link_to "By categories", :controller => 'invoices', :action => 'categories' %>
+		<%=link_to "Listing of invoices", invoices_path %>
+		<%=link_to "Balances", balances_invoices_path %>
+		<%=link_to "By categories" , categories_invoices_path %>
 		<%=link_to "Cash Flow", :controller => 'invoices', :action => 'cashflow' %>
 		<% if session[:auth] %>
 		<div style="float:right; font-size:14px; line-height:24px;">
