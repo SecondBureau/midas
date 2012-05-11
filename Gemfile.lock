@@ -128,7 +128,6 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   exchange
   jquery-rails
-  memcached
   pg
   rails (= 3.2.3)
   rspec-rails
