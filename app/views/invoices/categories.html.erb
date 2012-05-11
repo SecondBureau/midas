@@ -67,7 +67,7 @@
 			<% end %>
 			</td>
 			<%
-			total_year[(year).to_s+"balance"+category.id.to_s] = calculations[category.id]
+			total_year[(year).to_s+"balance"+category.id.to_s] = calculations[category.id].to_f + 0
 			calculations[category.id] = calculations[category.id].to_f + values[category.id].to_f
 			%>
 		<% end %>
