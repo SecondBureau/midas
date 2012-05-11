@@ -37,10 +37,12 @@
 <%
 balance_cash = @total[:cash].to_f
 %>
-  <tr><td colspan="<%=(@payment_modes.count*2)+9%>" align="right"><b>Cash at the first of the month : <%=@total[:cash].to_f%></b></td></tr>
+  <tr><td style="background:#444;color:#FFF;" colspan="<%=(@payment_modes.count*2)+9%>" align="right"><b>Cash at the first of the month : <%=@total[:cash].to_f%></b></td></tr>
+  
+<% total_year = Hash.new %>
 <% @invoices.each do |invoice| %>
   <tr>
-    <td class="cell_border_right month_cell"><%= invoice.date.strftime("%Y-%m-%d") %></td>
+    <td class="cell_border_right month_cell"><%= invoice.date.strftime("%d %B %Y") %></td>
     <td><%= invoice.description %></td>
     <td><%= invoice.invoice_status.label %></td>
     <td><%= invoice.cheque_number %></td>
@@ -52,6 +54,7 @@ balance_cash = @total[:cash].to_f
 			<% if invoice.payment_mode == payment_mode && invoice.category.label == "Income" %>
 				<%=invoice.amount%>
 				<% balance_cash = balance_cash + invoice.amount.to_f %>
+				<% total_year[payment_mode.id.to_s+"inflow"] = total_year[payment_mode.id.to_s+"inflow"].to_f + invoice.amount.to_f %>
 			<% else %>
 				<span style="color:#BBB;">0.0</span>
 			<% end %>
@@ -60,14 +63,25 @@ balance_cash = @total[:cash].to_f
 			<% if invoice.payment_mode == payment_mode && invoice.category.label != "Income" %>
 				<%=invoice.amount%>
 				<% balance_cash = balance_cash + invoice.amount.to_f %>
+				<% total_year[payment_mode.id.to_s+"outflow"] = total_year[payment_mode.id.to_s+"outflow"].to_f + invoice.amount.to_f %>
 			<% else %>
 				<span style="color:#BBB;">0.0</span>
 			<% end %>
 		</td>
 	<% end %>
 	<td class="total_cell cell_money"><%=balance_cash%></td>
-	<td class="total_cell cell_money"></td>
+	<% total_year["total"] = total_year["total"].to_f + balance_cash %>
+	<td class="total_cell cell_money">0.0</td>
   </tr>
 <% end %>
+  <tr>
+  	<td class="cell_border_right cell_year" colspan="7"></td>
+  	<% @payment_modes.each do |payment_mode| %>
+  		<td class="cell_money cell_year"><%=total_year[payment_mode.id.to_s+"inflow"].to_f%></td>
+  		<td class="cell_border_right cell_money cell_year"><%=total_year[payment_mode.id.to_s+"outflow"].to_f%></td>
+  	<% end %>
+  	<td class="cell_money cell_year"><%=total_year["total"]%></td>
+  	<td class="cell_money cell_year">0.0</td>
+  </tr>
 </table>
 

@@ -48,7 +48,7 @@ tr:nth-child(2n+1) td {
 }
 .month_cell {
 	background:#FAFAFA;
-	width:100px;
+	width:120px;
 	text-align: right;
 }
 .cell_money {
@@ -67,7 +67,23 @@ tr:nth-child(2n+1) td {
 	padding:5px;
 	margin-bottom: 20px;
 	-moz-border-radius: 5px;
-	text-align: center;
+	font-size:12px;
+	height:28px;
+}
+
+.button {
+	padding:6px;
+	-moz-border-radius: 5px;
+	height:20px;
+}
+
+.filter > .button {
+	line-height:28px;
+	background:#EEE;
+}
+
+.filter > form {
+	display:inline;
 }
 
 #menu {
@@ -116,4 +132,25 @@ tr:nth-child(2n+1) td {
 }
 #login-form > input {
 	margin-bottom:10px;
+}
+
+.good_looking_form {
+	width:500px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.good_looking_form h1 {
+	background: #EEE;
+	-moz-border-radius: 5px 5px 0px 0px;
+	padding:5px;
+	text-align: center;
+}
+
+.good_looking_form > form {
+	padding:5px;
+}
+
+.good_looking_form > form > .actions {
+	margin-top:20px;
+	text-align: center;
 }

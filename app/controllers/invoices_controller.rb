@@ -129,11 +129,22 @@ class InvoicesController < ApplicationController
   # GET /invoices/1/edit
   def edit
     @invoice = Invoice.find(params[:id])
+    # We don't to see the "minus" in front of the amount
+    @invoice[:amount] = @invoice[:amount].abs
+    #if @invoice[:amount] < 0
+    #	@invoice[:amount] = @invoice[:amount] - @invoice[:amount]*2
+    #end
   end
 
   # POST /invoices
   # POST /invoices.json
   def create
+  
+  	category_income = Category.where(:label => 'Income').first
+    if params[:invoice][:category_id].to_i != category_income[:id]
+    	params[:invoice][:amount] = '-'+params[:invoice][:amount]
+    end
+  
     @invoice = Invoice.new(params[:invoice])
 
     respond_to do |format|
@@ -150,6 +161,12 @@ class InvoicesController < ApplicationController
   # PUT /invoices/1
   # PUT /invoices/1.json
   def update
+  
+  	category_income = Category.where(:label => 'Income').first
+    if params[:invoice][:category_id].to_i != category_income[:id]
+    	params[:invoice][:amount] = '-'+params[:invoice][:amount]
+    end
+  
     @invoice = Invoice.find(params[:id])
 
     respond_to do |format|

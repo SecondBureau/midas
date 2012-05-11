@@ -1,4 +1,7 @@
-<h1>Listing banks</h1>
+
+<div class="filter">
+<%= link_to 'New Bank', new_bank_path, :class=>'button' %>
+</div>
 
 <table>
   <tr>
@@ -17,7 +20,3 @@
   </tr>
 <% end %>
 </table>
-
-<br />
-
-<%= link_to 'New Bank', new_bank_path %>
