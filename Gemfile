@@ -30,6 +30,6 @@ gem 'jquery-rails'
 
 gem 'exchange'
 
-#gem 'haml'
+gem 'haml', '3.1.4'
 gem 'money'
 

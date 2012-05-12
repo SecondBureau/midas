@@ -1,0 +1,53 @@
+cash:
+  uniq: label
+  label: Cash
+  currency: cny
+  group: cash   
+  fyeo: 0
+  opened_at: <%= Time.now - 10000000 %>
+  closed_at: 
+
+Danny:
+  uniq: label
+  label: Danny
+  currency: cny
+  group: cash   
+  fyeo: 0
+  opened_at: <%= Time.now - 10000000 %>
+  closed_at:
+    
+Gilles:
+  uniq: label
+  label: Gilles
+  currency: cny
+  group: cash 
+  fyeo: 1  
+  opened_at: <%= Time.now - 10000000 %>
+  closed_at:
+    
+ICBC:
+  uniq: label
+  label: ICBC CNY
+  currency: cny
+  group: bank   
+  fyeo: 0
+  opened_at: <%= Time.now - 10000000 %>
+  closed_at: <%= Time.now %>
+  
+SPD_CNY:
+  uniq: label
+  label: SPD CNY
+  currency: cny
+  group: bank  
+  fyeo: 0 
+  opened_at: <%= Time.now - 5000000 %>
+  closed_at:
+    
+SPD_EUR:
+  uniq: label
+  label: SPD EUR
+  currency: eur
+  group: bank  
+  fyeo: 0 
+  opened_at: <%= Time.now - 5000000 %>
+  closed_at:

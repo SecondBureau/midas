@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120510074746) do
+ActiveRecord::Schema.define(:version => 20120512043905) do
+
+  create_table "accounts", :force => true do |t|
+    t.string   "label"
+    t.string   "group",      :default => "cash"
+    t.string   "currency",   :default => "cny"
+    t.boolean  "fyeo",       :default => false
+    t.datetime "opened_at"
+    t.datetime "closed_at"
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+  end
+
+  add_index "accounts", ["label"], :name => "index_accounts_on_label", :unique => true
 
   create_table "banks", :force => true do |t|
     t.string   "name"
@@ -23,6 +36,22 @@ ActiveRecord::Schema.define(:version => 20120510074746) do
     t.string   "label"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "entries", :force => true do |t|
+    t.string   "label"
+    t.integer  "category_id"
+    t.integer  "account_id"
+    t.string   "currency"
+    t.integer  "src_amount_in_cents", :default => 0
+    t.integer  "amount_in_cents",     :default => 0
+    t.string   "status"
+    t.string   "invoice_num"
+    t.string   "cheque_num"
+    t.string   "accountant_status"
+    t.datetime "operation_date"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
   end
 
   create_table "invoice_statuses", :force => true do |t|

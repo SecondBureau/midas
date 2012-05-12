@@ -24,7 +24,6 @@ Midas::Application.routes.draw do
   resources :to_accountants
   
   # Index and login/logout
-  match '/', :controller => 'invoices', :action => 'index'
   get '/logout', :controller => 'application', :action => 'logout'
   match '/login', :controller => 'application', :action => 'login'
   get '/trylogin', :controller => 'application', :action => 'trylogin'
@@ -78,7 +77,7 @@ Midas::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+   root :to => 'invoices#index'
 
   # See how all your routes lay out with "rake routes"
 
