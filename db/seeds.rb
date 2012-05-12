@@ -69,7 +69,7 @@ Dir["#{seeds_path}/*"].select { |file| /(yml)$/ =~ file }.sort.each do |file|
 end
 
 # entries
-100000.times do 
+15000.times do 
   
   account = Account.all[rand(Account.count)]
   category = Category.all[rand(Category.count)]

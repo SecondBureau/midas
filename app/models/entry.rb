@@ -21,11 +21,12 @@ class Entry < ActiveRecord::Base
     if currency.eql?(Account::SYSTEM_CURRENCY)
       self.amount_in_cents = src_amount_in_cents
     else
-      exchange_date = operation_date.end_of_month < Time.now ? operation_date.end_of_month : Time.now
+      exchange_date = operation_date.end_of_month.future? ? Time.now : operation_date.end_of_month
+      puts exchange_date
       begin
         self.amount_in_cents = src_amount_in_cents.send(currency.to_sym).send("to_#{Account::SYSTEM_CURRENCY}".to_sym, :at => exchange_date).to_f.round(0)
       rescue
-        logger.warn "Failure"
+        puts "Failure"
       end
     end
   end

@@ -28,7 +28,8 @@ end
 
 gem 'jquery-rails'
 
-gem 'exchange'
+gem 'exchange' , :git => 'git@github.com:SecondBureau/exchange.git'
+
 
 gem 'haml', '3.1.4'
 gem 'money'
