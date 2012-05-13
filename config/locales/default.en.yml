@@ -1,4 +1,5 @@
 en:
   date:
     formats:
+      default: ! '%d/%m/%Y'
       table_header: ! '%Y %B'

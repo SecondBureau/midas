@@ -13,12 +13,12 @@ class Entry < ActiveRecord::Base
   
   def self.datas_table_main(params=[])
     {
-      :cols => [['string', 'Date'], ['string', 'Description'], ['string', 'Category'], ['string', 'Amount (CNY)'], ['string', 'Invoice'], ['string', 'Cheque'], ['string', 'Accountant']],
-      :rows => Entry.where("id < ?", 100).inject([]) do |entries, entry|
-        date        = entry.operation_date
+      :cols => [['string', 'Date'], ['string', 'Description'], ['string', 'Category'], ['number', 'Amount (CNY)'], ['string', 'Invoice'], ['string', 'Cheque'], ['string', 'Accountant']],
+      :rows => Entry.where("id < ?", 300).inject([]) do |entries, entry|
+        date        = I18n.localize(entry.operation_date, :format => :default)
         description = entry.label
         category    = entry.category.label
-        amount      = entry.amount.to_s
+        amount      = entry.amount
         invoice     = entry.invoice_num
         cheque      = entry.cheque_num
         accountant  = entry.accountant_status
@@ -26,15 +26,15 @@ class Entry < ActiveRecord::Base
         entries
        end, 
       :options => {
-        :height => params[:h] || '300px',
+        :height => params[:h] || '100%',
         :width => params[:w] || '100%',
         :showRowNumber => true,
         :page => 'enable',
-        :pageSize => 10,
+        :pageSize => 25,
         :allowHtml => true
       },
       :formatters => {
-          3 => {prefix: account.currency, negativeColor: 'red', negativeParens: true}
+          3 => {prefix: '', negativeColor: 'red', negativeParens: true}
         }
     }
   end
@@ -52,7 +52,7 @@ class Entry < ActiveRecord::Base
      {  
       :cols => [['string', 'month']] + Category.all.inject([]) do |cols, item| 
         cols << ['number', item.label] 
-        cols << ['number', 'cumul']
+        cols << ['number', '']
         cols
       end,
       :rows => (from.to_date..to.to_date).select {|_| _.day.eql?(1)}.inject([]) do |rows, day|
