@@ -1,5 +1,10 @@
 %h1 List of Entries
 
-= table_tag('accounts', 300, {:page => 'enable'})
+%ul
+  %li= link_to 'Full List', entries_path(:table => 'main'), :remote => true
+  %li= link_to 'Group by categories', entries_path(:table => 'categories'), :remote => true
+  %li= link_to 'Group by accounts', entries_path(:table => 'accounts'), :remote => true
+  
+#table_container  
+  = render 'table', :table => table
 
-= table_tag('categories', 300, {:page => 'enable'})

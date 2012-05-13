@@ -30,7 +30,8 @@ class Entry < ActiveRecord::Base
         :width => params[:w] || '100%',
         :showRowNumber => true,
         :page => 'enable',
-        :pageSize => 10
+        :pageSize => 10,
+        :allowHtml => true
       },
       :formatters => {
           3 => {prefix: account.currency, negativeColor: 'red', negativeParens: true}
@@ -38,20 +39,28 @@ class Entry < ActiveRecord::Base
     }
   end
   
+  
   def self.datas_table_categories(params=[])
     
       entries = Entry.all.group_by{ |e| [e.operation_date.beginning_of_month, e.category_id] }.inject({}) do |result, entries|
-        result[entries.first] = entries.last.collect(&:amount_in_cents).inject {|r, entry| r + entry} / 100.0
+        result[entries.first] = entries.last.collect(&:amount_in_cents).inject {|r, entry| r + entry} 
         result
        end
        
        from = Time.parse('2011-01-01 00:00:00 UTC')
        to   = Time.now.beginning_of_month
      {  
-      :cols => [['string', 'month']] + Category.all.collect{|c| ['number', c.label]},
+      :cols => [['string', 'month']] + Category.all.inject([]) do |cols, item| 
+        cols << ['number', item.label] 
+        cols << ['number', 'cumul']
+        cols
+      end,
       :rows => (from.to_date..to.to_date).select {|_| _.day.eql?(1)}.inject([]) do |rows, day|
-        row = [day.strftime('%Y%m')] + Category.all.collect(&:id).inject([]) do |row, category_id|
-           row << (entries[[day.to_time(:utc), category_id]] || 0)
+        row = [I18n.localize(day, :format => :table_header)] + Category.all.collect(&:id).inject([]) do |row, category_id|
+           # amount of the month for the category
+           row << (entries[[day.to_time(:utc), category_id]] || 0) / 100.0
+           # sum of amounts for previous month for the category
+           row << entries.select{|(date, cat_id), amount| date <= day.to_time(:utc) && cat_id.eql?(category_id)}.values.sum / 100.0
            row
         end
         rows << row
@@ -62,7 +71,8 @@ class Entry < ActiveRecord::Base
         :width => params[:w] || '100%',
         :showRowNumber => true,
         :page => 'enable',
-        :pageSize => 30
+        :pageSize => 30,
+        :allowHtml => true
       },
       :formatters => Category.all.inject({}) do |formatters, category|
           formatters[formatters.count + 1] = {prefix: '', negativeColor: 'red', negativeParens: true}
@@ -95,7 +105,8 @@ class Entry < ActiveRecord::Base
         :width => params[:w] || '100%',
         :showRowNumber => false,
         :page => 'enable',
-        :pageSize => 30
+        :pageSize => 30,
+        :allowHtml => true
       },
       :formatters => Account.all.inject({}) do |formatters, account|
           formatters[formatters.count + 1] = {prefix: '', negativeColor: 'red', negativeParens: true}
