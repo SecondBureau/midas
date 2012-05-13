@@ -1,6 +1,5 @@
 
-drawtables = () ->  
-  alert ('go')
+@drawtables = () ->   
   $("[data-table]").each ->
     div = $(this)
   
