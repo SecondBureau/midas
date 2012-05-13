@@ -13,28 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-drawtables = function() {
-    alert('go');
-    return $("[data-table]").each(function() {
-      var div;
-      div = $(this);
-      return $.getJSON(div.data("table"), function(datasource) {
-        var data, table;
-        table = new google.visualization.Table(div.get(0));
-        data = new google.visualization.DataTable();
-        $.each(datasource.cols, function() {
-          return data.addColumn.apply(data, this);
-        });
-        data.addRows(datasource.rows);
-        if (datasource.formatters != null) {
-          $.each(datasource.formatters, function(key, val) {
-            var formatter;
-            formatter = new google.visualization.NumberFormat(val);
-            return formatter.format(data, parseInt(key));
-          });
-        }
-        return table.draw(data, datasource.options);
-      });
-    });
-  };

@@ -52,9 +52,9 @@ class Entry < ActiveRecord::Base
      {  
       :cols => [['string', 'month']] + Category.all.inject([]) do |cols, item| 
         cols << ['number', item.label] 
-        cols << ['number', '']
+        cols << ['number', 'Balance']
         cols
-      end,
+      end + [['number', 'TOTAL']] + [['number', '']],
       :rows => (from.to_date..to.to_date).select {|_| _.day.eql?(1)}.inject([]) do |rows, day|
         row = [I18n.localize(day, :format => :table_header)] + Category.all.collect(&:id).inject([]) do |row, category_id|
            # amount of the month for the category
@@ -63,6 +63,10 @@ class Entry < ActiveRecord::Base
            row << entries.select{|(date, cat_id), amount| date <= day.to_time(:utc) && cat_id.eql?(category_id)}.values.sum / 100.0
            row
         end
+        # sum of amounts for all categories
+        row << entries.select{|(date, cat_id), amount| date.eql?(day.to_time(:utc)) }.values.sum / 100.0
+        # sum of amounts for previous months for all categories
+        row << entries.select{|(date, cat_id), amount| date <= day.to_time(:utc)}.values.sum / 100.0
         rows << row
         rows
       end,
@@ -74,10 +78,10 @@ class Entry < ActiveRecord::Base
         :pageSize => 30,
         :allowHtml => true
       },
-      :formatters => Category.all.inject({}) do |formatters, category|
+      :formatters => (0..(2 * Category.all.count + 1)).inject({}) do |formatters, category|
           formatters[formatters.count + 1] = {prefix: '', negativeColor: 'red', negativeParens: true}
           formatters
-        end
+        end 
     }
   end
   
