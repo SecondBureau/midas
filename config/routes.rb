@@ -1,4 +1,7 @@
 Midas::Application.routes.draw do
+  
+  resources :entries
+  
   resources :users
 
   match '/invoices' => 'invoices#index', :via => :post
@@ -77,7 +80,7 @@ Midas::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'invoices#index'
+   root :to => 'entries#index'
 
   # See how all your routes lay out with "rake routes"
 
