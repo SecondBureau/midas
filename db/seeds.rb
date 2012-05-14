@@ -69,13 +69,13 @@ Dir["#{seeds_path}/*"].select { |file| /(yml)$/ =~ file }.sort.each do |file|
 end
 
 # entries
-100000.times do 
+15000.times do 
   
   account = Account.all[rand(Account.count)]
   category = Category.all[rand(Category.count)]
   operation_date = account.opened_at + rand((account.closed_at || Time.now) - account.opened_at)
   label = Lipsum.generate(:words => rand(3) + 4, :start_with_lipsum => false)
-  Entry.create(:category_id => category.id, :account_id => account.id, :src_amount_in_cents => rand(10000000), :operation_date => operation_date, :label => label)
+  Entry.create(:category_id => category.id, :account_id => account.id, :src_amount_in_cents => rand(10000000) * (rand(10)<5 ? -1 : +1), :operation_date => operation_date, :label => label)
   Rails.logger.info "#{Entry.last.id} - #{Entry.last.currency} - #{operation_date} - #{Entry.last.amount}"
 
 end
