@@ -1,4 +1,6 @@
 class Account < ActiveRecord::Base
+
+  attr_accessible :label, :group, :currency, :fyeo,  :opened_at, :closed_at
   
   SYSTEM_CURRENCY = 'cny'
   

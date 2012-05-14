@@ -1,4 +1,4 @@
+.filter
+  = render "#{table}_table_filters"
 
-= table_tag(table, '100%', {:page => 'enable'})
-
-= render "#{table}_table_filters"
+= table_tag(table, '100%', {:page => 'enable', :params => params})

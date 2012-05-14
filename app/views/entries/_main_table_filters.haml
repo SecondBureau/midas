@@ -1,0 +1,4 @@
+%form{:action => '/'}
+  = select_year(0, :prompt => 'Choose year')
+  = select_month(0, :prompt => 'Choose month')
+  %input{:type => "submit", :value => "Filter", :class => "button"}

@@ -1,12 +1,11 @@
 require 'digest/md5'
 
 class User < ActiveRecord::Base
-	attr_accessible :email, :password
+  # Include default devise modules. Others available are:
+  # :token_authenticatable, :encryptable, :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable
 
-	# test : 098f6bcd4621d373cade4e832627b4f6
-	def self.auth?(email, password)
-		hashed_password = Digest::MD5.hexdigest(password)
-		user = User.find(:first, :conditions => "email='#{email}' and password='#{hashed_password}'" )
-		return !user.nil?
-	end
+  # Setup accessible (or protected) attributes for your model
+  attr_accessible :email, :password, :password_confirmation, :remember_me
 end

@@ -2,7 +2,7 @@
 <html>
 <head>
   <title>Midas</title>
-  <%= stylesheet_link_tag "style" %>
+  <%= stylesheet_link_tag "application" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
@@ -10,30 +10,12 @@
 <div id="main">
 	<div id="header">
 		<h1 style="float:left;margin:0;">Midas</h1>
-		<div style="float:right;">
-		<% if session[:auth] %>
-		<%=link_to "Logout", :controller => 'application', :action => 'logout' %>
-		<% else %>
-		<%=link_to "Login", :controller => 'application', :action => 'login' %>
-		<% end %>
-		</div>
-		
 	</div>
 	<div id="menu" style="clear:both">
 		<%=link_to "Listing of invoices", invoices_path %>
 		<%=link_to "Balances", balances_invoices_path %>
 		<%=link_to "By categories" , categories_invoices_path %>
 		<%=link_to "Cash Flow", :controller => 'invoices', :action => 'cashflow' %>
-		<% if session[:auth] %>
-		<div style="float:right; font-size:14px; line-height:24px;">
-		Configuration : 
-		<%=link_to "Categories", :controller => 'categories', :action => 'index' %>
-		<%=link_to "Banks", :controller => 'banks', :action => 'index' %>
-		<%=link_to "Invoice status", :controller => 'invoice_statuses', :action => 'index' %>
-		<%=link_to "Payment modes", :controller => 'payment_modes', :action => 'index' %>
-		<%=link_to "To accountant", :controller => 'to_accountants', :action => 'index' %>
-		</div>
-		<% end %>
 	</div>
 
 	<div id="container">

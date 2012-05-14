@@ -4,7 +4,7 @@ class EntriesController < ApplicationController
   
   DEFAULT_TABLE='main'
   
-  def index
+  def index  
     respond_to do |format|
       format.html
       format.json { render :json => Entry.send("datas_table_#{params[:table]}", params) }
@@ -30,7 +30,7 @@ class EntriesController < ApplicationController
   private 
   
   def entry
-    @entry ||= params[:id] ? Entry.find(params[:id]) : Entry.new(params[:vote])
+    @entry ||= params[:id] ? Entry.find(params[:id]) : Entry.new(params[:entry])
   end
   helper_method :entry
   

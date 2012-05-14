@@ -1,5 +1,11 @@
 Midas::Application.routes.draw do
   
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
+  devise_for :users
+
+  
+
   resources :entries
   
   resources :users
@@ -16,15 +22,7 @@ Midas::Application.routes.draw do
   
   match '/invoices/cashflow/filter', :controller => 'invoices', :action => 'cashflow'
 
-  resources :banks
-
-  resources :invoice_statuses
-
-  resources :payment_modes
-
   resources :categories
-
-  resources :to_accountants
   
   # Index and login/logout
   get '/logout', :controller => 'application', :action => 'logout'

@@ -1,11 +1,25 @@
 !!!
 %html
   %head{:profile => "http://gmpg.org/xfn/11"}
-    %title Lalaso Beijing Technologies
+    %title Midas
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
 
-  %body{:id => 'top'}
-  
-    = yield
+    #main
+      #header
+        %h1{:style => "float:left"} Midas
+        %div{:style => "float:right"}
+          - if user_signed_in?
+            = link_to 'Admin', '/admin'
+            = link_to 'Log out', 'users/sign_out'
+          - else
+            = link_to 'Log in', '/admin'
+    #menu
+      = link_to 'Full List', entries_path(:table => 'main'), :remote => true
+      = link_to 'Group by accounts', entries_path(:table => 'accounts'), :remote => true
+      = link_to 'Group by categories', entries_path(:table => 'categories'), :remote => true
+      = link_to "Cash Flow", :controller => 'invoices', :action => 'cashflow'
+
+    #container
+      = yield

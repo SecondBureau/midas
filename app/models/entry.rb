@@ -12,9 +12,12 @@ class Entry < ActiveRecord::Base
   end
   
   def self.datas_table_main(params=[])
+
     {
+    
       :cols => [['string', 'Date'], ['string', 'Description'], ['string', 'Category'], ['number', 'Amount (CNY)'], ['string', 'Invoice'], ['string', 'Cheque'], ['string', 'Accountant']],
       :rows => Entry.where("id < ?", 300).inject([]) do |entries, entry|
+      #:rows => Entry.where(:date => (start_date.to_date)..(end_date.to_date)).inject([]) do |entries, entry|
         date        = I18n.localize(entry.operation_date, :format => :default)
         description = entry.label
         category    = entry.category.label
@@ -76,7 +79,8 @@ class Entry < ActiveRecord::Base
         :showRowNumber => true,
         :page => 'enable',
         :pageSize => 30,
-        :allowHtml => true
+        :allowHtml => true,
+        :sort => 'disable'
       },
       :formatters => (0..(2 * Category.all.count + 1)).inject({}) do |formatters, category|
           formatters[formatters.count + 1] = {prefix: '', negativeColor: 'red', negativeParens: true}
@@ -110,7 +114,8 @@ class Entry < ActiveRecord::Base
         :showRowNumber => false,
         :page => 'enable',
         :pageSize => 30,
-        :allowHtml => true
+        :allowHtml => true,
+        :sort => 'disable'
       },
       :formatters => Account.all.inject({}) do |formatters, account|
           formatters[formatters.count + 1] = {prefix: '', negativeColor: 'red', negativeParens: true}
