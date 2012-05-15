@@ -112,7 +112,7 @@ th {
 	width:200px;
 	font-size: 14px;
 }
-.field > input, input {
+.field > input, .filter > form > input {
 	-moz-border-radius: 5px;
 	border:1px solid #CCC;
 	padding:5px;
@@ -120,7 +120,7 @@ th {
 	vertical-align:	top;
 }
 
-.field > select, select {
+.field > select, .filter > form > select {
 	-moz-border-radius: 5px;
 	border:1px solid #CCC;
 	padding:5px;
@@ -157,4 +157,31 @@ th {
 .good_looking_form > form > .actions {
 	margin-top:20px;
 	text-align: center;
+}
+
+.ui-widget-header {
+	border:0px;
+	background:#CCC;
+	padding:10px!important;
+}
+
+.dataTables_filter input {
+	-moz-border-radius: 5px;
+	border:0px;
+	padding:5px;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+	background-image: none!important;
+	background:#EEE!important;
+}
+
+.odd {
+	background:#F8F8F8!important;
+}
+.odd > .sorting_1 {
+	background:#F8F8F8!important;
+}
+.even > .sorting_1 {
+	background:#FFF!important;
 }

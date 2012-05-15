@@ -1,4 +1,14 @@
-.filter
-  = render "#{table}_table_filters"
-
-= table_tag(table, '100%', {:page => 'enable', :params => params})
+%table#entries
+  %thead
+    %tr
+      - @entries[:cols].each do |col|
+        %th= col[1]
+  %tbody
+    - @entries[:rows].each do |row|
+      %tr
+        - for i in 0..row.count-1
+          %td= row[i]
+          
+-#.filter
+-#  = render "#{table}_table_filters"          
+-#= table_tag(table, '100%', {:page => 'enable', :params => params})

@@ -11,11 +11,13 @@ class EntriesController < ApplicationController
     @search_category_id = params[:search] && params[:search][:category_id] ? params[:search][:category_id].to_i : 0
     @search_label = params[:search] && params[:search][:label] ? params[:search][:label] : ''
     
-    respond_to do |format|
-      format.html
-      format.json { render :json => Entry.send("datas_table_#{params[:table]}", params) }
-      format.js
-    end
+    @entries = Entry.datas_table_main(params)
+    
+#    respond_to do |format|
+#      format.html
+#      format.json { render :json => Entry.send("datas_table_#{params[:table]}", params) }
+#      format.js
+#    end
   end
 
   def show

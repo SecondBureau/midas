@@ -24,18 +24,17 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
+  gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+  gem 'jquery-ui-rails'
 end
 
 gem 'jquery-rails'
 
 gem 'exchange' , :git => 'git@github.com:SecondBureau/exchange.git'
 
-
 gem 'haml', '3.1.4'
 gem "haml-rails"
-
 gem 'rails_admin'
-
-gem "devise"
-
+gem 'devise'
 gem 'pry'
+gem 'aub-record_filter'

@@ -7,6 +7,16 @@ class Entry < ActiveRecord::Base
   
   before_validation :set_currency, :set_amount
   
+  scope :validated, where('accountant_status = ?', 'sent')
+  scope :by_date, lambda{ |after, before| where(:operation_date => after..before) }
+  
+  def self.mon_filtre(after, before=nil)
+  before = after + 3600 if before.nil?
+  where(:operation_date => after..before)
+  
+  end
+
+  
   def amount
     amount_in_cents / 100.0
   end
@@ -20,7 +30,7 @@ class Entry < ActiveRecord::Base
 
   	  search_year = params[:date][:year].to_i
   	  
-  	  if !params[:date][:month].nil? && !params[:date][:month].empty?
+  	  if !params[:date][:month].blank? 
       
         search_month = params[:date][:month].to_i
       
@@ -37,6 +47,11 @@ class Entry < ActiveRecord::Base
       end
     end
     
+    #entries = Entry.all 
+    
+    #entries = entries.by_date start_date, end_date if true
+    
+    #entree = entries.xxxx unless params[:search][:category_id].nil?
     
     if params[:search] && !params[:search][:category_id].nil? && !params[:search][:category_id].empty?
         request = Entry.order("operation_date DESC").where(:operation_date => (start_date)..(end_date)).where(:category_id => params[:search][:category_id].to_i)
@@ -45,6 +60,24 @@ class Entry < ActiveRecord::Base
     else
         request = Entry.order("operation_date DESC").where(:operation_date => (start_date)..(end_date))
     end
+    
+    {
+      :cols => [['string', 'Date'], ['string', 'Description'], ['string', 'Category'], ['number', 'Amount (CNY)'], ['string', 'Invoice'], ['string', 'Cheque'], ['string', 'Accountant']],
+      :rows => request.inject([]) do |entries, entry|
+        date        = I18n.localize(entry.operation_date, :format => :default)
+        description = entry.label
+        category    = entry.category.label
+        amount      = entry.amount
+        invoice     = entry.invoice_num
+        cheque      = entry.cheque_num
+        accountant  = entry.accountant_status
+        entries << [date, description, category, amount, invoice, cheque, accountant]
+        entries
+       end
+     }
+  end
+  
+  def test_DEPRECATED
 
     {
     
