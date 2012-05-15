@@ -79,7 +79,8 @@ RailsAdmin.config do |config|
 
   # All fields marked as 'hidden' won't be shown anywhere in the rails_admin unless you mark them as visible. (visible(true))
 
-  # config.model Account do
+   config.model Account do
+     object_label_method :label
   #   # Found associations:
   #     configure :entries, :has_many_association   #   # Found columns:
   #     configure :id, :integer 
@@ -91,41 +92,32 @@ RailsAdmin.config do |config|
   #     configure :closed_at, :datetime 
   #     configure :created_at, :datetime 
   #     configure :updated_at, :datetime   #   # Sections:
-  #   list do; end
+      list do
+        sort_by :label
+      end
   #   export do; end
   #   show do; end
   #   edit do; end
   #   create do; end
   #   update do; end
-  # end
-  # config.model Bank do
-  #   # Found associations:
-  #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :name, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
-  # config.model Category do
+  end
+  config.model Category do
+    object_label_method :label
   #   # Found associations:
   #     configure :entries, :has_many_association   #   # Found columns:
   #     configure :id, :integer 
   #     configure :label, :string 
   #     configure :created_at, :datetime 
   #     configure :updated_at, :datetime   #   # Sections:
-  #   list do; end
+      list do
+        sort_by :label
+      end
   #   export do; end
   #   show do; end
   #   edit do; end
   #   create do; end
   #   update do; end
-  # end
+  end
   # config.model Entry do
   #   # Found associations:
   #     configure :category, :belongs_to_association 
@@ -142,76 +134,6 @@ RailsAdmin.config do |config|
   #     configure :cheque_num, :string 
   #     configure :accountant_status, :string 
   #     configure :operation_date, :datetime 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
-  # config.model Invoice do
-  #   # Found associations:
-  #     configure :category, :belongs_to_association 
-  #     configure :payment_mode, :belongs_to_association 
-  #     configure :invoice_status, :belongs_to_association 
-  #     configure :to_accountant, :belongs_to_association 
-  #     configure :bank, :belongs_to_association   #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :date, :datetime 
-  #     configure :category_id, :integer         # Hidden 
-  #     configure :payment_mode_id, :integer         # Hidden 
-  #     configure :description, :string 
-  #     configure :amount, :decimal 
-  #     configure :invoice_status_id, :integer         # Hidden 
-  #     configure :cheque_number, :string 
-  #     configure :invoice_number, :string 
-  #     configure :to_accountant_id, :integer         # Hidden 
-  #     configure :bank_id, :integer         # Hidden 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime 
-  #     configure :rate, :float   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
-  # config.model InvoiceStatus do
-  #   # Found associations:
-  #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :label, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
-  # config.model PaymentMode do
-  #   # Found associations:
-  #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :label, :string 
-  #     configure :created_at, :datetime 
-  #     configure :updated_at, :datetime   #   # Sections:
-  #   list do; end
-  #   export do; end
-  #   show do; end
-  #   edit do; end
-  #   create do; end
-  #   update do; end
-  # end
-  # config.model ToAccountant do
-  #   # Found associations:
-  #   # Found columns:
-  #     configure :id, :integer 
-  #     configure :label, :string 
   #     configure :created_at, :datetime 
   #     configure :updated_at, :datetime   #   # Sections:
   #   list do; end

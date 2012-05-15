@@ -4,7 +4,13 @@ class EntriesController < ApplicationController
   
   DEFAULT_TABLE='main'
   
-  def index  
+  def index
+
+    @search_month = params[:date] && params[:date][:month] ? params[:date][:month].to_i : 0
+    @search_year = params[:date] && params[:date][:year] ? params[:date][:year].to_i : 0
+    @search_category_id = params[:search] && params[:search][:category_id] ? params[:search][:category_id].to_i : 0
+    @search_label = params[:search] && params[:search][:label] ? params[:search][:label] : ''
+    
     respond_to do |format|
       format.html
       format.json { render :json => Entry.send("datas_table_#{params[:table]}", params) }

@@ -95,8 +95,8 @@ th {
 	line-height:38px;
 }
 #menu a{
-	margin-left:10px;
-	margin-right:10px;
+	margin-left:20px;
+	margin-right:0px;
 	color:#DDD;
 }
 #menu a:hover {
@@ -116,7 +116,8 @@ th {
 	-moz-border-radius: 5px;
 	border:1px solid #CCC;
 	padding:5px;
-	height:30px;
+	height:18px;
+	vertical-align:	top;
 }
 
 .field > select, select {
