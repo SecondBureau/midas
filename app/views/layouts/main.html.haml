@@ -8,18 +8,19 @@
 
     #main
       #header
-        %h1{:style => "float:left"} Midas
-        %div{:style => "float:right"}
+        %h1.website_title <span style="color:#444">M</span><span style="color:#666">idas</span>
+        %div{:class => "log_admin_box"}
           - if user_signed_in?
             = link_to 'Admin', '/admin'
+            %br
             = link_to 'Log out', 'users/sign_out'
           - else
             = link_to 'Log in', '/admin'
     #menu
-      = link_to 'Full List', entries_path(:table => 'main'), :remote => true
-      = link_to 'Group by accounts', entries_path(:table => 'accounts'), :remote => true
-      = link_to 'Group by categories', entries_path(:table => 'categories'), :remote => true
-      = link_to "Cash Flow", :controller => 'invoices', :action => 'cashflow'
+      = link_to 'Full List', entries_path(:table => 'main')
+      = link_to 'Group by accounts', entries_path(:table => 'accounts')
+      = link_to 'Group by categories', entries_path(:table => 'categories')
+      = link_to "Cash Flow", entries_path(:table => 'cashflow')
 
     #container
       = yield

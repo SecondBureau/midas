@@ -11,6 +11,27 @@ a:hover {
 	color:blue;
 }
 
+.log_admin_box {
+  float: right; 
+  font-family: Georgia; 
+  font-size: 20px; 
+  padding: 5px;
+  line-height:25px;
+  text-align: right;
+}
+.log_admin_box a:hover {
+  background:#FFF;
+  color:#000;
+}
+
+.website_title {
+	float:left;
+	font-style:italic;
+	font-family: Georgia;
+	font-size:40px;
+	margin-left:10px;
+}
+
 table, th, td {
 	border:1px solid #EEE;
 	font-size:12px;

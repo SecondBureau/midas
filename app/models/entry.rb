@@ -76,54 +76,26 @@ class Entry < ActiveRecord::Base
        end
      }
   end
-  
-  def test_DEPRECATED
 
-    {
-    
-      :cols => [['string', 'Date'], ['string', 'Description'], ['string', 'Category'], ['number', 'Amount (CNY)'], ['string', 'Invoice'], ['string', 'Cheque'], ['string', 'Accountant']],
-      #:rows => Entry.where("id < ?", 300).inject([]) do |entries, entry|
-      :rows => request.inject([]) do |entries, entry|
-        date        = I18n.localize(entry.operation_date, :format => :default)
-        description = entry.label
-        category    = entry.category.label
-        amount      = entry.amount
-        invoice     = entry.invoice_num
-        cheque      = entry.cheque_num
-        accountant  = entry.accountant_status
-        entries << [date, description, category, amount, invoice, cheque, accountant]
-        entries
-       end, 
-      :options => {
-        :height => params[:h] || '100%',
-        :width => params[:w] || '100%',
-        :showRowNumber => true,
-        :page => 'enable',
-        :pageSize => 25,
-        :allowHtml => true
-      },
-      :formatters => {
-          3 => {prefix: '', negativeColor: 'red', negativeParens: true}
-        }
-    }
-  end
-  
-  
   def self.datas_table_categories(params=[])
     
       entries = Entry.all.group_by{ |e| [e.operation_date.beginning_of_month, e.category_id] }.inject({}) do |result, entries|
         result[entries.first] = entries.last.collect(&:amount_in_cents).inject {|r, entry| r + entry} 
         result
        end
-       
+
        from = Time.parse('2011-01-01 00:00:00 UTC')
        to   = Time.now.beginning_of_month
      {  
-      :cols => [['string', 'month']] + Category.all.inject([]) do |cols, item| 
-        cols << ['number', item.label] 
-        cols << ['number', 'Balance']
-        cols
-      end + [['number', 'TOTAL']] + [['number', '']],
+      :cols => [['string', 'Month', "rowspan"]] + Category.all.inject([]) do |cols, item| 
+        cols << ['number', item.label, "colspan"]
+        cols      	
+      end + [['number', 'TOTAL', "colspan"]],
+      :under_cols => Category.all.inject([]) do |under_cols, item|
+        under_cols << ['number', 'Month']
+        under_cols << ['number', 'Balance']
+        under_cols
+      end + [['number', 'MONTH', 'rowspan']] + [['number', 'BALANCE', 'rowspan']],
       :rows => (from.to_date..to.to_date).select {|_| _.day.eql?(1)}.inject([]) do |rows, day|
         row = [I18n.localize(day, :format => :table_header)] + Category.all.collect(&:id).inject([]) do |row, category_id|
            # amount of the month for the category
@@ -138,21 +110,9 @@ class Entry < ActiveRecord::Base
         row << entries.select{|(date, cat_id), amount| date <= day.to_time(:utc)}.values.sum / 100.0
         rows << row
         rows
-      end,
-      :options => {
-        :height => params[:h] || '300px',
-        :width => params[:w] || '100%',
-        :showRowNumber => true,
-        :page => 'enable',
-        :pageSize => 30,
-        :allowHtml => true,
-        :sort => 'disable'
-      },
-      :formatters => (0..(2 * Category.all.count + 1)).inject({}) do |formatters, category|
-          formatters[formatters.count + 1] = {prefix: '', negativeColor: 'red', negativeParens: true}
-          formatters
-        end 
+      end
     }
+    
   end
   
   def self.datas_table_accounts(params=[])
@@ -188,6 +148,27 @@ class Entry < ActiveRecord::Base
           formatters
         end
       
+    }
+  end
+  
+  def self.datas_table_cashflow(params=[])
+  
+    from = Date.new(2012, 5, 1)
+    to   = from+1.month
+    
+    entries = Entry.order("operation_date DESC").where(:operation_date => from..to)
+    {  
+      :cols => [['string', 'Description'], ['string', 'Date'], ['string', 'Cheque'], ['string', 'Invoice'], ['string', 'Accountant'], ['number', 'Amount (CNY)']],
+      :rows => entries.inject([]) do |entries, entry|
+      	description = entry.label
+        date        = I18n.localize(entry.operation_date, :format => :default)
+        cheque      = entry.cheque_num
+        invoice     = entry.invoice_num
+        accountant  = entry.accountant_status
+        amount      = entry.amount
+        entries << [description, date, cheque, invoice, accountant, amount]
+        entries
+      end
     }
   end
   

@@ -209,6 +209,7 @@ DEPENDENCIES
   haml-rails
   jquery-datatables-rails!
   jquery-rails
+  jquery-ui-rails
   libnotify
   newrelic_rpm
   pg
