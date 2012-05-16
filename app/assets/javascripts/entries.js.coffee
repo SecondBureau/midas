@@ -11,3 +11,8 @@ jQuery ($) ->
           for row in aData
             total = parseFloat total + parseFloat row[i]
           cells[i].innerHTML = parseFloat total
+  .columnFilter
+    sPlaceHolder: "head:before"
+    aoColumns:[
+      {type:"date-range"}
+    ]

@@ -158,15 +158,15 @@ class Entry < ActiveRecord::Base
     
     entries = Entry.order("operation_date DESC").where(:operation_date => from..to)
     {  
-      :cols => [['string', 'Description'], ['string', 'Date'], ['string', 'Cheque'], ['string', 'Invoice'], ['string', 'Accountant'], ['number', 'Amount (CNY)']],
+      :cols => [['string', 'Date'], ['string', 'Description'], ['string', 'Cheque'], ['string', 'Invoice'], ['string', 'Accountant'], ['number', 'Amount (CNY)']],
       :rows => entries.inject([]) do |entries, entry|
-      	description = entry.label
         date        = I18n.localize(entry.operation_date, :format => :default)
+      	description = entry.label
         cheque      = entry.cheque_num
         invoice     = entry.invoice_num
         accountant  = entry.accountant_status
         amount      = entry.amount
-        entries << [description, date, cheque, invoice, accountant, amount]
+        entries << [date, description, cheque, invoice, accountant, amount]
         entries
       end
     }
