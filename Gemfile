@@ -37,4 +37,3 @@ gem "haml-rails"
 gem 'rails_admin'
 gem 'devise'
 gem 'pry'
-gem 'aub-record_filter'
