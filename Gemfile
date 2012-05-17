@@ -12,7 +12,6 @@ group :development, :test do
   gem 'sqlite3'
   gem 'rspec'
   gem 'rspec-rails'
-  gem 'pry'
 end
 
 group :production do
@@ -25,6 +24,8 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
+  gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+  gem 'jquery-ui-rails'
 end
 
 gem 'jquery-rails'
@@ -35,3 +36,4 @@ gem 'haml', '3.1.4'
 gem "haml-rails"
 gem 'rails_admin'
 gem 'devise'
+gem 'pry'
