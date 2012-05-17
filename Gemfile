@@ -6,6 +6,7 @@ group :development do
   gem 'guard-rspec'
   gem 'growl'
   gem 'libnotify'
+  gem 'pry'
 end
 
 group :development, :test do
@@ -36,4 +37,3 @@ gem 'haml', '3.1.4'
 gem "haml-rails"
 gem 'rails_admin'
 gem 'devise'
-gem 'pry'
