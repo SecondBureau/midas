@@ -6,63 +6,15 @@ class Entry < ActiveRecord::Base
   belongs_to :category, :inverse_of => :entries
   
   before_validation :set_currency, :set_amount
-  
-  scope :validated, where('accountant_status = ?', 'sent')
-  scope :by_date, lambda{ |after, before| where(:operation_date => after..before) }
-  
-  def self.mon_filtre(after, before=nil)
-  before = after + 3600 if before.nil?
-  where(:operation_date => after..before)
-  
-  end
-
-  
   def amount
     amount_in_cents / 100.0
   end
   
   def self.datas_table_main(params=[])  
 
-    start_date = Date.new(0, 1, 1)
-    end_date = Date.new(3000, 12, 1)
-    search_month = 1
-
-  	if params[:date] && !params[:date][:year].nil? && !params[:date][:year].empty?
-
-  	  search_year = params[:date][:year].to_i
-  	  
-  	  if !params[:date][:month].blank? 
-      
-        search_month = params[:date][:month].to_i
-      
-        start_date = Date.new(search_year, search_month, 1)
-        end_date = Date.new(search_year, search_month, 1) + 1.month
-      
-      elsif
-      
-        start_date = Date.new(search_year, search_month, 1)
-        end_date = Date.new(search_year, search_month, 1) + 1.year
-
-      end
-    end
-    
-    #entries = Entry.all 
-    
-    #entries = entries.by_date start_date, end_date if true
-    
-    #entree = entries.xxxx unless params[:search][:category_id].nil?
-    
-    if params[:search] && !params[:search][:category_id].nil? && !params[:search][:category_id].empty?
-        request = Entry.order("operation_date DESC").where(:operation_date => (start_date)..(end_date)).where(:category_id => params[:search][:category_id].to_i)
-    elsif params[:search] && !params[:search][:label].nil? && !params[:search][:label].empty?
-        request = Entry.order("operation_date DESC").where(:operation_date => (start_date)..(end_date)).where("label LIKE :label", {:label => "%#{params[:search][:label]}%"})
-    else
-        request = Entry.order("operation_date DESC").where(:operation_date => (start_date)..(end_date))
-    end
-    
     {
       :cols => [['date', 'Date'], ['string', 'Description'], ['string', 'Category'], ['number', 'Amount (CNY)'], ['string', 'Invoice'], ['string', 'Cheque'], ['string', 'Accountant']],
-      :rows => request.inject([]) do |entries, entry|
+      :rows => Entry.order("operation_date DESC").inject([]) do |entries, entry|
         date        = entry.operation_date.strftime('%Y %B %d')#I18n.localize(entry.operation_date, :format => :short)
         description = entry.label
         category    = entry.category.label if entry.category
