@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 	end
 
   def csv_import 
-	  if user_signed_in?
+	  #if user_signed_in?
       file = params[:file]
 		  @all = []
       CSV.foreach file.tempfile do |row|
@@ -39,8 +39,8 @@ class ApplicationController < ActionController::Base
       	  e.save
         end
       end
-	  else
-	    redirect_to '/'
-    end # if user_signed_in?
+	  #else
+	  #  redirect_to '/'
+    #end
   end
 end
