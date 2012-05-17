@@ -10,21 +10,22 @@ require "lipsum"
 
 User.create :email => "danny@secondbureau.com", :password => "5ebe2294ecd0e0f08eab7690d2a6ee69"
 
-Bank.create :name => "Bank"
+Account.create :label => "Danny"
+Account.create :label => "Cash"
+Account.create :label => "Gilles"
+Account.create :label => "Bank Euro"
+Account.create :label => "SPD"
+Account.create :label => "ICBD"
 
-InvoiceStatus.create :label => "Invoiced"
-InvoiceStatus.create :label => "Paid"
-InvoiceStatus.create :label => "Received"
-InvoiceStatus.create :label => "Withdrew"
+Category.create :label => "Daily"
+Category.create :label => "Equipment"
+Category.create :label => "External"
+Category.create :label => "Income"
+Category.create :label => "Rental"
+Category.create :label => "Salary"
+Category.create :label => "Tax & Bank"
+Category.create :label => "Travel"
 
-PaymentMode.create :label => "Danny"
-PaymentMode.create :label => "Cash"
-PaymentMode.create :label => "Gilles"
-PaymentMode.create :label => "Bank Euro"
-
-ToAccountant.create :label => "Yes"
-ToAccountant.create :label => "No"
-ToAccountant.create :label => "Wrong writing"
 
 # Categories
 %w[ Salary Rental Daily External Tax&Bank Equipement Travel Income].each {|c| Category.find_or_create_by_label(:label => c)}
@@ -69,7 +70,7 @@ Dir["#{seeds_path}/*"].select { |file| /(yml)$/ =~ file }.sort.each do |file|
 end
 
 # entries
-15000.times do 
+0.times do 
   
   account = Account.all[rand(Account.count)]
   category = Category.all[rand(Category.count)]
