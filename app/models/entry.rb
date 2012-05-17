@@ -25,6 +25,7 @@ class Entry < ActiveRecord::Base
 
     start_date = Date.new(0, 1, 1)
     end_date = Date.new(3000, 12, 1)
+    search_month = 1
 
   	if params[:date] && !params[:date][:year].nil? && !params[:date][:year].empty?
 
@@ -38,8 +39,6 @@ class Entry < ActiveRecord::Base
         end_date = Date.new(search_year, search_month, 1) + 1.month
       
       elsif
-      
-      	search_month = 1
       
         start_date = Date.new(search_year, search_month, 1)
         end_date = Date.new(search_year, search_month, 1) + 1.year
@@ -62,11 +61,11 @@ class Entry < ActiveRecord::Base
     end
     
     {
-      :cols => [['string', 'Date'], ['string', 'Description'], ['string', 'Category'], ['number', 'Amount (CNY)'], ['string', 'Invoice'], ['string', 'Cheque'], ['string', 'Accountant']],
+      :cols => [['date', 'Date'], ['string', 'Description'], ['string', 'Category'], ['number', 'Amount (CNY)'], ['string', 'Invoice'], ['string', 'Cheque'], ['string', 'Accountant']],
       :rows => request.inject([]) do |entries, entry|
-        date        = I18n.localize(entry.operation_date, :format => :default)
+        date        = entry.operation_date.strftime('%Y %B %d')#I18n.localize(entry.operation_date, :format => :short)
         description = entry.label
-        category    = entry.category.label
+        category    = entry.category.label if entry.category
         amount      = entry.amount
         invoice     = entry.invoice_num
         cheque      = entry.cheque_num
@@ -79,7 +78,7 @@ class Entry < ActiveRecord::Base
 
   def self.datas_table_categories(params=[])
     
-      entries = Entry.all.group_by{ |e| [e.operation_date.beginning_of_month, e.category_id] }.inject({}) do |result, entries|
+      entries = Entry.order("operation_date ASC").group_by{ |e| [e.operation_date.beginning_of_month, e.category_id] }.inject({}) do |result, entries|
         result[entries.first] = entries.last.collect(&:amount_in_cents).inject {|r, entry| r + entry} 
         result
        end
@@ -87,7 +86,7 @@ class Entry < ActiveRecord::Base
        from = Time.parse('2011-01-01 00:00:00 UTC')
        to   = Time.now.beginning_of_month
      {  
-      :cols => [['string', 'Month', "rowspan"]] + Category.all.inject([]) do |cols, item| 
+      :cols => [['date', 'Month', "rowspan"]] + Category.all.inject([]) do |cols, item| 
         cols << ['number', item.label, "colspan"]
         cols      	
       end + [['number', 'TOTAL', "colspan"]],
@@ -125,7 +124,7 @@ class Entry < ActiveRecord::Base
        from = Time.parse('2012-01-01 00:00:00 UTC')
        to   = Time.now.beginning_of_month
      {  
-      :cols => [['string', 'Month']] + Account.all.collect{|c| ['number', c.label]},
+      :cols => [['date', 'Month']] + Account.all.collect{|c| ['number', c.label]},
       :rows => (from.to_date..to.to_date).select {|_| _.day.eql?(1)}.inject([]) do |rows, day|
         row = [I18n.localize(day, :format => :table_header)] + Account.all.collect(&:id).inject([]) do |row, category_id|
            row << (entries[[day.to_time(:utc), category_id]] || 0)
@@ -156,11 +155,11 @@ class Entry < ActiveRecord::Base
     from = Date.new(2012, 5, 1)
     to   = from+1.month
     
-    entries = Entry.order("operation_date DESC").where(:operation_date => from..to)
+    entries = Entry.order("operation_date DESC")#.where(:operation_date => from..to)
     {  
-      :cols => [['string', 'Date'], ['string', 'Description'], ['string', 'Cheque'], ['string', 'Invoice'], ['string', 'Accountant'], ['number', 'Amount (CNY)']],
+      :cols => [['date', 'Date'], ['string', 'Description'], ['string', 'Cheque'], ['string', 'Invoice'], ['string', 'Accountant'], ['number', 'Amount (CNY)']],
       :rows => entries.inject([]) do |entries, entry|
-        date        = I18n.localize(entry.operation_date, :format => :default)
+        date        = entry.operation_date.strftime('%Y %B %d')#I18n.localize(entry.operation_date, :format => :default)
       	description = entry.label
         cheque      = entry.cheque_num
         invoice     = entry.invoice_num

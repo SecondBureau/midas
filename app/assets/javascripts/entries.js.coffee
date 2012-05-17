@@ -1,5 +1,5 @@
 jQuery ($) ->
-  $('#entries').dataTable
+  oTable = $('#entries').dataTable
   	sPaginationType: "full_numbers"
   	bJQueryUI:true
   	iDisplayLength:50
@@ -8,11 +8,10 @@ jQuery ($) ->
       for cell, i in cells
         if cell.className.indexOf("number") >= 0
           total = 0
-          for row in aData
+          for index in aiDisplay
+            row = aData[index]
             total = parseFloat total + parseFloat row[i]
           cells[i].innerHTML = parseFloat total
-  .columnFilter
-    sPlaceHolder: "head:before"
-    aoColumns:[
-      {type:"date-range"}
+    "aoColumnDefs":[
+      { "sType": "date", "aTargets": [0]}
     ]

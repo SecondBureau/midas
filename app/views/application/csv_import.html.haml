@@ -1,0 +1,10 @@
+%table
+  - @all.each do |e|
+    %tr
+      %td=e.label
+      %td=e.operation_date
+      %td=e.category.label if e.category
+      %td=e.account.label if e.account
+      %td=e.src_amount_in_cents
+      %td=e.cheque_num
+      %td=e.invoice_num

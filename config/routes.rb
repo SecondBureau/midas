@@ -28,6 +28,8 @@ Midas::Application.routes.draw do
   get '/logout', :controller => 'application', :action => 'logout'
   match '/login', :controller => 'application', :action => 'login'
   get '/trylogin', :controller => 'application', :action => 'trylogin'
+  match '/import', :controller => 'application', :action => 'import'
+  post '/application/csv_import', :controller => 'application', :action => 'csv_import'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

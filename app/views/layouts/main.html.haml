@@ -5,15 +5,14 @@
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
-
+  %body
     #main
       #header
-        %h1.website_title <span style="color:#444">M</span><span style="color:#666">idas</span>
+        %h1.website_title 
+          = link_to 'Midas', entries_path(:table => 'main')
         %div{:class => "log_admin_box"}
           - if user_signed_in?
             = link_to 'Admin', '/admin'
-            %br
-            = link_to 'Log out', 'users/sign_out'
           - else
             = link_to 'Log in', '/admin'
     #menu

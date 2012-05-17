@@ -1,5 +1,6 @@
 body {
 	font-family:Arial, Verdana;
+	background-image: url(grey-background.jpg)
 }
 
 a {
@@ -16,12 +17,16 @@ a:hover {
   font-family: Georgia; 
   font-size: 20px; 
   padding: 5px;
-  line-height:25px;
+  line-height:50px;
   text-align: right;
   margin-right:10px;
+  text-shadow:0px 1px 0px white;
+}
+.log_admin_box a {
+	margin-left:20px;
 }
 .log_admin_box a:hover {
-  background:#FFF;
+  background:inherit;
   color:#000;
 }
 
@@ -31,6 +36,12 @@ a:hover {
 	font-family: Georgia;
 	font-size:40px;
 	margin-left:10px;
+	text-shadow:0px 1px 0px white;
+}
+
+.website_title a:hover {
+  color:black;
+  background:inherit;
 }
 
 table, th, td {
@@ -120,6 +131,7 @@ th {
 	margin-left:20px;
 	margin-right:0px;
 	color:#DDD;
+	text-shadow:0px 1px 0px black;
 }
 #menu a:hover {
 	background:#444;
