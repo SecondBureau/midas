@@ -87,44 +87,6 @@ th {
 	color:#FFF;
 }
 
-#new_user > div > label {
-	width:200px;
-	font-size: 14px;
-}
-
-#new_user {
-	margin-top:100px;
-	text-align:center;
-	margin-left:auto;
-	margin-right:auto;
-}
-#new_user > div > input {
-	margin-bottom:0px;
-	font-size:20px;
-	padding:10px;
-	border:none;
-}
-#new_user > div > input.sign_up_email {
-	-moz-border-radius: 5px 5px 0px 0px;
-	border-bottom:1px solid #EEE;
-	text-shadow: 0px 1px 1px #DDD;
-	width:300px;
-}
-#new_user > div > input.sign_up_password {
-	-moz-border-radius: 0px 0px 5px 5px;
-	margin-bottom:20px;
-	text-shadow: 0px 1px 1px #DDD;
-	width:300px;
-}
-#new_user > div > input.sign_up_submit {
-	margin-bottom:20px;
-	-moz-border-radius: 5px;
-	background:#444;
-	color:white;
-	text-shadow:0px 1px 0px black;
-	cursor:pointer;
-}
-
 .ui-widget-header {
 	border:0px;
 	background:#CCC;
