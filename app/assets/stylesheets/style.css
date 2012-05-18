@@ -107,13 +107,13 @@ th {
 #new_user > div > input.sign_up_email {
 	-moz-border-radius: 5px 5px 0px 0px;
 	border-bottom:1px solid #EEE;
-	text-shadow: 0px 1px 1px #CCC;
+	text-shadow: 0px 1px 1px #DDD;
 	width:300px;
 }
 #new_user > div > input.sign_up_password {
 	-moz-border-radius: 0px 0px 5px 5px;
 	margin-bottom:20px;
-	text-shadow: 0px 1px 1px #CCC;
+	text-shadow: 0px 1px 1px #DDD;
 	width:300px;
 }
 #new_user > div > input.sign_up_submit {

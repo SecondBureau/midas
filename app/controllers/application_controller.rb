@@ -19,7 +19,7 @@ class ApplicationController < ActionController::Base
 		  @all = []
       CSV.foreach file.tempfile do |row|
         entry = Entry.new
-        entry.operation_date = Date.strptime(row[1], '%m/%d/%Y')
+        entry.operation_date = Date.strptime(row[1], '%m/%d/%Y')+1.day
         entry.category = Category.find(:first, :conditions => ["lower(label) = ?", row[2].downcase]) if row[2]
         entry.account = Account.find(:first, :conditions => ["lower(label) = ?", row[3].downcase]) if row[3]
         entry.label = row[4]
@@ -36,7 +36,8 @@ class ApplicationController < ActionController::Base
     
       Entry.transaction do
         @all.each do |e|
-      	  e.save
+          entry = Entry.find(:first, :conditions => ["label = ? AND operation_date = ? AND src_amount_in_cents = ?", e.label, e.operation_date, e.src_amount_in_cents])
+      	  e.save unless entry
         end
       end
 	  #else

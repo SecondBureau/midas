@@ -35,5 +35,5 @@ gem 'exchange' , :git => 'git@github.com:SecondBureau/exchange.git'
 
 gem 'haml', '3.1.4'
 gem "haml-rails"
-gem 'rails_admin'
+gem 'rails_admin', '>= 0.0.3'
 gem 'devise'
