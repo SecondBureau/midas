@@ -14,3 +14,37 @@
  *= require dataTables/src/demo_table_jui
  *= require_tree .
 */
+
+body {
+	font-family:Arial, Verdana;
+	background-image: url("grey-background.jpg");
+	/* text-shadow:0px 1px 0px white; */
+}
+
+a {
+	color:black;
+	text-decoration: none;
+}
+
+a:hover {
+	color:blue;
+}
+
+.log_admin_box {
+  float: right; 
+  font-family: Georgia; 
+  font-size: 20px; 
+  padding: 5px;
+  line-height:50px;
+  text-align: right;
+  margin-right:10px;
+  text-shadow:0px 1px 0px white;
+}
+.log_admin_box a {
+	margin-left:20px;
+}
+.log_admin_box a:hover {
+  background:inherit;
+  color:#000;
+}
+
