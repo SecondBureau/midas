@@ -4,23 +4,9 @@ Midas::Application.routes.draw do
 
   devise_for :users
 
-  
-
   resources :entries
   
   resources :users
-
-  match '/invoices' => 'invoices#index', :via => :post
-  
-  resources :invoices do 
-  collection do
-    get 'balances' 
-    get 'categories'
-    get 'cashflow'
-  end
-  end
-  
-  match '/invoices/cashflow/filter', :controller => 'invoices', :action => 'cashflow'
 
   resources :categories
   

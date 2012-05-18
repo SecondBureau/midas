@@ -1,6 +1,7 @@
 body {
 	font-family:Arial, Verdana;
-	background-image: url(grey-background.jpg)
+	background-image: url(grey-background.jpg);
+	text-shadow:0px 1px 0px white;
 }
 
 a {
@@ -120,6 +121,8 @@ th {
 	-moz-border-radius: 5px;
 	background:#444;
 	color:white;
+	text-shadow:0px 1px 0px black;
+	cursor:pointer;
 }
 
 .ui-widget-header {
