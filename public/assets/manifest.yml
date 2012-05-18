@@ -4,8 +4,8 @@ loading.gif: loading-b8e27ab15993aa07d4843e2a88bf3dee.gif
 rails.png: rails-be8732dac73d845ac5b142c8fb5f9fb0.png
 spinner.gif: spinner-98467b7f8106fc185fdb7cc1dd85eb06.gif
 ui-icons_222222_256x240.png: ui-icons_222222_256x240-1bca65a97a49d7d05ab2f3dc83b97cd5.png
-application.js: application-7868b9eef17d2d898fee57a01b46af3a.js
-application.css: application-bd0fc76d23aeaaf53c66a48f388a9c89.css
+application.js: application-3adcb2977f9b792180cd2a292ce90e1b.js
+application.css: application-8e315c2f7482ae074f71001673a7485e.css
 rails_admin/aristo/images/bg_fallback.png: rails_admin/aristo/images/bg_fallback-55829c6af9b9af338904d5a0ed9c191d.png
 rails_admin/aristo/images/icon_sprite.png: rails_admin/aristo/images/icon_sprite-555074e93c8d91f9f72d1a211d5a820e.png
 rails_admin/aristo/images/progress_bar.gif: rails_admin/aristo/images/progress_bar-f2c649fbf555aafd4d55d58040db2990.gif
@@ -48,11 +48,7 @@ rails_admin/multiselect/ui-icon-circle-triangle-n-dark.png: rails_admin/multisel
 rails_admin/multiselect/ui-icon-circle-triangle-n-light.png: rails_admin/multiselect/ui-icon-circle-triangle-n-light-63951a1feb158c987d5e473dc87ba1ad.png
 rails_admin/multiselect/ui-icon-circle-triangle-s-dark.png: rails_admin/multiselect/ui-icon-circle-triangle-s-dark-03eca32d57c6ea3674881671c1b92e89.png
 rails_admin/multiselect/ui-icon-circle-triangle-s-light.png: rails_admin/multiselect/ui-icon-circle-triangle-s-light-a02877fe58788fc6fa05616a3a57c8c8.png
-rails_admin/jquery.colorpicker.js: rails_admin/jquery.colorpicker-23592d50bfe421a8dd44080c5d5d1643.js
-rails_admin/rails_admin.js: rails_admin/rails_admin-3888bfe9b46535f8a82883e4be7772d9.js
 rails_admin/base/README: rails_admin/base/README
-rails_admin/jquery.colorpicker.css: rails_admin/jquery.colorpicker-9b45d2697f2d0f573b542f2fdbe60432.css
-rails_admin/rails_admin.css: rails_admin/rails_admin-f739642473eabdd4dcf3c809303872c6.css
 glyphicons-halflings-white.png: glyphicons-halflings-white-13553a5bf21ae3cc374006592488ec64.png
 glyphicons-halflings.png: glyphicons-halflings-f6675c325532ec11a984d58e172b8e2a.png
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-a1eb3e0764573ed4b261ca742ed96ac3.png
