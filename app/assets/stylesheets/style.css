@@ -91,31 +91,6 @@ th {
 	clear:both;
 }
 
-.filter {
-	background:#CCC;
-	padding:5px;
-	margin-bottom: 20px;
-	-moz-border-radius: 5px;
-	font-size:12px;
-	height:30px;
-}
-
-.button {
-	padding:6px;
-	-moz-border-radius: 5px;
-	height:30px;
-	vertical-align:top;
-}
-
-.filter > .button {
-	line-height:28px;
-	background:#EEE;
-}
-
-.filter > form {
-	display:inline;
-}
-
 #menu {
 	color:white;
 	background:#444;
@@ -138,59 +113,41 @@ th {
 	color:#FFF;
 }
 
-.field {
-	margin-bottom: 5px;
-}
-.field > label {
-	float:left;
+#new_user > div > label {
 	width:200px;
 	font-size: 14px;
 }
-.field > input, .filter > form > input {
-	-moz-border-radius: 5px;
-	border:1px solid #CCC;
-	padding:5px;
-	height:18px;
-	vertical-align:	top;
-}
 
-.field > select, .filter > form > select {
-	-moz-border-radius: 5px;
-	border:1px solid #CCC;
-	padding:5px;
-	height:30px;
-}
-
-#login-form {
+#new_user {
 	margin-top:100px;
-	width:300px;
 	text-align:center;
 	margin-left:auto;
 	margin-right:auto;
 }
-#login-form > input {
-	margin-bottom:10px;
+#new_user > div > input {
+	margin-bottom:0px;
+	font-size:20px;
+	padding:10px;
+	border:none;
 }
-
-.good_looking_form {
-	width:500px;
-	margin-left: auto;
-	margin-right: auto;
-}
-.good_looking_form h1 {
-	background: #EEE;
+#new_user > div > input.sign_up_email {
 	-moz-border-radius: 5px 5px 0px 0px;
-	padding:5px;
-	text-align: center;
+	border-bottom:1px solid #EEE;
+	text-shadow: 0px 1px 1px #CCC;
+	width:300px;
+}
+#new_user > div > input.sign_up_password {
+	-moz-border-radius: 0px 0px 5px 5px;
+	margin-bottom:20px;
+	text-shadow: 0px 1px 1px #CCC;
+	width:300px;
 }
 
-.good_looking_form > form {
-	padding:5px;
-}
-
-.good_looking_form > form > .actions {
-	margin-top:20px;
-	text-align: center;
+#new_user > div > input.sign_up_submit {
+	margin-bottom:20px;
+	-moz-border-radius: 5px;
+	background:#444;
+	color:white;
 }
 
 .ui-widget-header {
