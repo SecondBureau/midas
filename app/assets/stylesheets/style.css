@@ -60,33 +60,6 @@ th {
 	background:#EEE;
 }
 
-.cell_year {
-	background:#d8e4f5!important;
-	font-weight: bold;
-}
-
-.cell_border_left {
-	border-left:1px solid #AAA;
-}
-.cell_border_right {
-	border-right:1px solid #AAA;
-}
-.total_cell {
-	background:#f1f4f9!important;
-	font-weight: bold;
-}
-.month_cell {
-	background:#FAFAFA;
-	width:120px;
-	text-align: right;
-}
-.cell_money {
-	text-align: right;
-}
-.cell_colspan_header {
-	border-bottom:1px solid #E5E5E5;
-}
-
 #container {
 	clear:both;
 }
@@ -142,7 +115,6 @@ th {
 	text-shadow: 0px 1px 1px #CCC;
 	width:300px;
 }
-
 #new_user > div > input.sign_up_submit {
 	margin-bottom:20px;
 	-moz-border-radius: 5px;
