@@ -26,12 +26,6 @@ ActiveRecord::Schema.define(:version => 20120514025604) do
 
   add_index "accounts", ["label"], :name => "index_accounts_on_label", :unique => true
 
-  create_table "banks", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "categories", :force => true do |t|
     t.string   "label"
     t.datetime "created_at", :null => false
@@ -54,40 +48,6 @@ ActiveRecord::Schema.define(:version => 20120514025604) do
     t.datetime "updated_at",                         :null => false
   end
 
-  create_table "invoice_statuses", :force => true do |t|
-    t.string   "label"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "invoices", :force => true do |t|
-    t.datetime "date"
-    t.integer  "category_id"
-    t.integer  "payment_mode_id"
-    t.string   "description"
-    t.float    "amount"
-    t.integer  "invoice_status_id"
-    t.string   "cheque_number"
-    t.string   "invoice_number"
-    t.integer  "to_accountant_id"
-    t.integer  "bank_id"
-    t.datetime "created_at",                         :null => false
-    t.datetime "updated_at",                         :null => false
-    t.float    "rate",              :default => 1.0
-  end
-
-  add_index "invoices", ["bank_id"], :name => "index_invoices_on_bank_id"
-  add_index "invoices", ["category_id"], :name => "index_invoices_on_category_id"
-  add_index "invoices", ["invoice_status_id"], :name => "index_invoices_on_invoice_status_id"
-  add_index "invoices", ["payment_mode_id"], :name => "index_invoices_on_payment_mode_id"
-  add_index "invoices", ["to_accountant_id"], :name => "index_invoices_on_to_accountant_id"
-
-  create_table "payment_modes", :force => true do |t|
-    t.string   "label"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
     t.string   "username"
@@ -100,12 +60,6 @@ ActiveRecord::Schema.define(:version => 20120514025604) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
-
-  create_table "to_accountants", :force => true do |t|
-    t.string   "label"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
 
   create_table "users", :force => true do |t|
     t.string   "email"

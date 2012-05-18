@@ -1,0 +1,159 @@
+3,1/10/2012 0:00:00,rental,Gilles,Zhong Yu 1516 SubContract Them (January 2012),36.00,received,-,Receipt 0006,-,-
+1,1/5/2012 0:00:00,daily,cash,Team Lunch,(71.00),paid,,36140098,,no
+2,1/5/2012 0:00:00,tax & bank,danny,2011 ICBC bank statement printing for audit,(13.00),paid,,ICBC receipt,,no
+4,1/8/2012 0:00:00,rental,Gilles,Zhong Yu 1516 SubContract SC&C (January 2012),220.00,received,-,Receipt 0005,-,-
+5,1/10/2012 0:00:00,tax & bank,SPD,Bank interest (20111102-20111220),32.00,received,,SPD receipt,,yes
+6,1/10/2012 0:00:00,tax & bank,SPD,Cash cheque purchase,(19.00),paid,,SPD receipt,,no
+7,1/10/2012 0:00:00,,SPD,Cash withdrawal from bank 2,"(1,288.00)",paid,134676,-,,no
+8,1/10/2012 0:00:00,,cash,Cash withdrawal from bank 2,"4,220.00",,,,,
+9,1/10/2012 0:00:00,daily,danny,Transportation fee (201112),(1.00),paid,,,,yes
+10,1/11/2012 0:00:00,External,cash,Accountant fees (201111-201112),"(1,761.00)",paid,,,,yes
+11,1/11/2012 0:00:00,Salary,cash,Danny - 201112,"(1,435.00)",paid,,,,yes
+12,1/11/2012 0:00:00,External,cash,Office Cleaning 201112,(364.00),paid,,,,yes
+13,1/11/2012 0:00:00,daily,danny,Transportation fee (201201),(78.00),paid,,,,no
+14,1/11/2012 0:00:00,Salary,SPD,IIT payment 201112 for Danny,(223.00),paid,,,,yes
+15,1/17/2012 0:00:00,tax & bank,SPD,Online bank usbkey (2),(2.00),paid,,SPD receipt,,no
+16,1/17/2012 0:00:00,rental,SPD,Zhong Yu 1515 Rental (20120210-20120309),(941.00),paid,552511,12653960,,no
+17,1/17/2012 0:00:00,rental,SPD,Zhong Yu 1515 Fees (20120210-20120309),(85.00),paid,552512,13650090,,no
+18,1/12/2012 0:00:00,daily,cash,Team Lunch,(88.00),paid,,20970236,,no
+19,1/17/2012 0:00:00,Salary,SPD,Fesco - 201201,"(10,740.00)",paid,552514,4527982,,no
+20,1/19/2012 0:00:00,daily,cash,Team Lunch,(1.00),paid,,39668689,,no
+21,1/23/2012 0:00:00,rental,Gilles,Zhong Yu 1516 SubContract SC&C (February 2012),202.00,received,-,Receipt 0007,-,-
+22,1/20/2012 0:00:00,daily,cash,Batteries ,(22.00),paid,,4973163,,no
+23,1/31/2012 0:00:00,rental,Gilles,Zhong Yu 1516 SubContract Them (February 2012),"3,939.00",received,-,Receipt 0007,,-
+24,1/3/2012 0:00:00,daily,Gilles,team lunch,(92.00),paid,,32818241,,wrong writing
+25,2/2/2012 0:00:00,daily,Gilles,team lunch,(17.00),paid,,5718344,,wrong writing
+26,1/17/2012 0:00:00,daily,Gilles,team lunch,(56.00),paid,,receipt,,
+27,2/7/2012 0:00:00,daily,cash,team lunch,(37.00),paid,,17249420,,no
+28,2/7/2012 0:00:00,External,danny,Signature Witness fee,(160.00),paid,,HSBC receipt,,no
+29,2/7/2012 0:00:00,daily,cash,taxi fee to HSBC,(10.00),paid,,,,no
+30,2/7/2012 0:00:00,rental,Gilles,Zhong Yu 1516 Rental(20120210-20120309),"(3,305.00)",paid,,12653992,,
+31,2/7/2012 0:00:00,rental,Gilles,Zhong Yu 1516 fees(20120210-20120309),(51.00),paid,,16274614,,
+32,2/3/2012 0:00:00,External,SPD,SAFE Change,(11.00),paid,552515,10098582,,no
+33,2/3/2012 0:00:00,External,SPD,Service fee to China Solution final payment,"(2,025.00)",paid,552515,1236690,,no
+34,2/3/2012 0:00:00,External,SPD,stamp carving for custom,(33.00),paid,552515,7264498,,yes
+35,2/3/2012 0:00:00,External,SPD,"Stamp carving for Company, financial and name)",(22.00),paid,552515,7264459,,yes
+36,2/3/2012 0:00:00,External,SPD,Code certificate change,(29.00),paid,552515,1113856335,,yes
+37,2/3/2012 0:00:00,External,SPD,Business license update( address),(52.00),paid,552515,26914987,,yes
+38,2/3/2012 0:00:00,External,SPD,Business license update( name + Rep+Scope)),(69.00),paid,552515,3429473,,yes
+39,1/31/2012 0:00:00,daily,danny,transportation for 201201,(76.00),paid,,,,no
+40,1/12/2012 0:00:00,tax & bank,SPD,Tax payment (BT+ET+CT),"(2,230.00)",paid,,482097,,no
+41,1/17/2012 0:00:00,tax & bank,SPD,Online bank annual service 2012,(19.00),paid,,991339880008,,no
+42,2/6/2012 0:00:00,Salary,SPD,IIT for Danny 201201,(327.00),paid,,482240,,no
+43,2/9/2012 0:00:00,daily,cash,Team lunch,(117.00),paid,,20848787,,no
+44,2/14/2012 0:00:00,salary,SPD,Danny - 201201,(386.00),paid,spd999579179462,,,no
+45,2/14/2012 0:00:00,daily,danny,Business Card,(7.00),paid,,6486618,,no
+46,2/13/2012 0:00:00,daily,danny,Printer Fix,(235.00),paid,,11644315,,no
+47,2/16/2012 0:00:00,daily,cash,team lunch,(6.00),paid,,36141382,,no
+48,2/21/2012 0:00:00,tax & bank,danny,Change ICBC capital account stamp,(40.00),paid,,,,no
+49,2/21/2012 0:00:00,tax & bank,danny,Printing bank statement and interest slip for capital account,(1.00),paid,,,,no
+50,2/9/2012 0:00:00,income,SPD,Invoice 0007 (Second Bureau),"54,698.00",received,,Invoice 7,,no
+51,2/14/2012 0:00:00,tax & bank,SPD,bank transfer fee for Danny's salary (201201),0.00,paid,spd999570170462,,,no
+52,2/17/2012 0:00:00,income,SPD,Invoice 0009 (Bernard Controls),"9,847.00",received,,1st payment,,no
+53,2/22/2012 0:00:00,,SPD,Cash withdrawal from bank 2,0.00,withdrew,134678,,,no
+54,2/22/2012 0:00:00,,danny,Cash withdrawal from bank 2,0.00,received,,,,
+55,2/22/2012 0:00:00,daily,cash,business lunch,(91.00),paid,,4795438,,no
+56,2/24/2012 0:00:00,,SPD,Cash withdrawal from bank 2,#REF!,withdrew,134679,,,no
+57,2/24/2012 0:00:00,,cash,Cash withdrawal from bank 2,#REF!,received,,,,
+58,2/23/2012 0:00:00,External ,danny,payment for accounting software,(365.00),paid,,10500657,,no
+59,2/23/2012 0:00:00,External ,danny,payment for accountant for 201201,(300.00),paid,,,,no
+60,2/23/2012 0:00:00,External ,danny,payment for office cleaning fee 201201,(394.00),paid,,,,no
+61,2/23/2012 0:00:00,daily,cash,business lunch,(143.00),paid,,22876089,,no
+62,2/23/2012 0:00:00,daily,danny,team lunch,(40.00),paid,,,,no
+63,2/24/2012 0:00:00,rental,Gilles,1516 rental for 20120310-20120409),"(1,436.00)",paid,,58064,,no
+64,2/24/2012 0:00:00,rental,Gilles,1516 mgt fee for 20120310-20120409),(465.00),paid,,16274663,,no
+65,2/28/2012 0:00:00,tax & bank,SPD,bank transfer from ICBC capital account,28.00,received,,,,no
+66,2/28/2012 0:00:00,rental,SPD,1515 rental fee for 20120310-20120409,"(3,215.00)",paid,,58105,,no
+67,2/28/2012 0:00:00,rental,SPD,1515 mgt fee 20120310-20120409&elec 20120106-20120207,(815.00),paid,,16274662,,no
+68,2/28/2012 0:00:00,salary,SPD,Fesco (2012-02),"(15,511.00)",paid,,4538115,,no
+69,2/24/2012 0:00:00,daily,cash,business lunch,(51.00),paid,,3491238,,no
+70,2/25/2012 0:00:00,daily,cash,business lunch,(63.00),paid,,13378893,,no
+71,1/14/2012 0:00:00,daily,Gilles,Gilles phone bill charge,(296.00),paid,,12081635,,no
+72,2/29/2012 0:00:00,,SPD,Widthdraw,"(8,550.00)",withdrew,134680,,,no
+73,2/29/2012 0:00:00,,cash,Widthdraw,"17,253.00",received,,,,no
+74,2/29/2012 0:00:00,income,Bank Euro,Invoice 8 (SecondBureau),"4,308.00",received,,,,no
+75,3/1/2012 0:00:00,rental,Gilles,Zhong Yu 1516 SubContract Them (March 2012),740.00,received,,Receipt 0008,,-
+76,2/28/2012 0:00:00,tax & bank,bank 2 ,online bank transfer charge expense for FESCO 201202,(1.00),paid,spd110194240452,,,no
+77,2/28/2012 0:00:00,tax & bank,SPD,online bank transfer charge expense for rental transfer 20120310-20120409,0.00,paid,spd110194240430,,,no
+78,2/28/2012 0:00:00,tax & bank,SPD,online bank transfer charge expense for mgt fee transfer 20120310-20120409,0.00,paid,spd110194240831,,,no
+79,3/1/2012 0:00:00,daily,cash,team lunch,(5.00),paid,,39764038,,no
+80,2/28/2012 0:00:00,daily,danny,transportation expense ,(180.00),paid,,,,no
+81,3/1/2012 0:00:00,salary,SPD,Danny - 201202,(696.00),paid,spd999570079354,,,no
+82,3/12/2012 0:00:00,External ,danny,office Cleaning-201202,(217.00),paid,,,,no
+83,3/5/2012 0:00:00,rental,Gilles,Zhong Yu 1516 SubContract SC&C (March 2012),222.00,received,-,Receipt 0009,-,-
+84,3/3/2012 0:00:00,daily,cash,business lunch,(96.00),paid,,5169274,,no
+85,3/4/2012 0:00:00,daily,cash,business lunch,(52.00),paid,,6410079,,no
+86,3/6/2012 0:00:00,External ,Danny,accounting fee (201202),(581.00),paid,,,,no
+87,3/7/2012 0:00:00,salary,SPD,IIT for Danny 201202,(176.00),paid,,482471,,no
+88,3/6/2012 0:00:00,daily,SPD,GrandCloud usage ,(84.00),paid,,4309901,,no
+89,3/1/2012 0:00:00,tax & bank,SPD,bank tranfer expense for Danny salary 201202,0.00,paid,spd999570079354,,,no
+90,3/7/2012 0:00:00,tax & bank,SPD,online bank transfer charge expense for Grandcloud usage,(2.00),paid,,999570170013,,no
+91,3/8/2012 0:00:00,daily,cash,battery purchase,(42.00),paid,,2082931,,no
+92,3/8/2012 0:00:00,daily,Gilles,team lunch,(160.00),paid,,,,
+93,3/8/2012 0:00:00,External ,cash,Chinese training course,"(1,951.00)",paid,,6572949,,no
+94,3/10/2012 0:00:00,daily,cash,team lunch,(253.00),paid,,44205751,,no
+95,3/13/2012 0:00:00,daily,cash,team lunch,(126.00),paid,,18558035,,no
+96,3/15/2012 0:00:00,daily,cash,team lunch,(132.00),paid,,44240565,,no
+97,3/16/2012 0:00:00,External ,SPD,CCIFC membership  -2012 ,"(1,457.00)",paid,SPD 110194220540,901314725,,
+98,3/16/2012 0:00:00,tax & bank,SPD,online bank transfer charge for CCIFC payment,0.00,paid,SPD 110194220540,,,
+99,3/13/2012 0:00:00,External ,SPD,CCIFC Connexion advertisement order for 2012 ,"(1,348.00)",paid,SPD 110169170223,2897489,,
+100,3/13/2012 0:00:00,tax & bank,SPD,online bank transfer charge for Connexion ads order,(1.00),paid,SPD 110169170223,,,
+101,3/21/2012 0:00:00,tax & bank,SPD,bank account Interest income (20111221-20120320),31.00,received,,,,
+102,3/21/2012 0:00:00,tax & bank,bank Euro,bank account Interest income (20111221-20120320),0.00,received,,,,
+103,3/23/2012 0:00:00,rental,SPD,Office 1515 rental 20120410-20120509,(476.00),paid,spd110175720001,,,
+104,3/23/2012 0:00:00,tax & bank,SPD,online bank transfer charge for office 1515 rental transfer,0.00,paid,spd110175720001,,,
+105,3/23/2012 0:00:00,rental,SPD,Office 1515 mgt fee(20120410-20120509)+elec(20120208-20120306),"(1,172.00)",paid,spd110175720002,19242844,,
+106,3/23/2012 0:00:00,tax & bank,SPD,online bank transfer charge for Office 1515 mgt and Elec fee,0.00,paid,spd110175720002,,,
+107,3/26/2012 0:00:00,salary,SPD,Fesco (2012-03),"(1,240.00)",paid,spd 110194240086,4535374,,
+108,3/26/2012 0:00:00,tax & bank,SPD,online bank transfer charge for FESCO transfer,(1.00),paid,spd 110194240086,,,
+109,3/29/2012 0:00:00,,SPD,cash  withdrawal,"(1,555.00)",withdrew,134681,,,
+110,3/29/2012 0:00:00,,cash,Cash withdrawal from bank 2,410.00,received,,,,
+111,3/29/2012 0:00:00,rental ,Gilles,office 1516 rental 20120410-20120509,"(2,382.00)",paid,,,,
+112,3/29/2012 0:00:00,rental ,Gilles,Office 1516 mgt fee and door knob repair fee,(743.00),paid,,19242805,,
+113,3/21/2012 0:00:00,External,Danny,Gift for Tax officer ,(131.00),paid,,27508862,,
+114,3/29/2012 0:00:00,daily,Danny,transportation  expense,(251.00),paid,,,,
+115,3/29/2012 0:00:00,daily,cash,CCIFC seminar for social media,(343.00),paid,,2897490,,
+116,3/29/2012 0:00:00,,cash,Transfert to Danny's Account,(374.00),received,,,,
+117,3/29/2012 0:00:00,,Danny,Transfert from Cash Account,497.00,received,,,,
+118,4/5/2012 0:00:00,rental,Gilles,Zhong Yu 1516 SubContract Them (April 2012),"3,282.00",received,,Receipt 0010,,-
+119,4/9/2012 0:00:00,rental,Gilles,Zhong Yu 1516 SubContract SC&C (April 2012),"1,430.00",received,,Receipt 0011,,-
+120,2/14/2012 0:00:00,daily,cash,business meal,(108.00),paid,,3481100,,
+121,3/31/2012 0:00:00,daily,cash,business meal,(12.00),paid,,962075,,
+122,4/1/2012 0:00:00,daily,cash,business meal,(166.00),paid,,2547739,,
+123,4/5/2012 0:00:00,daily,cash,business meal,(159.00),paid,,44340785,,
+124,4/7/2012 0:00:00,daily,cash,business meal,(79.00),paid,,522174,,
+125,4/6/2012 0:00:00,daily,cash,business meal,(127.00),paid,,64820,,
+126,4/9/2012 0:00:00,daily,cash,business meal,(177.00),paid,,29882099,,
+127,3/20/2012 0:00:00,daily,Danny,Mouse x1,(78.00),paid,,5704162,,
+128,4/13/2012 0:00:00,daily,cash,business meal,(149.00),paid,,6599208,,
+129,4/16/2012 0:00:00,daily,cash,business meal,(139.00),paid,,2802147,,
+130,4/13/2011 0:00:00,daily,cash,team lunch,(215.00),paid,,44457244,,
+131,4/11/2012 0:00:00,daily,Gilles,business lunch,(209.00),paid,,no official invoice ,,
+132,4/12/2012 0:00:00,External,SPD,Internet usage 20120204-20130203,"(6,552.00)",paid,,485407,,
+133,4/10/2012 0:00:00,External,cash,fee for internet for Gilles,(765.00),paid,,1905352,,
+134,4/13/2012 0:00:00,External,SPD,office cleaning fee for 201203,(395.00),paid,110194240398,,,
+135,4/13/2012 0:00:00,tax & bank,SPD,bank transfer expense for office cleaning fee,(1.00),paid,110194240398,,,
+136,4/13/2012 0:00:00,Salary,SPD,salary for Danny for 201203,(819.00),paid,999570560305,,,
+137,4/13/2012 0:00:00,tax & bank,SPD,bank transfer charge for Danny salary,0.00,paid,999570560305,,,
+138,4/12/2012 0:00:00,Salary,SPD,IIT for Danny 201203,(114.00),paid,,482719,,
+139,4/10/2012 0:00:00,daily,cash,transportation fee for Gilles,(56.00),paid,,,,
+140,4/20/2012 0:00:00,daily,cash,team lunch,(129.00),paid,,3941022,,
+141,4/23/2012 0:00:00,income,SPD,Invoice 0012 (Bernard Controls),"8,974.00",Invoiced,,2nd Payment,,no
+142,4/17/2012 0:00:00,daily,cash,SH trip meal,(256.00),paid,,41758363,,
+143,4/17/2012 0:00:00,daily,cash,SH trip taxi,(43.00),paid,,30287260,,
+144,4/17/2012 0:00:00,daily,cash,taxi in beijing for Gilles,(106.00),paid,,18507037,,
+145,4/22/2012 0:00:00,daily,cash,business meal,(106.00),paid,,66293,,
+146,4/20/2012 0:00:00,daily,cash,team lunch,(176.00),paid,,2773192,,
+147,4/28/2012 0:00:00,daily,cash,team lunch,(187.00),paid,,2643188,,
+148,4/25/2012 0:00:00,Travel,cash,SH Trip Flight & hotel package,"(5,150.00)",paid,,21086206,,
+149,4/26/2012 0:00:00,salary,SPD,FESCO 201204,"(14,378.00)",paid,110175720573,19281984,,
+150,4/25/2012 0:00:00,rental,SPD,Zhongyu office 1515 ( mgt fee20120510-20120609+elec fee20120307-20120406+fix fee),(989.00),paid,110175720124,22716524,,
+151,4/23/2012 0:00:00,tax & bank,SPD,bank transfer charge for office 1515 mgt fee,(1.00),paid,110175720124,,,
+152,4/24/2012 0:00:00,rental,SPD,zhongyu office 1515(20120510-20120609),"(1,415.00)",paid,110175720123,58268,,
+153,4/23/2012 0:00:00,tax & bank,SPD,bank transfer charge for rental ,(1.00),paid,110175720123,,,
+154,4/24/2012 0:00:00,tax & bank,SPD,bank transfer charge for FESCO,0.00,paid,110175720573,,,
+155,5/2/2012 0:00:00,rental,Gilles,zhongyu office 1516(20120510-20120609),(814.00),paid,,58305,,
+156,5/2/2012 0:00:00,rental,Gilles,zhongyu office 1516 mgt fee (20120510-20120609),(67.00),paid,,22716548,,
+157,4/28/2012 0:00:00,,cash,cash transfer to Danny,"(1,069.00)",,,,,
+158,4/28/2012 0:00:00,,Danny,receive petty cash from cash account,"1,649.00",,,,,
+159,5/3/2012 0:00:00,daily,cash,team lunch,(164.00),paid,,38935149,,
