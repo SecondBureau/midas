@@ -8,18 +8,14 @@
   %body
     #main
       #header
-        %h1.website_title 
-          = link_to 'Midas', entries_path(:table => 'main')
-        %div{:class => "log_admin_box"}
-          - if user_signed_in?
-            = link_to 'Admin', '/admin'
-          - else
-            = link_to 'Log in', '/admin'
-    #menu
-      = link_to 'Full List', entries_path(:table => 'main')
-      = link_to 'Group by accounts', entries_path(:table => 'accounts')
-      = link_to 'Group by categories', entries_path(:table => 'categories')
-      = link_to "Cash Flow", entries_path(:table => 'cashflow')
+        = link_to 'Midas', entries_path(:table => 'main')
+    - if user_signed_in?
+      #menu
+        = link_to 'Full List', entries_path(:table => 'main')
+        = link_to 'Group by accounts', entries_path(:table => 'accounts')
+        = link_to 'Group by categories', entries_path(:table => 'categories')
+        = link_to "Cash Flow", entries_path(:table => 'cashflow')
+        = link_to 'Admin', '/admin'
 
     #container
       = yield

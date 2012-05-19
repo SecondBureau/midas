@@ -1,6 +1,8 @@
 Midas::Application.routes.draw do
   
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+  
+  match '/users/sign_up' => redirect('/404.html')
 
   devise_for :users
 

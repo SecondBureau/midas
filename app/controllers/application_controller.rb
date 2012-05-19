@@ -40,8 +40,5 @@ class ApplicationController < ActionController::Base
       	  e.save unless entry
         end
       end
-	  #else
-	  #  redirect_to '/'
-    #end
   end
 end
