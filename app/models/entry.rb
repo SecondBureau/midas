@@ -7,7 +7,7 @@ class Entry < ActiveRecord::Base
   
   before_validation :set_currency, :set_amount
   def amount
-    amount_in_cents / 100.0
+    src_amount_in_cents / 100.0 # Previously, amount_in_cents, but sometimes = 0
   end
   
   def self.datas_table_main(params=[])  

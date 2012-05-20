@@ -62,14 +62,17 @@ CSV.foreach file do |row|
   begin
     entry.operation_date = Date.strptime(row[1], '%m/%d/%Y')+1.day
   
-    category = ""
-    if row[2] and row[2] == "Gcro"
-  	  category = "Gilles"
+    
+    if row[2]
+      category = row[2]
+      if row[2] == "Gcro"
+  	    category = "Gilles"
+  	  end
+  	  entry.category = Category.find(:first, :conditions => ["lower(label) = ?", category.downcase])
     end
-    entry.category = Category.find(:first, :conditions => ["lower(label) = ?", category.downcase]) if category
   
-    account = ""
     if row[3]
+      account = row[3]
   	  if row[3].downcase == "bank 2"
   		  account = "SPD CNY"
   	  elsif row[3].downcase == "bank"
@@ -77,12 +80,12 @@ CSV.foreach file do |row|
   	  elsif row[3].downcase == "Bank €"
   		  account = "SPD EUR"
   	  end
+  	  entry.account = Account.find(:first, :conditions => ["lower(label) = ?", account.downcase])
     end
-    entry.account = Account.find(:first, :conditions => ["lower(label) = ?", account.downcase]) if account
+    
     entry.label = row[4]
     str = row[5].to_s.tr("()", '')
-  
-    if entry.category && entry.category.id == 8
+    if entry.category && entry.category.label == "Income"
       entry.src_amount_in_cents = str.to_i*100
     else
       entry.src_amount_in_cents = str.to_i*-100
