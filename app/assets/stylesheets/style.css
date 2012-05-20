@@ -94,6 +94,8 @@ th {
 	text-shadow: 0px 1px 1px #DDD;
 	width:300px;
 	margin:0 0 1px 0;
+	border-top:1px solid #DDD;
+	border-left: 1px solid #DDD;
 }
 
 #new_user > div > input.sign_up_password {
@@ -104,6 +106,7 @@ th {
 	text-shadow: 0px 1px 1px #EEE;
 	width:300px;
  	margin:0 0 40px 0;
+ 	border-left: 1px solid #DDD;
 }
 
 #new_user > div > input.sign_up_submit {

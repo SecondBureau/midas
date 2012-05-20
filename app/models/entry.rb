@@ -84,21 +84,7 @@ class Entry < ActiveRecord::Base
         end
         rows << row
         rows
-      end,
-      :options => {
-        :height => params[:h] || '300px',
-        :width => params[:w] || '100%',
-        :showRowNumber => false,
-        :page => 'enable',
-        :pageSize => 30,
-        :allowHtml => true,
-        :sort => 'disable'
-      },
-      :formatters => Account.all.inject({}) do |formatters, account|
-          formatters[formatters.count + 1] = {prefix: '', negativeColor: 'red', negativeParens: true}
-          formatters
-        end
-      
+      end
     }
   end
   
