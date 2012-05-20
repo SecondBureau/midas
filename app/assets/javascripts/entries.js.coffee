@@ -13,7 +13,7 @@ jQuery ($) ->
               row = aData[index]
               value = parseFloat row[i].replace " ",""
               total = parseFloat total + parseFloat value
-            cells[i].innerHTML = total
+            cells[i].innerHTML = total.toMoney()
       "aoColumnDefs":[
         { "sType": "date", "aTargets": [0]}
       ]
