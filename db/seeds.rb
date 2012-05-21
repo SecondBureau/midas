@@ -65,20 +65,19 @@ CSV.foreach file do |row|
     
     if row[2]
       category = row[2]
-      if row[2] == "Gcro"
-  	    category = "Gilles"
-  	  end
   	  entry.category = Category.find(:first, :conditions => ["lower(label) = ?", category.downcase])
     end
   
     if row[3]
       account = row[3]
-  	  if row[3].downcase == "bank 2"
+  	  if row[3].downcase == "bank 2".downcase
   		  account = "SPD CNY"
-  	  elsif row[3].downcase == "bank"
+  	  elsif row[3].downcase == "bank".downcase
   		  account = "ICBC CNY"
-  	  elsif row[3].downcase == "Bank €"
+  	  elsif row[3].downcase == "Bank €".downcase
   		  account = "SPD EUR"
+  	  elsif row[3].downcase == "Gcro".downcase
+  		  account = "Gilles"
   	  end
   	  entry.account = Account.find(:first, :conditions => ["lower(label) = ?", account.downcase])
     end

@@ -20,8 +20,27 @@ class ApplicationController < ActionController::Base
       CSV.foreach file.tempfile do |row|
         entry = Entry.new
         entry.operation_date = Date.strptime(row[1], '%m/%d/%Y')+1.day
-        entry.category = Category.find(:first, :conditions => ["lower(label) = ?", row[2].downcase]) if row[2]
-        entry.account = Account.find(:first, :conditions => ["lower(label) = ?", row[3].downcase]) if row[3]
+    if row[2]
+      category = row[2]
+      if row[2] == "Gcro"
+  	    category = "Gilles"
+  	  end
+  	  binding.pry
+  	  entry.category = Category.find(:first, :conditions => ["lower(label) = ?", category.downcase])
+    end
+  
+    if row[3]
+      account = row[3]
+  	  if row[3].downcase == "bank 2"
+  		  account = "SPD CNY"
+  	  elsif row[3].downcase == "bank"
+  		  account = "ICBC CNY"
+  	  elsif row[3].downcase == "Bank "
+  		  account = "SPD EUR"
+  	  end
+  	  entry.account = Account.find(:first, :conditions => ["lower(label) = ?", account.downcase])
+    end
+    
         entry.label = row[4]
         str = row[5].to_s.tr("()", '')
         if entry.category && entry.category.id == 8
