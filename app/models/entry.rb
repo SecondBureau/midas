@@ -23,7 +23,7 @@ class Entry < ActiveRecord::Base
         invoice     = entry.invoice_num
         cheque      = entry.cheque_num
         accountant  = entry.accountant_status
-        entries << [date, description, category, account, amount, invoice, cheque, accountant]
+        entries << {"datas" => [date, description, category, account, amount, invoice, cheque, accountant], "row_style" => (entry.amount.to_i > 0) ? 'positive' : ''}
         entries
        end
      }
@@ -60,7 +60,7 @@ class Entry < ActiveRecord::Base
         row << entries.select{|(date, cat_id), amount| date.eql?(day.to_time(:utc)) }.values.sum / 100.0
         # sum of amounts for previous months for all categories
         row << entries.select{|(date, cat_id), amount| date <= day.to_time(:utc)}.values.sum / 100.0
-        rows << row
+        rows << {"datas" => row}
         rows
       end
     }
@@ -83,7 +83,7 @@ class Entry < ActiveRecord::Base
            row << (entries[[day.to_time(:utc), category_id]] || 0)
            row
         end
-        rows << row
+        rows << {"datas" => row}
         rows
       end
     }
@@ -105,7 +105,7 @@ class Entry < ActiveRecord::Base
         invoice     = entry.invoice_num
         accountant  = entry.accountant_status
         amount      = entry.amount
-        entries << [date, description, account, cheque, invoice, accountant, amount]
+        entries << {"datas" => [date, description, account, cheque, invoice, accountant, amount], "row_style" => (entry.amount.to_i > 0) ? 'positive' : ''}
         entries
       end
     }

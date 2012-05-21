@@ -84,7 +84,7 @@ CSV.foreach file do |row|
     end
     
     entry.label = row[4]
-    str = row[5].to_s.tr("()", '')
+    str = row[5].to_s.tr("(),", '')
     if entry.category && entry.category.label == "Income"
       entry.src_amount_in_cents = str.to_i*100
     else

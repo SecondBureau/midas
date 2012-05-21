@@ -152,3 +152,7 @@ tfoot > tr > th {
 	font-weight: bold!important;
 	color: #45565d!important;
 }
+
+.positive {
+	background:#f2ffe0!important;
+}

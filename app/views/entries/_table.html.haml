@@ -19,21 +19,26 @@
             %th= col[1]
   %tbody
     - @entries[:rows].each do |row|
-      %tr
+    
+      %tr{:class=>row['row_style']}
         - $j = 0
         - $k = 0
-        - for i in 0..row.count-1
-          - $value = row[i]
+        - for i in 0..row['datas'].count-1
+          
+          - $class = @entries[:cols][$j][0]
+          - $value = row['datas'][i]
+          
           - if @entries[:cols][$j][0] == "number"
-            - $value = number_to_currency(row[i], :delimiter=>' ', :format=>'%n')
+            - $value = number_to_currency($value, :delimiter=>' ', :format=>'%n')
+            
           - if @entries[:cols][$j][2] == "colspan"
-            %td{:value=>row[i], :class=>@entries[:cols][$j][0]}= $value
+            %td{:class=>$class}= $value
             - $k = $k + 1
             - if $k > 1
               - $j = $j + 1
               - $k = 0
           - else
-            %td{:value=>row[i], :class=>@entries[:cols][$j][0]}= $value
+            %td{:class=>$class}= $value
             - $j = $j + 1
   %tfoot
     %tr
