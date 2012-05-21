@@ -7,22 +7,23 @@ class Entry < ActiveRecord::Base
   
   before_validation :set_currency, :set_amount
   def amount
-    src_amount_in_cents / 100.0 # Previously, amount_in_cents, but sometimes = 0
+    amount_in_cents / 100.0
   end
   
   def self.datas_table_main(params=[])  
 
     {
-      :cols => [['date', 'Date'], ['string', 'Description'], ['string', 'Category'], ['number', 'Amount (CNY)'], ['string', 'Invoice'], ['string', 'Cheque'], ['string', 'Accountant']],
+      :cols => [['date', 'Date'], ['string', 'Description'], ['string', 'Category'], ['string', 'Account'], ['number', 'Amount (CNY)'], ['string', 'Invoice'], ['string', 'Cheque'], ['string', 'Accountant']],
       :rows => Entry.order("operation_date DESC").inject([]) do |entries, entry|
         date        = entry.operation_date.strftime('%Y %B %d')#I18n.localize(entry.operation_date, :format => :short)
         description = entry.label
         category    = entry.category.label if entry.category
+        account			= entry.account.label if entry.account
         amount      = entry.amount
         invoice     = entry.invoice_num
         cheque      = entry.cheque_num
         accountant  = entry.accountant_status
-        entries << [date, description, category, amount, invoice, cheque, accountant]
+        entries << [date, description, category, account, amount, invoice, cheque, accountant]
         entries
        end
      }
@@ -95,15 +96,16 @@ class Entry < ActiveRecord::Base
     
     entries = Entry.order("operation_date DESC")#.where(:operation_date => from..to)
     {  
-      :cols => [['date', 'Date'], ['string', 'Description'], ['string', 'Cheque'], ['string', 'Invoice'], ['string', 'Accountant'], ['number', 'Amount (CNY)']],
+      :cols => [['date', 'Date'], ['string', 'Description'], ['string', 'Account'], ['string', 'Cheque'], ['string', 'Invoice'], ['string', 'Accountant'], ['number', 'Amount (CNY)']],
       :rows => entries.inject([]) do |entries, entry|
         date        = entry.operation_date.strftime('%Y %B %d')#I18n.localize(entry.operation_date, :format => :default)
       	description = entry.label
+      	account			= entry.account.label if entry.account
         cheque      = entry.cheque_num
         invoice     = entry.invoice_num
         accountant  = entry.accountant_status
         amount      = entry.amount
-        entries << [date, description, cheque, invoice, accountant, amount]
+        entries << [date, description, account, cheque, invoice, accountant, amount]
         entries
       end
     }
@@ -116,7 +118,7 @@ class Entry < ActiveRecord::Base
   end
   
   def set_amount
-    if currency.eql?(Account::SYSTEM_CURRENCY)
+    if !account || currency.eql?(Account::SYSTEM_CURRENCY)
       self.amount_in_cents = src_amount_in_cents
     else
       exchange_date = operation_date.end_of_month.future? ? Time.now : operation_date.end_of_month
