@@ -1,2 +1,4 @@
 == Midas
 - Yet Another Simple Financial Software
+
+== How to use ?
