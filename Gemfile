@@ -25,7 +25,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer'
   gem 'uglifier', '>= 1.0.3'
-  gem 'jquery-datatables-rails', github: 'rweng/jquery-datatables-rails'
+  gem 'jquery-datatables-rails', :git => 'git@github.com:rweng/jquery-datatables-rails.git'
   gem 'jquery-ui-rails'
 end
 
