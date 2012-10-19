@@ -1,20 +1,20 @@
 class Entry < ActiveRecord::Base
-  
+
   attr_accessible :label, :category_id, :account_id, :src_amount_in_cents,  :cheque_num, :invoice_num, :operation_date, :status
-  
+
   belongs_to :account, :inverse_of => :entries
   belongs_to :category, :inverse_of => :entries
-  
+
   before_validation :set_currency, :set_amount
   def amount
     amount_in_cents / 100.0
   end
-  
-  def self.datas_table_main(params=[])  
+
+  def self.datas_table_main(params=[])
 
     {
       :cols => [['date', 'Date'], ['string', 'Description'], ['string', 'Category'], ['string', 'Account'], ['number', 'Amount (CNY)'], ['string', 'Invoice'], ['string', 'Cheque'], ['string', 'Accountant']],
-      :rows => Entry.order("operation_date DESC").inject([]) do |entries, entry|
+      :rows => Entry.order("operation_date DESC").includes(:category).includes(:account).inject([]) do |entries, entry|
         date        = entry.operation_date.strftime('%Y %B %d')#I18n.localize(entry.operation_date, :format => :short)
         description = entry.label
         category    = entry.category.label if entry.category
@@ -30,18 +30,18 @@ class Entry < ActiveRecord::Base
   end
 
   def self.datas_table_categories(params=[])
-    
+
       entries = Entry.order("operation_date ASC").group_by{ |e| [e.operation_date.beginning_of_month, e.category_id] }.inject({}) do |result, entries|
-        result[entries.first] = entries.last.collect(&:amount_in_cents).inject {|r, entry| r + entry} 
+        result[entries.first] = entries.last.collect(&:amount_in_cents).inject {|r, entry| r + entry}
         result
        end
 
        from = Time.parse('2011-01-01 00:00:00 UTC')
        to   = Time.now.beginning_of_month
-     {  
-      :cols => [['date', 'Month', "rowspan"]] + Category.all.inject([]) do |cols, item| 
+     {
+      :cols => [['date', 'Month', "rowspan"]] + Category.all.inject([]) do |cols, item|
         cols << ['number', item.label, "colspan"]
-        cols      	
+        cols
       end + [['number', 'TOTAL', "colspan"]],
       :under_cols => Category.all.inject([]) do |under_cols, item|
         under_cols << ['number', 'Month']
@@ -64,19 +64,19 @@ class Entry < ActiveRecord::Base
         rows
       end
     }
-    
+
   end
-  
+
   def self.datas_table_accounts(params=[])
-    
+
       entries = Entry.all.group_by{ |e| [e.operation_date.beginning_of_month, e.account_id] }.inject({}) do |result, entries|
         result[entries.first] = entries.last.collect(&:amount_in_cents).inject {|r, entry| r + entry} / 100.0
         result
        end
-       
+
        from = Time.parse('2012-01-01 00:00:00 UTC')
        to   = Time.now.beginning_of_month
-     {  
+     {
       :cols => [['date', 'Month']] + Account.all.collect{|c| ['number', c.label]},
       :rows => (from.to_date..to.to_date).select {|_| _.day.eql?(1)}.inject([]) do |rows, day|
         row = [I18n.localize(day, :format => :table_header)] + Account.all.collect(&:id).inject([]) do |row, category_id|
@@ -88,14 +88,14 @@ class Entry < ActiveRecord::Base
       end
     }
   end
-  
+
   def self.datas_table_cashflow(params=[])
-  
+
     from = Date.new(2012, 5, 1)
     to   = from+1.month
-    
-    entries = Entry.order("operation_date DESC")#.where(:operation_date => from..to)
-    {  
+
+    entries = Entry.order("operation_date DESC").includes(:account)
+    {
       :cols => [['date', 'Date'], ['string', 'Description'], ['string', 'Account'], ['string', 'Cheque'], ['string', 'Invoice'], ['string', 'Accountant'], ['number', 'Amount (CNY)']],
       :rows => entries.inject([]) do |entries, entry|
         date        = entry.operation_date.strftime('%Y %B %d')#I18n.localize(entry.operation_date, :format => :default)
@@ -110,13 +110,13 @@ class Entry < ActiveRecord::Base
       end
     }
   end
-  
+
   private
-  
+
   def set_currency
     self.currency = self.account.currency if self.account
   end
-  
+
   def set_amount
     if !account || currency.eql?(Account::SYSTEM_CURRENCY)
       self.amount_in_cents = src_amount_in_cents
@@ -129,5 +129,5 @@ class Entry < ActiveRecord::Base
       end
     end
   end
-  
+
 end

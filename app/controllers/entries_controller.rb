@@ -1,9 +1,9 @@
 class EntriesController < ApplicationController
-  
+
   layout 'main'
-  
+
   DEFAULT_TABLE='main'
-  
+
   def index
 		if user_signed_in?
     	table ||= ( params[:table] || DEFAULT_TABLE)
@@ -27,14 +27,14 @@ class EntriesController < ApplicationController
 
   def destroy
   end
-  
-  private 
-  
+
+  private
+
   def entry
     @entry ||= params[:id] ? Entry.find(params[:id]) : Entry.new(params[:entry])
   end
   helper_method :entry
-  
+
   def entries
   	if user_signed_in?
     	@entries ||= Entry.all
@@ -43,7 +43,7 @@ class EntriesController < ApplicationController
     end
   end
   helper_method :entries
-  
+
   def table
     @table ||= ( params[:table] || DEFAULT_TABLE)
   end

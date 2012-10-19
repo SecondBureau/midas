@@ -1,17 +1,17 @@
 Midas::Application.routes.draw do
-  
+
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-  
+
   match '/users/sign_up' => redirect('/404.html')
 
   devise_for :users
 
   resources :entries
-  
+
   resources :users
 
   resources :categories
-  
+
   # Index and login/logout
   get '/logout', :controller => 'application', :action => 'logout'
   match '/login', :controller => 'application', :action => 'login'

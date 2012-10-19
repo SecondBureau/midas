@@ -8,7 +8,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 # First user
-User.new({:email => "romain@secondbureau.com", :password => "admin01", :password_confirmation => "admin01" }).save(:validate=>false)
+#User.new({:email => "romain@secondbureau.com", :password => "admin01", :password_confirmation => "admin01" }).save(:validate=>false)
 
 # Categories
 %w[ Salary Rental Daily External Tax&Bank Equipement Travel Income].each {|c| Category.find_or_create_by_label(:label => c)}
@@ -58,16 +58,16 @@ file = File.open('db/seeds/previous_entries.csv')
 @all = []
 CSV.foreach file do |row|
   entry = Entry.new
-  
+
   begin
     entry.operation_date = Date.strptime(row[1], '%m/%d/%Y')+1.day
-  
-    
+
+
     if row[2]
       category = row[2]
   	  entry.category = Category.find(:first, :conditions => ["lower(label) = ?", category.downcase])
     end
-  
+
     if row[3]
       account = row[3]
   	  if row[3].downcase == "bank 2".downcase
@@ -81,7 +81,7 @@ CSV.foreach file do |row|
   	  end
   	  entry.account = Account.find(:first, :conditions => ["lower(label) = ?", account.downcase])
     end
-    
+
     entry.label = row[4]
     str = row[5].to_s.tr("(),", '')
     if entry.category && entry.category.label == "Income"
@@ -95,9 +95,9 @@ CSV.foreach file do |row|
   rescue Exception=>e
   	# Exception! most of the time, because the format of one of the data is totally wrong : not a date, or not a integer, etc.
   end
-  
+
 end
-    
+
 Entry.transaction do
   @all.each do |e|
     entry = Entry.find(:first, :conditions => ["label = ? AND operation_date = ? AND src_amount_in_cents = ?", e.label, e.operation_date, e.src_amount_in_cents])
