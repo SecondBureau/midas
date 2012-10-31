@@ -1,6 +1,0 @@
-%form{:action => '/', :method => 'post'}
-  = select_year(@search_year, :prompt => 'Choose year')
-  = select_month(@search_month, :prompt => 'Choose month')
-  = select("search", "category_id", Category.all.collect {|p| [ p.label, p.id ] }, {:prompt => 'Choose category', :selected => @search_category_id})
-  %input{:type => "text", :placeholder => "Search in description…", :value => @search_label, :name => "search[label]"}
-  %input{:type => "submit", :value => "Filter", :class => "button"}

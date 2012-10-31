@@ -1,23 +1,11 @@
 Midas::Application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-
-  match '/users/sign_up' => redirect('/404.html')
-
-  devise_for :users
-
-  resources :entries
-
-  resources :users
-
-  resources :categories
-
-  # Index and login/logout
-  get '/logout', :controller => 'application', :action => 'logout'
-  match '/login', :controller => 'application', :action => 'login'
-  get '/trylogin', :controller => 'application', :action => 'trylogin'
-  match '/import', :controller => 'application', :action => 'import'
-  post '/application/csv_import', :controller => 'application', :action => 'csv_import'
+  # This line mounts Refinery's routes at the root of your application.
+  # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.
+  # If you would like to change where this extension is mounted, simply change the :at option to something different.
+  #
+  # We ask that you don't use the :as option here, as Refinery relies on it being the default of "refinery"
+  mount Refinery::Core::Engine, :at => '/'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -68,11 +56,11 @@ Midas::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-   root :to => 'entries#index'
+  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id))(.:format)'
+  # match ':controller(/:action(/:id(.:format)))'
 end
