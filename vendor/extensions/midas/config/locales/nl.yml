@@ -1,0 +1,92 @@
+nl:
+  refinery:
+    plugins:
+      entries:
+        title: Entries
+      accounts:
+        title: Accounts
+      categories:
+        title: Categories
+    midas:
+      admin:
+        entries:
+          actions:
+            create_new: Maak een nieuwe Entry
+            reorder: Wijzig de volgorde van de Entries
+            reorder_done: Klaar met het wijzingen van de volgorde van de Entries
+          records:
+            title: Entries
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Entries. Druk op 'Maak een nieuwe Entry'
+              om de eerste aan te maken.
+          entry:
+            view_live_html: Bekijk deze entry op de website <br/><em>(opent een nieuw
+              venster)</em>
+            edit: Bewerk deze entry
+            delete: Verwijder deze entry voor eeuwig
+        accounts:
+          actions:
+            create_new: Maak een nieuwe Account
+            reorder: Wijzig de volgorde van de Accounts
+            reorder_done: Klaar met het wijzingen van de volgorde van de Accounts
+          records:
+            title: Accounts
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Accounts. Druk op 'Maak een nieuwe Account'
+              om de eerste aan te maken.
+          account:
+            view_live_html: Bekijk deze account op de website <br/><em>(opent een
+              nieuw venster)</em>
+            edit: Bewerk deze account
+            delete: Verwijder deze account voor eeuwig
+        categories:
+          actions:
+            create_new: Maak een nieuwe Category
+            reorder: Wijzig de volgorde van de Categories
+            reorder_done: Klaar met het wijzingen van de volgorde van de Categories
+          records:
+            title: Categories
+            sorry_no_results: Helaas! Er zijn geen resultaten gevonden.
+            no_items_yet: Er zijn nog geen Categories. Druk op 'Maak een nieuwe Category'
+              om de eerste aan te maken.
+          category:
+            view_live_html: Bekijk deze category op de website <br/><em>(opent een
+              nieuw venster)</em>
+            edit: Bewerk deze category
+            delete: Verwijder deze category voor eeuwig
+      entries:
+        show:
+          other: Andere Entries
+      accounts:
+        show:
+          other: Andere Accounts
+      categories:
+        show:
+          other: Andere Categories
+  activerecord:
+    attributes:
+      refinery/midas/entry:
+        midas_category_id: Midas Category
+        midas_account_id: Midas Account
+        currency: Currency
+        src_amount_in_cents: Src Amount In Cents
+        amount_in_cents: Amount In Cents
+        status: Status
+        title: Title
+        invoice: Invoice
+        cheque: Cheque
+        acountant_status: Acountant Status
+        valid_after: Valid After
+      refinery/midas/account:
+        title: Title
+        description: Description
+        active: Active
+        currency: Currency
+        confidential: Confidential
+        group: Group
+        opening_balance: Opening Balance
+        opened_on: Opened On
+        closed_on: Closed On
+      refinery/midas/category:
+        title: Title
+        description: Description

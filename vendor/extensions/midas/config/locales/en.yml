@@ -1,0 +1,89 @@
+en:
+  refinery:
+    plugins:
+      entries:
+        title: Entries
+      accounts:
+        title: Accounts
+      categories:
+        title: Categories
+    midas:
+      admin:
+        entries:
+          actions:
+            create_new: Add New Entry
+            reorder: Reorder Entries
+            reorder_done: Done Reordering Entries
+          records:
+            title: Entries
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Entries yet. Click "Add New Entry" to add your
+              first entry.
+          entry:
+            view_live_html: View this entry live <br/><em>(opens in a new window)</em>
+            edit: Edit this entry
+            delete: Remove this entry forever
+        accounts:
+          actions:
+            create_new: Add New Account
+            reorder: Reorder Accounts
+            reorder_done: Done Reordering Accounts
+          records:
+            title: Accounts
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Accounts yet. Click "Add New Account" to add
+              your first account.
+          account:
+            view_live_html: View this account live <br/><em>(opens in a new window)</em>
+            edit: Edit this account
+            delete: Remove this account forever
+        categories:
+          actions:
+            create_new: Add New Category
+            reorder: Reorder Categories
+            reorder_done: Done Reordering Categories
+          records:
+            title: Categories
+            sorry_no_results: Sorry! There are no results found.
+            no_items_yet: There are no Categories yet. Click "Add New Category" to
+              add your first category.
+          category:
+            view_live_html: View this category live <br/><em>(opens in a new window)</em>
+            edit: Edit this category
+            delete: Remove this category forever
+      entries:
+        show:
+          other: Other Entries
+      accounts:
+        show:
+          other: Other Accounts
+      categories:
+        show:
+          other: Other Categories
+  activerecord:
+    attributes:
+      refinery/midas/entry:
+        midas_category_id: Midas Category
+        midas_account_id: Midas Account
+        currency: Currency
+        src_amount_in_cents: Src Amount In Cents
+        amount_in_cents: Amount In Cents
+        status: Status
+        title: Title
+        invoice: Invoice
+        cheque: Cheque
+        acountant_status: Acountant Status
+        valid_after: Valid After
+      refinery/midas/account:
+        title: Title
+        description: Description
+        active: Active
+        currency: Currency
+        confidential: Confidential
+        group: Group
+        opening_balance: Opening Balance
+        opened_on: Opened On
+        closed_on: Closed On
+      refinery/midas/category:
+        title: Title
+        description: Description

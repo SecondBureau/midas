@@ -1,0 +1,23 @@
+%li{:class => "clearfix record #{cycle("on", "on-hover")}", :id => dom_id(account)}
+  %span.title
+    = account.title
+    - if Refinery.i18n_enabled? and Refinery::I18n.frontend_locales.many?
+      %span.preview
+        - account.translations.each do |translation|
+          - if translation.title.present?
+            = link_to refinery_icon_tag("flags/#{translation.locale}.png", :size => '16x11'),        |
+              refinery.edit_midas_admin_account_path(account, :switch_locale => translation.locale), |
+              :class => 'locale'                                                                     |
+  %span.actions
+    = link_to refinery_icon_tag("application_go.png"), refinery.midas_account_path(account), |
+      :title => t('.view_live_html'),                                                        |
+      :target => "_blank"                                                                    |
+    -#
+    = link_to refinery_icon_tag("application_edit.png"), refinery.edit_midas_admin_account_path(account), |
+      :title => t('.edit')                                                                                |
+    -#
+    = link_to refinery_icon_tag("delete.png"), refinery.midas_admin_account_path(account),  |
+      :class => "cancel confirm-delete",                                                    |
+      :title => t('.delete'),                                                               |
+      :confirm => t('message', :scope => 'refinery.admin.delete', :title => account.title), |
+      :method => :delete                                                                    |

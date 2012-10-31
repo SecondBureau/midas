@@ -1,0 +1,16 @@
+%li{:class => "clearfix record #{cycle("on", "on-hover")}", :id => dom_id(entry)}
+  %span.title
+    = entry.currency
+  %span.actions
+    = link_to refinery_icon_tag("application_go.png"), refinery.midas_entry_path(entry), |
+      :title => t('.view_live_html'),                                                    |
+      :target => "_blank"                                                                |
+    -#
+    = link_to refinery_icon_tag("application_edit.png"), refinery.edit_midas_admin_entry_path(entry), |
+      :title => t('.edit')                                                                            |
+    -#
+    = link_to refinery_icon_tag("delete.png"), refinery.midas_admin_entry_path(entry),       |
+      :class => "cancel confirm-delete",                                                     |
+      :title => t('.delete'),                                                                |
+      :confirm => t('message', :scope => 'refinery.admin.delete', :title => entry.currency), |
+      :method => :delete                                                                     |

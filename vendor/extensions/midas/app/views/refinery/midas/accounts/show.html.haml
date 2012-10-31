@@ -1,0 +1,47 @@
+- content_for :body_content_title do
+  = @account.title
+- content_for :body do
+  %section
+    %h1 Title
+    %p
+      = raw @account.title
+  %section
+    %h1 Description
+    %p
+      = raw @account.description
+  %section
+    %h1 Active
+    %p
+      = raw @account.active
+  %section
+    %h1 Currency
+    %p
+      = raw @account.currency
+  %section
+    %h1 Confidential
+    %p
+      = raw @account.confidential
+  %section
+    %h1 Group
+    %p
+      = raw @account.group
+  %section
+    %h1 Opening Balance
+    %p
+      = raw @account.opening_balance_in_cents
+  %section
+    %h1 Opened On
+    %p
+      = raw @account.opened_on
+  %section
+    %h1 Closed On
+    %p
+      = raw @account.closed_on
+- content_for :side_body do
+  %aside
+    %h2= t('.other')
+    %ul#accounts
+      - @accounts.each do |account|
+        %li
+          = link_to account.title, refinery.midas_account_path(account)
+= render '/refinery/content_page'

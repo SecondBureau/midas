@@ -1,0 +1,92 @@
+nb:
+  refinery:
+    plugins:
+      entries:
+        title: Entries
+      accounts:
+        title: Accounts
+      categories:
+        title: Categories
+    midas:
+      admin:
+        entries:
+          actions:
+            create_new: Lag en ny Entry
+            reorder: Endre rekkefølgen på Entries
+            reorder_done: Ferdig å endre rekkefølgen Entries
+          records:
+            title: Entries
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Entries enda. Klikk på "Lag en ny Entry" for
+              å legge til din første entry.
+          entry:
+            view_live_html: Vis hvordan denne entry ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne entry
+            delete: Fjern denne entry permanent
+        accounts:
+          actions:
+            create_new: Lag en ny Account
+            reorder: Endre rekkefølgen på Accounts
+            reorder_done: Ferdig å endre rekkefølgen Accounts
+          records:
+            title: Accounts
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Accounts enda. Klikk på "Lag en ny Account"
+              for å legge til din første account.
+          account:
+            view_live_html: Vis hvordan denne account ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne account
+            delete: Fjern denne account permanent
+        categories:
+          actions:
+            create_new: Lag en ny Category
+            reorder: Endre rekkefølgen på Categories
+            reorder_done: Ferdig å endre rekkefølgen Categories
+          records:
+            title: Categories
+            sorry_no_results: Beklager! Vi fant ikke noen resultater.
+            no_items_yet: Det er ingen Categories enda. Klikk på "Lag en ny Category"
+              for å legge til din første category.
+          category:
+            view_live_html: Vis hvordan denne category ser ut offentlig <br/><em>(åpner
+              i et nytt vindu)</em>
+            edit: Rediger denne category
+            delete: Fjern denne category permanent
+      entries:
+        show:
+          other: Andre Entries
+      accounts:
+        show:
+          other: Andre Accounts
+      categories:
+        show:
+          other: Andre Categories
+  activerecord:
+    attributes:
+      refinery/midas/entry:
+        midas_category_id: Midas Category
+        midas_account_id: Midas Account
+        currency: Currency
+        src_amount_in_cents: Src Amount In Cents
+        amount_in_cents: Amount In Cents
+        status: Status
+        title: Title
+        invoice: Invoice
+        cheque: Cheque
+        acountant_status: Acountant Status
+        valid_after: Valid After
+      refinery/midas/account:
+        title: Title
+        description: Description
+        active: Active
+        currency: Currency
+        confidential: Confidential
+        group: Group
+        opening_balance: Opening Balance
+        opened_on: Opened On
+        closed_on: Closed On
+      refinery/midas/category:
+        title: Title
+        description: Description

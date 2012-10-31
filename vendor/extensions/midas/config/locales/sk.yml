@@ -1,0 +1,89 @@
+sk:
+  refinery:
+    plugins:
+      entries:
+        title: Entries
+      accounts:
+        title: Accounts
+      categories:
+        title: Categories
+    midas:
+      admin:
+        entries:
+          actions:
+            create_new: Pridať Entry
+            reorder: Preusporiadať Entries
+            reorder_done: Koniec radenia Entries
+          records:
+            title: Entries
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Entries. Kliknite na "Pridať Entry"
+              pre pridanie prvého entry.
+          entry:
+            view_live_html: Zobraziť náhľad entry<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť entry
+            delete: Zmazať entry
+        accounts:
+          actions:
+            create_new: Pridať Account
+            reorder: Preusporiadať Accounts
+            reorder_done: Koniec radenia Accounts
+          records:
+            title: Accounts
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Accounts. Kliknite na "Pridať Account"
+              pre pridanie prvého account.
+          account:
+            view_live_html: Zobraziť náhľad account<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť account
+            delete: Zmazať account
+        categories:
+          actions:
+            create_new: Pridať Category
+            reorder: Preusporiadať Categories
+            reorder_done: Koniec radenia Categories
+          records:
+            title: Categories
+            sorry_no_results: Ľutujeme, ale neboli nájdené žiadne výsledky.
+            no_items_yet: Nie sú vytvorené žiadne Categories. Kliknite na "Pridať
+              Category" pre pridanie prvého category.
+          category:
+            view_live_html: Zobraziť náhľad category<br/><em>(otvorí sa v novom okne)</em>
+            edit: Upraviť category
+            delete: Zmazať category
+      entries:
+        show:
+          other: Daľšie Entries
+      accounts:
+        show:
+          other: Daľšie Accounts
+      categories:
+        show:
+          other: Daľšie Categories
+  activerecord:
+    attributes:
+      refinery/midas/entry:
+        midas_category_id: Midas Category
+        midas_account_id: Midas Account
+        currency: Currency
+        src_amount_in_cents: Src Amount In Cents
+        amount_in_cents: Amount In Cents
+        status: Status
+        title: Title
+        invoice: Invoice
+        cheque: Cheque
+        acountant_status: Acountant Status
+        valid_after: Valid After
+      refinery/midas/account:
+        title: Title
+        description: Description
+        active: Active
+        currency: Currency
+        confidential: Confidential
+        group: Group
+        opening_balance: Opening Balance
+        opened_on: Opened On
+        closed_on: Closed On
+      refinery/midas/category:
+        title: Title
+        description: Description

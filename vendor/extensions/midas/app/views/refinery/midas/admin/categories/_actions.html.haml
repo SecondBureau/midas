@@ -1,0 +1,19 @@
+%ul
+  - if ::Refinery::Midas::Admin::CategoriesController.searchable?
+    %li
+      = render '/refinery/admin/search', :url => refinery.midas_admin_categories_path
+  %li
+    = link_to t('.create_new'), refinery.new_midas_admin_category_path, |
+      :class => "add_icon"                                              |
+  - if !searching? && ::Refinery::Midas::Admin::CategoriesController.sortable? && ::Refinery::Midas::Category.any?
+    %li
+      = link_to t('.reorder', :what => "Categories"), |
+        refinery.midas_admin_categories_path,         |
+        :id => "reorder_action",                      |
+        :class => "reorder_icon"                      |
+      -#
+      = link_to t('.reorder_done', :what => "Categories"), |
+        refinery.midas_admin_categories_path,              |
+        :id => "reorder_action_done",                      |
+        :style => "display: none;",                        |
+        :class => "reorder_icon"                           |

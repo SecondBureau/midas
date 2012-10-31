@@ -1,0 +1,6 @@
+- content_for :body do
+  %ul#accounts
+    - @accounts.each do |account|
+      %li
+        = link_to account.title, refinery.midas_account_path(account)
+= render '/refinery/content_page'

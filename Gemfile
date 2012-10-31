@@ -65,4 +65,5 @@ gem 'thin'
 
 # Refinery CMS
 gem 'refinerycms', '~> 2.0.8'
-
+gem 'refinerycms-i18n', '~> 2.0.0'
+gem 'refinerycms-midas', :path => 'vendor/extensions'

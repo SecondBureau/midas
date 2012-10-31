@@ -1,0 +1,6 @@
+%input#switch_locale{:name => "switch_locale", :type => "hidden", :value => local_assigns[:current_locale]}/
+- if (locales ||= Refinery::I18n.frontend_locales).present? and locales.many?
+  %ul#switch_locale_picker.clearfix
+    - locales.each do |locale|
+      <li#{" class='selected'" if locale.to_s == local_assigns[:current_locale].to_s}>
+      \#{link_to refinery_icon_tag("flags/#{locale}.png", :size => "32x22"), refinery.url_for(:switch_locale => locale)}

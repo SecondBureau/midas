@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121031113529) do
+ActiveRecord::Schema.define(:version => 20121031135339) do
 
   create_table "accounts", :force => true do |t|
     t.string   "label"
@@ -71,6 +71,70 @@ ActiveRecord::Schema.define(:version => 20121031113529) do
     t.string   "image_ext"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+  end
+
+  create_table "refinery_midas_account_translations", :force => true do |t|
+    t.integer  "refinery_midas_account_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
+  end
+
+  add_index "refinery_midas_account_translations", ["locale"], :name => "index_refinery_midas_account_translations_on_locale"
+  add_index "refinery_midas_account_translations", ["refinery_midas_account_id"], :name => "index_c7987ddd9b1464a9bad975c7c754801f1700828f"
+
+  create_table "refinery_midas_accounts", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.boolean  "active"
+    t.string   "currency"
+    t.boolean  "confidential"
+    t.string   "group"
+    t.integer  "opening_balance_in_cents"
+    t.date     "opened_on"
+    t.date     "closed_on"
+    t.integer  "position"
+    t.datetime "created_at",               :null => false
+    t.datetime "updated_at",               :null => false
+  end
+
+  create_table "refinery_midas_categories", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.integer  "position"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  create_table "refinery_midas_category_translations", :force => true do |t|
+    t.integer  "refinery_midas_category_id"
+    t.string   "locale"
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",                 :null => false
+    t.datetime "updated_at",                 :null => false
+  end
+
+  add_index "refinery_midas_category_translations", ["locale"], :name => "index_refinery_midas_category_translations_on_locale"
+  add_index "refinery_midas_category_translations", ["refinery_midas_category_id"], :name => "index_1eaeee25a5ee3f7034fa97feabdb14b033488de6"
+
+  create_table "refinery_midas_entries", :force => true do |t|
+    t.integer  "midas_category_id"
+    t.integer  "midas_account_id"
+    t.string   "currency"
+    t.integer  "src_amount_in_cents"
+    t.integer  "amount_in_cents"
+    t.string   "status"
+    t.string   "title"
+    t.string   "invoice"
+    t.string   "cheque"
+    t.string   "acountant_status"
+    t.date     "valid_after"
+    t.integer  "position"
+    t.datetime "created_at",          :null => false
+    t.datetime "updated_at",          :null => false
   end
 
   create_table "refinery_page_part_translations", :force => true do |t|

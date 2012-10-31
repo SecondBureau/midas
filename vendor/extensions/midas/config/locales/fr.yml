@@ -1,0 +1,89 @@
+fr:
+  refinery:
+    plugins:
+      entries:
+        title: Entries
+      accounts:
+        title: Accounts
+      categories:
+        title: Categories
+    midas:
+      admin:
+        entries:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Entry
+            reorder: Réordonner les Entries
+            reorder_done: Fin de réordonnancement des Entries
+          records:
+            title: Entries
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Entry. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Entry" pour créer votre premi(er/ère) entry.
+          entry:
+            view_live_html: Voir ce(t/tte) entry <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) entry
+            delete: Supprimer définitivement ce(t/tte) entry
+        accounts:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Account
+            reorder: Réordonner les Accounts
+            reorder_done: Fin de réordonnancement des Accounts
+          records:
+            title: Accounts
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Account. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Account" pour créer votre premi(er/ère) account.
+          account:
+            view_live_html: Voir ce(t/tte) account <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) account
+            delete: Supprimer définitivement ce(t/tte) account
+        categories:
+          actions:
+            create_new: Créer un(e) nouve(au/l/lle) Category
+            reorder: Réordonner les Categories
+            reorder_done: Fin de réordonnancement des Categories
+          records:
+            title: Categories
+            sorry_no_results: Désolé ! Aucun résultat.
+            no_items_yet: Il n'y a actuellement aucun(e) Category. Cliquer sur "Créer
+              un(e) nouve(au/l/lle) Category" pour créer votre premi(er/ère) category.
+          category:
+            view_live_html: Voir ce(t/tte) category <br/><em>(Ouvre une nouvelle fenêtre)</em>
+            edit: Modifier ce(t/tte) category
+            delete: Supprimer définitivement ce(t/tte) category
+      entries:
+        show:
+          other: Autres Entries
+      accounts:
+        show:
+          other: Autres Accounts
+      categories:
+        show:
+          other: Autres Categories
+  activerecord:
+    attributes:
+      refinery/midas/entry:
+        midas_category_id: Midas Category
+        midas_account_id: Midas Account
+        currency: Currency
+        src_amount_in_cents: Src Amount In Cents
+        amount_in_cents: Amount In Cents
+        status: Status
+        title: Title
+        invoice: Invoice
+        cheque: Cheque
+        acountant_status: Acountant Status
+        valid_after: Valid After
+      refinery/midas/account:
+        title: Title
+        description: Description
+        active: Active
+        currency: Currency
+        confidential: Confidential
+        group: Group
+        opening_balance: Opening Balance
+        opened_on: Opened On
+        closed_on: Closed On
+      refinery/midas/category:
+        title: Title
+        description: Description

@@ -1,0 +1,92 @@
+es:
+  refinery:
+    plugins:
+      entries:
+        title: Entries
+      accounts:
+        title: Accounts
+      categories:
+        title: Categories
+    midas:
+      admin:
+        entries:
+          actions:
+            create_new: Crear nuevo entry
+            reorder: Reordenar entries
+            reorder_done: Reordenación de entries completada
+          records:
+            title: Entries
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay entries todavía. Pulsa en "Crear nuevo Entry" para
+              crear tu primer entry.
+          entry:
+            view_live_html: Ver este entry como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este entry
+            delete: Borrar este entry para siempre
+        accounts:
+          actions:
+            create_new: Crear nuevo account
+            reorder: Reordenar accounts
+            reorder_done: Reordenación de accounts completada
+          records:
+            title: Accounts
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay accounts todavía. Pulsa en "Crear nuevo Account"
+              para crear tu primer account.
+          account:
+            view_live_html: Ver este account como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este account
+            delete: Borrar este account para siempre
+        categories:
+          actions:
+            create_new: Crear nuevo category
+            reorder: Reordenar categories
+            reorder_done: Reordenación de categories completada
+          records:
+            title: Categories
+            sorry_no_results: Lo siento, no hay resultados
+            no_items_yet: No hay categories todavía. Pulsa en "Crear nuevo Category"
+              para crear tu primer category.
+          category:
+            view_live_html: Ver este category como abierto al público <br/><em>(abre
+              en ventana nueva)</em>
+            edit: Editar este category
+            delete: Borrar este category para siempre
+      entries:
+        show:
+          other: Otros entries
+      accounts:
+        show:
+          other: Otros accounts
+      categories:
+        show:
+          other: Otros categories
+  activerecord:
+    attributes:
+      refinery/midas/entry:
+        midas_category_id: Midas Category
+        midas_account_id: Midas Account
+        currency: Currency
+        src_amount_in_cents: Src Amount In Cents
+        amount_in_cents: Amount In Cents
+        status: Status
+        title: Title
+        invoice: Invoice
+        cheque: Cheque
+        acountant_status: Acountant Status
+        valid_after: Valid After
+      refinery/midas/account:
+        title: Title
+        description: Description
+        active: Active
+        currency: Currency
+        confidential: Confidential
+        group: Group
+        opening_balance: Opening Balance
+        opened_on: Opened On
+        closed_on: Closed On
+      refinery/midas/category:
+        title: Title
+        description: Description

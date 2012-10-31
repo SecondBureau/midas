@@ -1,0 +1,55 @@
+- content_for :body_content_title do
+  = @entry.currency
+- content_for :body do
+  %section
+    %h1 Midas Category
+    %p
+      = raw @entry.midas_category_id
+  %section
+    %h1 Midas Account
+    %p
+      = raw @entry.midas_account_id
+  %section
+    %h1 Currency
+    %p
+      = raw @entry.currency
+  %section
+    %h1 Src Amount In Cents
+    %p
+      = raw @entry.src_amount_in_cents
+  %section
+    %h1 Amount In Cents
+    %p
+      = raw @entry.amount_in_cents
+  %section
+    %h1 Status
+    %p
+      = raw @entry.status
+  %section
+    %h1 Title
+    %p
+      = raw @entry.title
+  %section
+    %h1 Invoice
+    %p
+      = raw @entry.invoice
+  %section
+    %h1 Cheque
+    %p
+      = raw @entry.cheque
+  %section
+    %h1 Acountant Status
+    %p
+      = raw @entry.acountant_status
+  %section
+    %h1 Valid After
+    %p
+      = raw @entry.valid_after
+- content_for :side_body do
+  %aside
+    %h2= t('.other')
+    %ul#entries
+      - @entries.each do |entry|
+        %li
+          = link_to entry.currency, refinery.midas_entry_path(entry)
+= render '/refinery/content_page'
