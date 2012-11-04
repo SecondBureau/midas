@@ -3,7 +3,7 @@ module Refinery
     module Admin
       class CategoriesController < ::Refinery::AdminController
 
-        crudify :'refinery/midas/category', :xhr_paging => true
+        crudify :'refinery/midas/category', :xhr_paging => true, :order => "code ASC", :sortable => false
 
       end
     end

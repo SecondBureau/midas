@@ -3,9 +3,7 @@ module Refinery
     module Admin
       class EntriesController < ::Refinery::AdminController
         
-
-        crudify :'refinery/midas/entry',
-                :title_attribute => 'title', :xhr_paging => true
+        crudify :'refinery/midas/entry', :xhr_paging => true, :order => "valid_after DESC", :sortable => false
 
       end
     end

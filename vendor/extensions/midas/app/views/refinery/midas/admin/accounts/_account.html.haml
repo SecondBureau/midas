@@ -1,13 +1,17 @@
-%li{:class => "clearfix record #{cycle("on", "on-hover")}", :id => dom_id(account)}
-  %span.title
-    = account.title
-    - if Refinery.i18n_enabled? and Refinery::I18n.frontend_locales.many?
-      %span.preview
-        - account.translations.each do |translation|
-          - if translation.title.present?
-            = link_to refinery_icon_tag("flags/#{translation.locale}.png", :size => '16x11'),        |
-              refinery.edit_midas_admin_account_path(account, :switch_locale => translation.locale), |
-              :class => 'locale'                                                                     |
+%li{:class => "clearfix account #{cycle("on", "on-hover")}", :id => dom_id(account)}
+  %i{:class => account.active? ? 'icon-folder-open' : 'icon-folder-close'}
+  %span.title= account.title
+  %span.label.label-info.currency= account.currency.upcase
+  %span.balance= account.balance
+  %span.last_entry= account.last_entry || '-'
+  
+  - if Refinery.i18n_enabled? and Refinery::I18n.frontend_locales.many?
+    %span.preview
+      - account.translations.each do |translation|
+        - if translation.title.present?
+          = link_to refinery_icon_tag("flags/#{translation.locale}.png", :size => '16x11'),        |
+            refinery.edit_midas_admin_account_path(account, :switch_locale => translation.locale), |
+            :class => 'locale'                                                                     |
   %span.actions
     = link_to refinery_icon_tag("application_go.png"), refinery.midas_account_path(account), |
       :title => t('.view_live_html'),                                                        |

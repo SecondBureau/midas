@@ -3,7 +3,9 @@ class CreateMidasCategories < ActiveRecord::Migration
 
   def up
     create_table :refinery_midas_categories do |t|
+      
       t.string :title
+      t.string :code
       t.text :description
       t.integer :position
 

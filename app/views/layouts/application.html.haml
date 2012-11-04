@@ -1,0 +1,36 @@
+!!! 5
+= render "/refinery/html_tag"
+
+- content_for :meta do
+  %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0" }
+= render '/refinery/head'
+
+%body
+
+  .navbar.navbar-fixed-top.navbar-inverse
+    .navbar-inner
+      .container
+        -#= render "site/header"
+      
+  .container
+    .content
+      .row
+        .span4
+          .hidden-phone
+            -#= render "site/sidebar"
+          .visible-phone
+            %center
+              -#= link_to image_tag("APE-LOGO.png"), refinery.root_path, {:title => t("home.title")}
+        .span8.light-grey.shadow
+          = bootstrap_flash
+          -##site_image.hidden-phone= image_tag(banner_image_url) 
+          = yield
+        
+
+  .footer.navbar.navbar-fixed-bottom.navbar-inverse
+    .navbar-inner
+      .container
+        -#= render "site/footer"
+      
+  = render "/refinery/javascripts"
+    

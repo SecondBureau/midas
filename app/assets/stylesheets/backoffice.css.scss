@@ -1,0 +1,44 @@
+@import "bootstrap_and_overrides";
+@import "common";
+
+li.account {
+  .title {
+    display: inline-block;
+    width:150px;
+  }
+  .currency {
+    display: inline-block;
+  }
+  .balance {
+    display: inline-block;
+    width:80px;
+    text-align:right;
+  }
+  .last_entry {
+    display: inline-block;
+    width:70px;
+    padding-right:10px;
+    padding-left:10px;
+    text-align:center;
+  }
+} 
+
+li.entry {
+  .valid_after {
+    display: inline-block;
+    width:70px;
+    padding-right:10px;
+    padding-left:10px;
+    text-align:center;
+  }
+  .amount {
+    display: inline-block;
+    width:80px;
+    text-align:right;
+  }
+  .title {
+    display: inline-block;
+    width:250px;
+    white-space: nowrap;
+  }
+}

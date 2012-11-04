@@ -1,6 +1,12 @@
-%li{:class => "clearfix record #{cycle("on", "on-hover")}", :id => dom_id(entry)}
+%li{:class => "clearfix entry #{cycle("on", "on-hover")}", :id => dom_id(entry)}
+  %span.valid_after
+    = entry.valid_after
+  %span.amount{:class => entry.src_amount_in_cents < 0 ? 'red' : 'green'}
+    = entry.amount
   %span.title
-    = entry.currency
+    = entry.title.truncate(40, :separator => ' ')
+  %span.label.label-info.account
+    = entry.account.title
   %span.actions
     = link_to refinery_icon_tag("application_go.png"), refinery.midas_entry_path(entry), |
       :title => t('.view_live_html'),                                                    |

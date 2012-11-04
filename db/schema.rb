@@ -87,21 +87,25 @@ ActiveRecord::Schema.define(:version => 20121031135339) do
 
   create_table "refinery_midas_accounts", :force => true do |t|
     t.string   "title"
+    t.string   "number"
     t.text     "description"
     t.boolean  "active"
     t.string   "currency"
     t.boolean  "confidential"
     t.string   "group"
-    t.integer  "opening_balance_in_cents"
+    t.integer  "opening_balance_in_cents", :default => 0
     t.date     "opened_on"
     t.date     "closed_on"
     t.integer  "position"
-    t.datetime "created_at",               :null => false
-    t.datetime "updated_at",               :null => false
+    t.date     "last_entry"
+    t.integer  "balance_in_cents",         :default => 0
+    t.datetime "created_at",                              :null => false
+    t.datetime "updated_at",                              :null => false
   end
 
   create_table "refinery_midas_categories", :force => true do |t|
     t.string   "title"
+    t.string   "code"
     t.text     "description"
     t.integer  "position"
     t.datetime "created_at",  :null => false

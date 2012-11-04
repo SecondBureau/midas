@@ -3,15 +3,18 @@ class CreateMidasAccounts < ActiveRecord::Migration
   def up
     create_table :refinery_midas_accounts do |t|
       t.string :title
+      t.string :number
       t.text :description
       t.boolean :active
       t.string :currency
       t.boolean :confidential
       t.string :group
-      t.integer :opening_balance_in_cents
+      t.integer :opening_balance_in_cents, :default => 0
       t.date :opened_on
       t.date :closed_on
       t.integer :position
+      t.date :last_entry
+      t.integer :balance_in_cents, :default => 0
 
       t.timestamps
     end

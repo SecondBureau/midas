@@ -4,7 +4,7 @@ module Refinery
       
       has_many :entries, :foreign_key => 'midas_category_id'
 
-      attr_accessible :title, :description, :position
+      attr_accessible :code, :title, :description, :position
 
       translates :title, :description
 
@@ -12,9 +12,9 @@ module Refinery
         attr_accessible :locale
       end
 
-      acts_as_indexed :fields => [:title, :description]
+      acts_as_indexed :fields => [:code, :title, :description]
 
-      validates :title, :presence => true, :uniqueness => true
+      validates :code, :presence => true, :uniqueness => true
     end
   end
 end
