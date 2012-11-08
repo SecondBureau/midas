@@ -1,4 +1,7 @@
 # encoding: utf-8
+require 'csv'
+
+
 
 desc 'Init data'
 task :init_midas_data => :environment do
@@ -6,6 +9,7 @@ task :init_midas_data => :environment do
   I18n.locale = :en
 
   include ActionView::Helpers::TextHelper
+  
   
   # Users, Roles & Groups
   Refinery::User.all.each {|u| u.destroy }
@@ -57,7 +61,8 @@ task :init_midas_data => :environment do
   '625700', 'Réception',
   '625710', 'Team Lunch',
   '625720', 'Business Lunch',
-  '626000', 'Téléphone & Internet'
+  '626000', 'Téléphone & Internet',
+  '628100', 'Cotisations',
   '641100', 'Net Salaries',
   '641100.01', 'Gilles Crofils',
   '641100.03', 'Zhang Weihan',
@@ -81,6 +86,17 @@ task :init_midas_data => :environment do
   '645110.09', 'Wang Hongyan',
   '645110.10', 'Meng Xianli',
   '645110.11', 'Ren Lihong',
+  '645115', 'Employer Housing Fund',
+  '645115.01', 'Gilles Crofils',
+  '645115.03', 'Zhang Weihan',
+  '645115.04', 'Yang Huachang',
+  '645115.05', 'Li Zhe',
+  '645115.06', 'Li Lin',
+  '645115.07', 'Romain Binaux',
+  '645115.08', 'Zhang Yang',
+  '645115.09', 'Wang Hongyan',
+  '645115.10', 'Meng Xianli',
+  '645115.11', 'Ren Lihong',
   '645120', 'Employee Social Taxes',
   '645120.01', 'Gilles Crofils',
   '645120.03', 'Zhang Weihan',
@@ -92,6 +108,17 @@ task :init_midas_data => :environment do
   '645120.09', 'Wang Hongyan',
   '645120.10', 'Meng Xianli',
   '645120.11', 'Ren Lihong',
+  '645125', 'Employee Housing Fund',
+  '645125.01', 'Gilles Crofils',
+  '645125.03', 'Zhang Weihan',
+  '645125.04', 'Yang Huachang',
+  '645125.05', 'Li Zhe',
+  '645125.06', 'Li Lin',
+  '645125.07', 'Romain Binaux',
+  '645125.08', 'Zhang Yang',
+  '645125.09', 'Wang Hongyan',
+  '645125.10', 'Meng Xianli',
+  '645125.11', 'Ren Lihong',
   '645130', 'Individual Income Tax',
   '645130.01', 'Gilles Crofils',
   '645130.03', 'Zhang Weihan',
@@ -113,8 +140,11 @@ task :init_midas_data => :environment do
   '695300', 'Business Tax',
   '760000', 'Bank Interests',
   '760100', 'Prestation de Services',
+  '760100.0012', 'Bernard Controls',
   '760100.0014', 'WinterSweet',
   '760100.0017', 'China Trade Winds',
+  '760100.0018', 'Fimasys',
+  '760100.0020', 'Paraland',
   '760100.0000', 'Second Bureau',
   '708300', 'Locations diverses',
   '708300.0024', 'SC & C',
@@ -147,6 +177,8 @@ task :init_midas_data => :environment do
     end
    
    # Entries
+   Refinery::Midas::Entry.all.each {|e| e.destroy }
+   
    [ 'HSBC EURO Savings',   '760100.0000',  'eur',    3600000,    '2010-12-16',   'Facture xxx',  
      'HSBC EURO Savings',   '580000',     'eur',    -3550000,   '2010-12-21',   'Capital Injection to ICBC CNY',
      'HSBC EURO Savings',   '661600',     'eur',    -4670,      '2010-12-21',   'Frais de transfert HSBC',   
@@ -206,4 +238,44 @@ task :init_midas_data => :environment do
                                         :title => title
                                       )
   end
+  
+  
+  i = 0
+  CSV.foreach(Rails.root.join('db', 'seeds', 'entries.csv')) do |id, date, category, account, title, amount, employee, ratio, status, num1, num2, docid, accountant|
+    i += 1
+
+
+    account_title = case account.downcase.strip
+      when 'bank' then 'ICBC CNY'
+      when 'bank 2' then 'SPD CNY'
+      when 'bank euro' then 'SPD EURO'
+      when 'cash' then 'Cash'
+      when 'danny' then 'Danny'
+      when 'gcro' then 'Gilles'
+      else nil
+      end
+
+    midas_account = Refinery::Midas::Account.find_by_title(account_title) unless account_title.nil?
+    midas_category = Refinery::Midas::Category.find_by_code(category)
+
+    if midas_account.nil? || midas_category.nil?
+      puts "#{i} account >#{account.downcase}< inconnu" if midas_account.nil?
+      puts "#{i} category >#{category}< inconnue" if midas_category.nil?
+    else
+        begin
+        Refinery::Midas::Entry.create!(  :account => midas_account,
+                                      :category => midas_category,
+                                      :currency => midas_account.currency,
+                                      :src_amount_in_cents => (amount.gsub(' ','').to_f * 100),
+                                      :valid_after => Date.parse(date),
+                                      :title => title
+                                    )
+      rescue Exception => e
+        puts "****************  Erreur #{e} parsing #{i} #{id}, #{date}, #{category}, #{account}, #{title}, #{amount}, #{midas_account}, #{midas_category}"
+      end
+  end
+  
+end
+  
+  
  end

@@ -1,0 +1,945 @@
+1,2010-11-30,614030.01,cash,MDC - Office Decoration,"-13800,56",,,,,8429108,,yes
+2,2010-12-11,614030.01,Cash,MDC - Office Decoration,"-2379,32",,,paid,,8429108,,yes
+3,2010-12-23,661600,Bank,Bank account maintenance fee (ICBC),-90,,,paid,,,,
+4,2010-12-30,661600,cash,Bank inquiry letter from ICBC for 3rd capital verification,-200,,,paid,,,,yes
+5,2010-12-30,661600,cash,bank information consulting service from ICBC for 3rd verification,-300,,,paid,,,,yes
+6,2010-12-31,695200,bank,cash deposit to Bank Account (Julien),1400,,,deposited,,,,
+7,2010-12-31,695200,Bank,payment to VAT (Julien),"-1388,68",,,paid,,,,
+8,2010-12-31,760000,Bank,unknown financial expense deduction or income,"3,06",,,received,,,,
+9,2011-01-04,614010.01,Cash,Zhong Yu 1515 Rental (20110110-20110209),"-3325,6",,,paid,,12652204,,yes
+10,2011-01-04,614020.01,Cash,Zhong Yu 1515 Fees (20110110-20110209),"-870,25",,,paid,,12958279,,yes
+11,2011-01-07,614030.01,Cash,MDC - Office Decoration,"-7555,57",,,paid,,8429108,,yes
+12,2011-01-10,695000,cash,3rd capital verification report,-1000,,,paid,,23823257,,yes
+13,2011-01-12,695000,Bank,Receiving bank transfer for import custom duty refund from government,653,,,Received,,,,
+14,2011-01-12,695000,Bank,Receiving bank transfer for import vat refund from government,1498,,,Received,,,,
+15,2011-01-21,614030.01,Cash,Furnitures ,-6400,,,paid,,2919082,,yes
+16,2011-01-24,580000,Bank,Capital Injection from HSBC EURO Savings,"317891,85",,,Received,,,,
+17,2011-01-24,606400,Cash,Stationery,"-151,3",,,paid,-,,,
+18,2011-01-25,661600,Bank,Account settlement fee by ICBC,-20,,,paid,bank transfer ,,,
+19,2011-01-25,614030.01,Cash,Ikea furniture,-5779,,,paid,,14558427,,yes
+20,2011-01-25,614010.01,Cash,Zhong Yu 1515 Rental (20110210-20110309),"-3325,6",,,paid,,12652471,,yes
+21,2011-01-25,614020.01,Cash,Zhong Yu 1515 Fees (20110210-20110309),"-877,95",,,Paid,,16727023,,yes
+22,2011-01-25,606400,cash,moving expense ,-301,,,paid,,2330726,,yes
+23,2011-01-26,580000,bank,Cash Withdrawal,-20000,,,withdrew,,,,yes
+24,2011-01-26,580000,cash,Cash Withdrawal from ICBC CNY,20000,,,Received,11497837,,,
+25,2011-01-31,606400,Cash,Phone and air moisture machine,-1017,,,paid,-,,,
+26,2011-02-10,606400,Gcro,Cables,-115,,,paid,-,-,-,-
+27,2011-02-10,606400,Gcro,CD,-20,,,paid,-,-,-,-
+28,2011-02-10,606400,Gcro,Cables,-295,,,paid,-,-,-,-
+29,2011-02-13,625720,Cash,Business Lunch,-522,,,paid,-,0510449,1,yes
+30,2011-02-14,606400,Gcro,Miscellaneous,"-78,5",,,paid,-,-,-,-
+31,2011-02-17,648000,Gcro,Physical Check up,-10,,,paid,,93478844,5,-
+32,2011-02-22,614010.01,Bank,Zhong Yu 1515 Rental (20110310-20110409),"-3325,6",,,paid,,12652495,2,yes
+33,2011-02-22,606400,Gcro,Miscellaneous,-53,,,paid,-,-,-,-
+34,2011-02-22,614020.01,Bank,Zhong Yu 1515 Fees (20110310-20110409),"-903,25",,,paid,,15587145,3,yes
+35,2011-02-22,606500,Bank,Monitors,-10760,,,paid,,04875837,4,yes
+36,2011-02-22,606400,Cash,Internet cable and testing tool,-128,,,paid,,03785419,6,yes
+37,2011-02-22,606500,Bank,Dell sever,-11700,,,paid,,00172770,7,yes
+38,2011-02-22,622600.01,Bank,RMG International  Business Consulting Company,"-33959,99",,,paid,,21091964,8,yes
+39,2011-02-22,606400,Bank,mouses & keyboards,-2680,,,paid,,10802917,9,yes
+40,2011-02-22,626000,Bank,Internet Provider (Dnion) 2011,-32000,,,paid,,24561254,10,yes
+41,2011-02-23,606400,Gcro,Miscellaneous,"-93,4",,,paid,-,-,-,-
+42,2011-02-23,606400,Gcro,Miscellaneous,-128,,,paid,-,-,-,-
+43,2011-02-23,622600.02,Bank,China Solution - Business license,-5500,,,paid,,,11,yes
+44,2011-02-24,625720,Gcro,Business Lunch,-200,,,paid,-,-,-,-
+45,2011-02-28,614030.01,Cash,Office curtain installation,-680,,,paid,,00960921,12,yes
+46,2011-03-01,606400,Gcro,Water / Food,-24,,,paid,-,-,-,-
+47,2011-03-01,626000,Gcro,Shared Internet (Office 1516),4000,,,paid,-,-,-,-
+48,2011-03-01,626000,Gcro,Shared Internet (Office 1517),4000,,,paid,-,-,-,-
+49,2011-03-03,580000,bank,Cash Withdrawal,-30000,,,withdrew,,,,yes
+49,2011-03-02,580000,cash,Cash Withdrawal from ICBC CNY,30000,,,Received,11497840,,1,yes
+50,2011-03-02,641100.04,Gcro,Yang Huachang - 201102,-2500,,,paid,,,2,-
+51,2011-03-02,641100.03,Gcro,Zhang Weihan - 201102,-8335,,,paid,,,2,-
+52,2011-03-02,606400,Gcro,Moving Negotiation fee charged by JCI,-400,,,paid,,unofficial receipt,4,-
+53,2011-03-08,661600,Bank,4 checks purchase fee (ICBC),-100,,,paid,Bank Transfer,,3,yes
+54,2011-03-08,606400,Gcro,Miscellaneous,-99,,,paid,-,-,-,-
+55,2011-03-08,624400,Gcro,Taxi,-39,01 - Gilles Crofils,,paid,-,-,-,-
+56,2011-03-09,606400,Gcro,Cables,-100,,,paid,-,-,-,-
+57,2011-03-11,628100,Bank,CCIFC membership fee (2011),-3000,,,paid,1957751,800643882,5,yes
+58,2011-03-15,606400,Gcro,Miscellaneous,"-61,4",,,paid,-,-,-,-
+59,2011-03-15,625710,Gcro,Team Lunch,-70,,,paid,-,-,-,-
+60,2011-03-16,641100.10,Gcro,Meng Xianli - 201102,-400,,,paid,cash,,7,-
+61,2011-03-17,625710,Cash,Team Lunch,-136,,,paid,cash,28454436,11,yes
+62,2011-03-21,622600.03,Bank,2010 Annual Audit (pre-Payment 50%),-1800,,,prepaid,1957752,,6,yes
+63,2011-03-21,760000,bank,Bank account interest (20101221-20110320),"146,1",,,Received,,11080000001,,yes
+64,2011-03-21,661600,bank,Bank account maintenance fee (ICBC),-90,,,paid,,11080000003,,yes
+65,2011-03-24,614010.01,Bank,Zhong Yu 1515 Rental (20110410-20110509),"-3325,6",,,paid,1957753,12652594,8,yes
+66,2011-03-24,614020.01,Bank,Zhong Yu 1515 Fees (20110410-20110509),"-1012,15",,,paid,1957754,21048246,9,yes
+67,2011-03-24,625710,Gcro,Team Lunch,-114,,,paid,-,-,-,yes
+68,2011-03-25,624400,Gcro,Taxi,-42,01 - Gilles Crofils,,paid,-,-,-,-
+69,2011-03-31,625710,Gcro,Team Lunch,-108,,,paid,-,-,-,-
+70,2011-03-31,606400,Gcro,Water / Food,-20,,,paid,-,-,-,-
+71,2011-04-01,625720,Gcro,Business Lunch,-116,,,paid,-,-,-,-
+,2011-03-24,641100.03,Bank,Zhang Weihan - 201103,"-5540,61",,,,,,,
+,2011-03-24,645110.03,Bank,Zhang Weihan - 201103,"-4510,83",,,,,,,
+,2011-03-24,645120.03,Bank,Zhang Weihan - 201103,"-2315,64",,,,,,,
+,2011-03-24,645130.03,Bank,Zhang Weihan - 201103,"-477,75",,,,,,,
+,2011-03-24,622600.04,Bank,Zhang Weihan - 201103,"-749,2",,,,,,,
+1,2011-04-07,641100.04,Cash,Yang Huachang - 201103,-2160,,,paid,-,-,-,yes
+2,2011-04-07,614010,Cash,Fimasys Meeting Room rental  (3 x transportation invoices),-300,,,paid,-,-,-,-
+3,2011-04-07,622600.03,Bank,2010 Annual Audit (balance Payment 50%),-1800,,,paid,1957757,19420882,,yes
+4,2011-04-07,622600.05,Cash,Recruitment fee of ZhaoPin,-600,,,paid,-,18512847,,yes
+5,2011-04-10,606400,Cash,Bike (personal),-883,,100%,paid,-,00987911,,yes
+,2011-04-12,641100.09,Cash,Wang Hongyan - 201012,-1000,,,,,,,
+,2011-04-12,641100.09,Cash,Wang Hongyan - 201101,-1000,,,,,,,
+,2011-04-12,641100.09,Cash,Wang Hongyan - 201102,-1000,,,,,,,
+,2011-04-12,641100.09,Cash,Wang Hongyan - 201103,-1000,,,,,,,
+1,2011-04-12,606500,Bank,HP printer 4500,-1240,,,paid,1957758,18360107,,yes
+2,2011-04-12,645130.04,bank,Yang Huachang - 201103,-340,,,paid,,,,yes
+3,2011-04-14,625710,cash,Team Lunch,-151,,,paid,cash,28437583,,yes
+4,2011-04-18,606400,cash,Stationery (printing paper and file box),-190,,,paid,cash,297006,,yes
+5,2011-04-20,641100.10,Gcro,Meng Xianli - 201103,-400,,,paid,,-,-,-
+6,2011-04-21,614010.01,Bank,Zhong Yu 1515 Rental (20110510-20110609),"-3325,6",,,paid,1957760,12652749,,yes
+7,2011-04-21,614020.01,Bank,Zhong Yu 1515 Fees (20110510-20110609),"-1039,65",,,paid,1957759,951539,,yes
+8,2011-04-21,625710,cash,Team Lunch,-156,,,paid,cash,31592355,,yes
+9,2011-04-22,624400,cash,Taxi,-32,,,paid,cash,57428097,,yes
+10,2011-04-26,695000,Cash,2010 SAIC annual check governmental fee,-50,,,paid,cash,2402486,,yes
+11,2011-04-28,625710,cash,Team Lunch,-239,,,paid,cash,2912987,,yes
+12,2011-05-04,614010,cash,Fimasys Meeting Room rental (taxi invoices),-200,,,paid,cash,,,yes
+,2011-04-27,641100.03,Bank,Zhang Weihan - 201104,"-5540,61",,,,,,,
+,2011-04-27,645110.03,Bank,Zhang Weihan - 201104,"-4510,83",,,,,,,
+,2011-04-27,645120.03,Bank,Zhang Weihan - 201104,"-2315,64",,,,,,,
+,2011-04-27,645130.03,Bank,Zhang Weihan - 201104,"-477,75",,,,,,,
+,2011-04-27,622600.04,Bank,Zhang Weihan - 201104,"-749,2",,,,,,,
+1,2011-05-05,641100.04,cash,Yang Huachang - 201104,-2160,,,paid,cash,,,yes
+2,2011-05-05,641100.09,Cash,Wang Hongyan - 201104,-1000,,,paid,cash,,,yes
+3,2011-05-05,625710,cash,Team Lunch,-145,,,paid,,10846474,,yes
+4,2011-05-06,695000,cash,2010 tax certificate card fee,-120,,,paid,,18021955,,yes
+5,2011-05-07,645130.04,bank,Yang Huachang - 201104,-340,,,paid,,,,yes
+6,2011-05-19,641100.10,Gcro,Meng Xianli - 201104,-400,,,paid,-,-,,-
+7,2011-05-19,614020.01,Bank,Zhong Yu 1515 Fees (20110610-20110709),"-1326,25",,,paid,1957763,2590570,,yes
+8,2011-05-19,625710,cash,Team Lunch,-185,,,paid,,1127377,,yes
+9,2011-05-23,614010.01,Bank,Zhong Yu 1515 Rental (20110610-20110709),"-3325,6",,,paid,1957764,12652819,,yes
+,2011-05-25,641100.03,Bank,Zhang Weihan - 201105,"-10853,96",,,,,,,
+,2011-05-25,645110.03,Bank,Zhang Weihan - 201105,"-4510,83",,,,,,,
+,2011-05-25,645120.03,Bank,Zhang Weihan - 201105,"-2315,64",,,,,,,
+,2011-05-25,645130.03,Bank,Zhang Weihan - 201105,"-1415,4",,,,,,,
+,2011-05-25,622600.04,Bank,Zhang Weihan - 201105,"-749,2",,,,,,,
+103,2011-05-30,580000,bank,Cash Withdrawal,-8000,,,withdrew,,,,yes
+104,2011-05-30,580000,cash,Cash Withdrawal from ICBC CNY,8000,,,Received,2411402,,,yes
+105,2011-05-30,625710,cash,Team Lunch,-125,,,paid,,31261252,,yes
+106,2011-06-01,580000,bank,Cash Withdrawal,-8000,,,withdrew,,,,yes
+107,2011-05-31,580000,cash,Cash Withdrawal from ICBC CNY,8000,,,received,2411401,,,yes
+108,2011-05-31,661600,cash,Bank account card annual fee,-360,,,paid,,,,yes
+109,2011-06-02,641100.04,cash,Yang Huachang - 201105,-2160,,,paid,,,,yes
+110,2011-06-02,641100.09,Cash,Wang Hongyan - 201105,-1000,,,paid,,,,yes
+108,2011-06-02,622600.02,cash,China Solution - 2010 Annual Check,-2000,,,paid,,2188728,,yes
+109,2011-06-02,641100.10,cash,Meng Xianli - 201105,-400,,,paid,,,,yes
+110,2011-06-07,645130.04,bank,Yang Huachang - 201105,-340,,,paid,,,,yes
+111,2011-06-20,614030.01,cash,Zhong Yu 1515 Fees (phone cable) ,-50,,,paid,,3215869,,yes
+112,2011-06-20,606400,cash,Office stationery (phone),-453,,,paid,,22081002,,yes
+113,2011-06-21,760000,bank,Bank account interest,"153,89",,,Received,,,,yes
+114,2011-06-22,661600,bank,Bank account maintenance fee (ICBC),-90,,,paid,,,,yes
+115,2011-06-23,625710,cash,Team Lunch,-205,,,paid,,30863093,,yes
+116,2011-06-24,614010.01,bank,Zhong Yu 1515 Rental (20110710-20110809),"-3325,6",,,paid,1957767,12652920,,yes
+117,2011-06-24,614020.01,bank,Zhong Yu 1515 Fees (20110710-20110809),"-1168,35",,,paid,1957768,3215903,,yes
+118,2011-06-30,626000,cash,Phone,-300,,,paid,,50431131,,yes
+119,2011-06-30,625710,cash,Team Lunch,-252,,,paid,,6896863,,yes
+121,2011-06-30,614010,cash,Fimasys Meeting Room rental (using transportation invoice),-200,,,paid,,,,yes
+,2011-06-30,641100.03,Bank,Zhang Weihan - 201106,"-5540,61",,,,,,,
+,2011-06-30,645110.03,Bank,Zhang Weihan - 201106,"-4510,83",,,,,,,
+,2011-06-30,645120.03,Bank,Zhang Weihan - 201106,"-2315,64",,,,,,,
+,2011-06-30,645130.03,Bank,Zhang Weihan - 201106,"-477,75",,,,,,,
+,2011-06-30,622600.04,Bank,Zhang Weihan - 201106,"-749,2",,,,,,,
+1,2011-06-30,641100.04,cash,Yang Huachang - 201106,-2160,,,paid,,,,yes
+2,2011-06-30,641100.10,cash,Meng Xianli - 201106,-400,,,paid,,,,yes
+3,2011-07-07,625710,cash,Team Lunch,-281,,,paid,,6874162,,yes
+4,2011-07-07,645130.04,bank,Yang Huachang - 201106,-340,,,paid,,,,yes
+5,2011-07-07,614010,gcro,Fimasys Meeting Room rental,-700,,,paid,,-,,-
+6,2011-07-12,606400,cash,Name card making,-40,,,paid,,1389343,,yes
+7,2011-07-14,622600.01,bank,RMG International  Business Consulting Company,"-23430,9",,,paid,1957774,7168453,,yes
+8,2011-07-14,625710,cash,Team Lunch,-192,,,paid,,8931504,,yes
+9,2011-07-20,606400,cash,HK legalization documents for business doc update,-5640,,,paid,,,,yes
+10,2011-07-21,625710,cash,Team Lunch,-306,,,paid,,5299512,,yes
+11,2011-07-21,614010.01,bank,Zhong Yu 1515 Rental (20110810-20110909),"-3325,6",,,paid,1957769,,,yes
+12,2011-07-21,614020.01,bank,Zhong Yu 1515 Fees (20110810-20110909),"-1108,95",,,paid,1957770,4522975,,yes
+13,2011-07-26,606400,cash,Office Stationery,"-92,9",,,paid,,2116047,,yes
+14,2011-07-26,626000,cash,Phone (201107),-100,,,paid,,50465197,,yes
+,2011-07-26,641100.03,Bank,Zhang Weihan - 201107,"-5540,61",,,,,,,
+,2011-07-26,645110.03,Bank,Zhang Weihan - 201107,"-4510,83",,,,,,,
+,2011-07-26,645120.03,Bank,Zhang Weihan - 201107,"-2315,64",,,,,,,
+,2011-07-26,645130.03,Bank,Zhang Weihan - 201107,"-477,75",,,,,,,
+,2011-07-26,622600.04,Bank,Zhang Weihan - 201107,"-749,2",,,,,,,
+,2011-07-26,641100.05,Bank,Li Zhe - 201107,"-4260,26",,,,,,,
+,2011-07-26,645110.05,Bank,Li Zhe - 201107,"-3383,47",,,,,,,
+,2011-07-26,645120.05,Bank,Li Zhe - 201107,"-1737,93",,,,,,,
+,2011-07-26,645130.05,Bank,Li Zhe - 201107,"-251,81",,,,,,,
+,2011-07-26,622600.04,Bank,Li Zhe - 201107,"-749,2",,,,,,,
+1,2011-08-04,580000,cash,Transfer to Danny's Account,-5000,,,,,-,,-
+2,2011-08-04,580000,danny,Transfer from Cash Account,5000,,,,,-,,-
+3,2011-08-04,641100.10,danny,Meng Xianli - 201107,-400,,,paid,,,,yes
+4,2011-08-04,641100.04,danny,Yang Huachang - 201107,-2160,,,paid,,,,yes
+5,2011-08-08,580000,cash,Transfer to Danny's Account,-3000,,,,,-,,-
+6,2011-08-08,580000,danny,Transfer from Cash Account,3000,,,,,-,,-
+7,2011-08-09,606400,danny,hp ink purchase,-258,,,paid,4725469,,,yes
+8,2011-08-10,641100.09,danny,Wang Hongyan - 201106,-1000,,,paid,,,,yes
+,2011-08-10,641100.09,danny,Wang Hongyan - 201107,-1000,,,,,,,
+146,2011-09-01,580000,gcro,Loan Gilles Crofils,-24500,,,paid,,,,
+147,2011-09-01,580000,bank,Loan  Gilles Crofils,24500,,,received,,-,-,yes
+148,2011-09-01,625710,gcro,Team Lunch,-232,,,paid,-,-,-,-
+149,2011-08-23,614010.01,bank,Zhong Yu 1515 Rental (20110910-20111009),"-3325,6",,,paid,1957773,12653220,,yes
+150,2011-08-23,614020.01,danny,Zhong Yu 1515 Fees (20110910-20111009),"-1147,45",,,paid,,7241045,,yes
+151,2011-08-18,625710,danny,Team Lunch,-225,,,paid,,5299263,,no
+152,2011-08-11,625710,danny,Team Lunch,-144,,,paid,,8932222,,no
+,2011-08-31,641100.03,Bank,Zhang Weihan - 201108,"-11070,49",,,,,,,
+,2011-08-31,645110.03,Bank,Zhang Weihan - 201108,"-4510,83",,,,,,,
+,2011-08-31,645120.03,Bank,Zhang Weihan - 201108,"-2315,64",,,,,,,
+,2011-08-31,645130.03,Bank,Zhang Weihan - 201108,"-1198,87",,,,,,,
+,2011-08-31,622600.04,Bank,Zhang Weihan - 201108,"-749,2",,,,,,,
+,2011-08-31,641100.05,Bank,Li Zhe - 201108,"-4260,26",,,,,,,
+,2011-08-31,645110.05,Bank,Li Zhe - 201108,"-3383,47",,,,,,,
+,2011-08-31,645120.05,Bank,Li Zhe - 201108,"-1737,93",,,,,,,
+,2011-08-31,645130.05,Bank,Li Zhe - 201108,"-251,81",,,,,,,
+,2011-08-31,622600.04,Bank,Li Zhe - 201108,"-749,2",,,,,,,
+1,2011-09-20,760100.0000,bank,Invoice 0002 - SecondBureau (17220.00EUR),"149116,59",,,settled,,I0002,,yes
+154,2011-09-20,580000,bank,Cash Withdrawal,-10000,,,withdrew,,,,yes
+155,2011-09-20,580000,cash,Cash Withdrawal from ICBC CNY,10000,,,received,2411403,,,yes
+156,2011-09-20,580000,bank,Returning Loan,-24500,,,paid,2411404,,,yes
+157,2011-09-20,580000,gcro,Returning Loan from ICBC CNY,24500,,,received,,,,
+158,2011-09-20,614010.01,bank,Zhong Yu 1515 Rental (20111010-20111109),"-3325,6",,,paid,1957777,12653324,,yes
+159,2011-09-20,614020.01,bank,Zhong Yu 1515 Fees (20111010-20111109),"-1093,55",,,paid,1957776,8446525,,yes
+160,2011-09-20,606400,danny,office supply,-13,10 - Meng Xianli,,paid,,unofficial invoice,,no
+,2011-09-23,641100.03,Bank,Zhang Weihan - 201109,"-8069,69",,,,,,,
+,2011-09-23,645110.03,Bank,Zhang Weihan - 201109,"-4510,83",,,,,,,
+,2011-09-23,645120.03,Bank,Zhang Weihan - 201109,"-2315,64",,,,,,,
+,2011-09-23,645130.03,Bank,Zhang Weihan - 201109,"-448,67",,,,,,,
+,2011-09-23,622600.04,Bank,Zhang Weihan - 201109,"-749,2",,,,,,,
+,2011-09-23,641100.05,Bank,Li Zhe - 201109,"-4260,26",,,,,,,
+,2011-09-23,645110.05,Bank,Li Zhe - 201109,"-3383,47",,,,,,,
+,2011-09-23,645120.05,Bank,Li Zhe - 201109,"-1737,93",,,,,,,
+,2011-09-23,645130.05,Bank,Li Zhe - 201109,"-251,81",,,,,,,
+,2011-09-23,622600.04,Bank,Li Zhe - 201109,"-749,2",,,,,,,
+1,2011-09-06,641100.10,danny,Meng Xianli - 201108,-400,,,paid,,l,,yes
+2,2011-09-20,606400,danny,water machine and water (10),-450,,,paid,,3705533,,yes
+3,2011-09-20,606400,danny,water container deposit,-50,,,paid,,,,yes
+4,2011-08-07,645130.04,bank,Yang Huachang - 201107,-340,,,paid,,,,yes
+5,2011-09-07,645130.04,bank,Yang Huachang - 201108,-340,,,paid,,,,yes
+6,2011-09-20,614010.02,gcro,Zhong Yu 1516 Rental ,"-4195,85",,,paid,,,,
+7,2011-09-22,661600,danny,HSBC bank signature witness delivery,-150,,,paid,,,,
+8,2011-09-22,624400,danny,Transportation (201108),-100,04 - Yang Huachang,,paid,,890593,,yes
+9,2011-09-22,641100.09,Cash,Wang Hongyan - 201108,-1000,,,paid,,,,yes
+10,2011-09-26,695000,bank,disabled assurance payment 2010 ,-494,,,paid,,,,yes
+11,2011-09-22,661600,bank,small account management fee by ICBC,-90,,,paid,,,,yes
+12,2011-09-21,760000,bank,RMB bank account interest (20110621-20110920),"55,86",,,paid,,,,yes
+13,2011-09-29,580000,cash,Transfer to Danny's Account,-1000,,,,-,-,-,-
+14,2011-09-29,580000,danny,Transfer from Cash Account,1000,,,,-,-,-,-
+15,2011-09-29,606400,Cash,Bike (personal),-1052,,100%,paid,,987955,,no
+16,2011-09-29,625710,Cash,Team Lunch,-238,,,paid,,20954978,,no
+17,2011-09-29,641100.04,cash,Yang Huachang - 201108,-2160,,,paid,,,,yes
+18,2011-09-29,641100.04,cash,Yang Huachang - 201109,-2160,,,paid,,,,yes
+19,2011-10-08,606500,danny,UNKNOWN HARDWARE,-1300,,,paid,,1398691,,yes
+20,2011-10-08,645130.04,bank,Yang Huachang - 201109,-340,,,paid,,,,yes
+21,2011-09-26,624400,danny,Transportation (201109),-110,04 - Yang Huachang,,paid,,,,yes
+22,2011-10-11,641100.09,Cash,Wang Hongyan - 201109,-1000,,,paid,,,,yes
+23,2011-10-11,641100.10,cash,Meng Xianli - 201109,-400,,,paid,,,,yes
+24,2011-10-11,580000,cash,Transfer to Danny's Account,-300,,,,-,-,-,-
+25,2011-10-18,580000,danny,Transfer from Cash Account,300,,,,-,-,-,-
+26,2011-10-11,695000,danny,stamp duty for rental contract,-115,,,paid,,,,yes
+27,2011-10-11,614030.01,danny,Zhong Yu Fees (Logo),-280,,,paid,,8446623,,yes
+28,2011-10-18,580000,cash,Transfer to Danny's Account,-3500,,,,-,-,-,-
+29,2011-10-18,580000,danny,Transfer from Cash Account,3500,,,,-,-,-,-
+30,2011-10-14,661600,danny,ICBC - bank account update,-20,,,paid,,,,yes
+194,2011-10-18,580000,bank,Transfer to Cash,-30000,,,,,,,yes
+195,2011-10-18,580000,cash,Transfer from SPD CNY,30000,,,withdrew,2411405,,,yes
+196,2011-10-18,614020.01,bank,Zhong Yu 1515 Fees (20111110-20111209),"-1125,45",,,paid,1957780,9564002,,yes
+197,2011-10-18,614010.01,bank,Zhong Yu 1515 Rental (20111110-20111209),"-3325,6",,,paid,1957783,12653460,,yes
+198,2011-10-18,614020.02,gcro,Zhong Yu 1516 Fees (20111110-20111209),"-870,25",,,paid,,,,
+199,2011-10-18,614010.02,gcro,Zhong Yu 1516 Rental (20111110-20111209),"-3325,6",,,paid,,,,
+,2011-10-18,641100.03,Bank,Zhang Weihan - 201110,"-5871,52",,,paid,1957779,4034514,,
+,2011-10-18,645110.03,Bank,Zhang Weihan - 201110,"-4510,83",,,paid,1957779,4034514,,
+,2011-10-18,645120.03,Bank,Zhang Weihan - 201110,"-2315,64",,,paid,1957779,4034514,,
+,2011-10-18,645130.03,Bank,Zhang Weihan - 201110,"-146,84",,,paid,1957779,4034514,,
+,2011-10-18,622600.04,Bank,Zhang Weihan - 201110,"-749,2",,,paid,1957779,4034514,,
+,2011-10-18,641100.05,Bank,Li Zhe - 201110,"-11015,06",,,paid,1957779,4034514,,
+,2011-10-18,645110.05,Bank,Li Zhe - 201110,"-3383,47",,,paid,1957779,4034514,,
+,2011-10-18,645120.05,Bank,Li Zhe - 201110,"-1737,93",,,paid,1957779,4034514,,
+,2011-10-18,645130.05,Bank,Li Zhe - 201110,"-1185,01",,,paid,1957779,4034514,,
+,2011-10-18,622600.04,Bank,Li Zhe - 201110,"-749,2",,,paid,1957779,4034514,,
+1,2011-10-18,695300,bank,Business Tax,"-7861,41",,,paid,,,,yes
+2,2011-10-25,606400,danny,office stationery (ink+file box_tissue),-352,,,paid,,11701528,,yes
+203,2011-10-15,606400,danny,office stationery (name card book) ,-42,,,paid,,11701529,,yes
+204,2011-10-26,625710,danny,Team Lunch,-286,,,paid,,2850879,,no
+205,2011-11-02,606400,danny,office stationery (white board +pen_ink),-394,,,paid,,4086084,,yes
+206,2011-11-10,708300.0024,gcro,Receipt 0001 - S.C.&S (RMB1800.00) - 201111,1800,,,received,,R0001,,-
+,2011-10-18,645130.04,bank,Yang Huachang - 201109,-340,,,,,,,
+207,2011-11-10,645130.04,danny,Yang Huachang - 201110,-340,,,paid,,,,yes
+208,2011-11-14,641100.10,danny,Meng Xianli - 201110,-500,,,paid,,,,yes
+209,2011-11-14,641100.04,cash,Yang Huachang - 201110,-2160,,,paid,,,,yes
+210,2011-11-14,641100.09,danny,Wang Hongyan - 201110,-1000,,,paid,,,,yes
+211,2011-11-14,624400,danny,Transportation (201110),-164,04 - Yang Huachang,,paid,,,,yes
+212,2011-11-14,614010,danny,Fimasys Meeting Room rental,-300,,,paid,,,,
+213,2011-11-14,580000,cash,Transfer to Danny's Account,-2300,,,,-,-,-,-
+214,2011-11-14,580000,danny,Transfer from Cash Account,2300,,,,-,-,-,-
+215,2011-11-16,580000,cash,Transfer to Danny's Account,-2500,,,,-,-,-,-
+216,2011-11-16,580000,danny,Transfer from Cash Account,2500,,,,-,-,-,-
+217,2011-11-18,623700,danny,Second Bureau logo pen (100),-400,,,paid,,4234431,,yes
+218,2011-11-18,606500,danny,UPS supply,-2050,,,paid,,10277590,,yes
+219,2011-11-18,623700,danny,Polo shirt (10),-500,,,paid,,10802118,,yes
+220,2011-11-16,623400,danny,Gift for manager of Zhong Yu,-200,,,paid,,4607427,,yes
+221,2011-11-21,606400,danny,Business Card,-80,,,paid,,3186012,,yes
+222,2011-11-22,606500,danny,Furniture (Deposit),-400,,,paid,,3949905,,yes
+223,2011-11-18,626000,danny,sim card and phone charge,-165,04 - Yang Huachang,,paid,,,,
+224,2011-11-22,580000,cash,Transfer to Danny's Account,-1400,,,,,-,,
+225,2011-11-22,580000,danny,Transfer from Cash Account,1400,,,,,,,
+226,2011-11-22,618500,danny,CCIFC Gala 2011 (2 people),-2400,,,paid,,35827012,,yes
+227,2011-11-28,626000,cash,Mobile Phone Charge,-500,01 - Gilles Crofils,50%,paid,,2514414,,yes
+228,2011-11-28,614010.01,cash,Zhong Yu 1515 Rental (20111210-20120109),"-3325,6",,,paid,,12653595,,yes
+229,2011-11-28,614020.01,cash,Zhong Yu 1515 Fees (20111210-20120109) ,"-1092,45",,,paid,,13582066,,yes
+230,2011-11-28,614010.02,gcro,Zhong Yu 1516 Rental (20111210-20120109),"-3325,6",,,paid,,12653596,,
+231,2011-11-28,606500,cash,Furnitures (final payment),-1740,,,paid,,394905,,yes
+232,2011-11-26,606500,cash,2 dlink switchs,-755,,,paid,,4672702,,yes
+233,2011-11-28,606400,gcro,Key copies,-6,,,paid,,,,
+234,2011-11-28,614020.02,gcro,Zhong Yu 1516 Fees (20111210-20120109),"-870,25",,,paid,,13582067,,
+235,2011-11-27,606500,Gcro,Cables + Iinstallation,-3000,,,paid,,,,no
+236,2011-12-05,708300.0025,gcro,Receipt 0004 - LesAchats.fr (RBM5100.00) - 201112,5100,,,received,,R0004,,-
+237,2011-11-28,708300.0025,Gcro,Receipt 0003 - LesAchats.fr (RMB510.00) - 201111,510,,,received,,R0003,,-
+238,2011-12-01,580000,cash,Transfer to Danny's Account,-500,,,,,-,,
+239,2011-12-01,580000,danny,Transfer from Cash Account,500,,,,,,,
+240,2011-11-20,625100,cash,Hotel (Amin),-3300,02 - Amin Rafinejad,,paid,,1149248,,yes
+241,2011-12-01,606400,danny,Business Card,-80,,,paid,,unofficial receipt,,no
+242,2011-12-06,641100.04,danny,Yang Huachang - 201111,-2160,,,paid,,,,yes
+243,2011-12-01,760100.0000,bank 2,Invoice 0003 - SecondBureau (15380.00EUR),"131005,3",,,received,,I0003,,yes
+244,2011-12-01,661600,bank 2,one bank transfer check purchase,-30,,,paid,,SPD 110279820008,,yes
+245,2011-12-01,661600,bank 2,E-receipt box usage in SPD,-150,,,paid,,SPD 110279820010,,yes
+,2011-12-01,641100.05,Bank,Li Zhe - 201111,"-4481,71",,,paid,SPD00552503,9660913,,
+,2011-12-01,645110.05,Bank,Li Zhe - 201111,"-3383,47",,,paid,SPD00552503,9660913,,
+,2011-12-01,645120.05,Bank,Li Zhe - 201111,"-1737,93",,,paid,SPD00552503,9660913,,
+,2011-12-01,645130.05,Bank,Li Zhe - 201111,"-30,36",,,paid,SPD00552503,9660913,,
+,2011-12-01,622600.04,Bank,Li Zhe - 201111,"-749,2",,,paid,SPD00552503,9660913,,
+1,2011-12-01,625710,danny,Team Lunch,-205,,,paid,,13441605,,yes
+2,2011-12-01,624400,danny,Taxi (201111),-229,04 - Yang Huachang,,paid,,,,yes
+3,2011-11-30,606400,danny,Drink water and machine for 1516,-450,,,paid,,7935971,,yes
+4,2011-12-01,606400,danny,Water bucket deposit,-50,,,paid ,,unofficial receipt ,,yes
+5,2011-12-01,580000,cash,Transfer to Danny's Account,-3000,,,,,,,
+6,2011-12-01,580000,danny,Transfer from Cash Account,3000,,,,,,,
+7,2011-12-02,606400,cash,Green plants,-420,,,paid,,5791103,,yes
+8,2011-12-07,645130.04,danny,Yang Huachang - 201111,-340,,,paid,,4511,,yes
+9,2011-12-08,708300.0024,Gcro,Receipt xxxx - S.C.&S (RMB1800.00) - 201112,1800,,,received,,-,,-
+10,2011-12-13,606400,Gcro,Amin's Bike (personal),900,,,,,,,
+11,2011-12-13,695000,Gcro,Lalaso HK Registration - Asia Business,-3848,,,Paid,,,,
+12,2011-12-13,580000,cash,Transfer to Danny's Account,-6152,,,,,,,
+13,2011-12-13,580000,danny,Transfer from Cash Account,6152,,,,,,,
+14,2011-11-16,647000.01,cash,Chinese class traning,-4400,01 - Gilles Crofils,50%,paid,,23982171,,no
+15,2011-11-11,625710,cash,Team Lunch,-249,,,paid,,2850880,,no
+16,2011-12-04,625710,cash,Team Lunch,-120,,,paid,,3430817/05252851,,no
+17,2011-09-22,625710,cash,Team Lunch,-582,,,paid,,1139914,,no
+18,2011-11-01,625720,cash,Business Lunch,-330,,,paid,,19486120,,no
+19,2011-11-10,625710,cash,Team Lunch,-190,,,paid,,19486198,,no
+20,2011-09-02,625710,cash,Team Lunch,-360,,,paid,,7498748(wrong writing),,no
+21,2011-10-13,625710,cash,Team Lunch,-262,,,paid,,20534790,,no
+22,2011-10-08,625710,cash,Team Lunch,-154,,,paid,,20955028,,no
+23,2011-09-24,625720,cash,Business Lunch,-1348,,,paid,,3132539,,no
+24,2011-11-19,625710,cash,Team Lunch,"-553,2",,,paid,,3478453,,no
+25,2011-12-06,625710,cash,Team Lunch,-323,,,paid,,3267943,,no
+26,2011-11-22,625710,cash,Team Lunch,-538,,,paid,,13441429,,no
+27,2011-11-18,625710,cash,Team Lunch,-270,,,paid,,20536310,,no
+28,2011-11-22,625710,cash,Team Lunch,-275,,,paid,,5138002(wrong writing),,no
+29,2011-11-19,625710,cash,Team Lunch,-1623,,,paid,,3427308,,no
+30,2011-11-21,625710,cash,Team Lunch,-230,,,paid,,27388672,,no
+31,2011-09-14,648000,cash,Resident permit,-400,,,paid,,3330918,,no
+32,2011-09-09,648000,cash,Resident permit,-400,,,paid,,3330103,,no
+33,2011-09-19,624400,cash,Transportation fees (201108),-30,04 - Yang Huachang,,paid,,20028136,,no
+34,2011-10-10,624400,cash,Transportation fees (201109),-39,04 - Yang Huachang,,paid,,31091559,,no
+35,2011-12-15,625710,cash,Team Lunch,-350,,,paid,,27831922,,no
+36,2011-12-15,661600,danny,bank stamp change in ICBC,-50,,,paid,,ICBC receipt,,no
+285,2011-12-15,760000,bank,bank account interest(20110921-20111215),"46,44",,,received,,ICBC receipt,,no
+286,2011-12-16,580000,bank,Transfer to SPD CNY,"-12551,31",,,transfered,,ICBC receipt,,no
+287,2011-12-16,580000,bank 2,Transfer from ICBC CNY,"12551,31",,,received,,ICBC receipt,,no
+288,2011-12-16,614010.01,bank 2,Zhong Yu 1515 Rental (20120110-20120209),"-3325,6",,,paid,552508,12653758,,no
+289,2011-12-16,614020.01,bank 2,Zhong Yu 1515 Fees (20120110-20120209),"-1194,75",,,paid,552510,13649952,,no
+290,2011-12-16,614010.02,danny,Zhong Yu 1516 Rental (20120110-20120209),"-3325,6",,,paid,cash,12653759,,yes
+291,2011-12-16,614020.02,danny,Zhong Yu 1516 Fees (20111210-20120109),"-870,25",,,paid,cash,13649954,,yes
+,2011-12-31,641100.05,Bank,Li Zhe - 201112,"-6315,86",,,paid,552507,9652867,,
+,2011-12-31,645110.05,Bank,Li Zhe - 201112,"-3383,47",,,paid,552507,9652867,,
+,2011-12-31,645120.05,Bank,Li Zhe - 201112,"-1737,93",,,paid,552507,9652867,,
+,2011-12-31,645130.05,Bank,Li Zhe - 201112,"-196,21",,,paid,552507,9652867,,
+,2011-12-31,622600.04,Bank,Li Zhe - 201112,"-749,2",,,paid,552507,9652867,,
+1,2011-12-26,641100.10,danny,Meng Xianli - 201111,-532,,,paid,,,,no
+294,2011-12-26,614030.01,danny,Office Decoration - FFS and HAVS remaining payment (3%),-192,,,paid,,receipt,,no
+295,2011-11-24,625710,gcro,Team Lunch,-200,,,paid,,unofficial receipt,,no
+296,2011-12-08,625710,gcro,Team Lunch,-87,,,paid,,unofficial receipt,,no
+1,2012-01-05,625710,cash,Team Lunch,-140,,,paid,,36140098,,no
+2,2012-01-05,661600,danny,2011 ICBC bank statement printing for audit,-20,,,paid,,ICBC receipt,,no
+3,2012-01-10,708300.0025,Gcro,Receipt 0006 - LesAchats.fr (RMB5100.00) - 201201,5100,,,received,-,R0006,-,-
+4,2012-01-08,708300.0024,Gcro,Receipt 0005 - S.C.&S (RMB1800.00) - 201201,1800,,,received,-,R0005,-,-
+5,2012-01-10,760000,Bank 2,Bank interest (20111102-20111220),"34,53",,,received,,SPD receipt,,yes
+6,2012-01-10,661600,Bank 2,Cash cheque purchase,-20,,,paid,,SPD receipt,,no
+7,2012-01-10,580000,Bank 2,Transfer to Cash,-5000,,,paid,134676,-,,no
+8,2012-01-10,580000,cash,Transfer from SPD CNY,5000,,,,,,,
+9,2012-01-10,624400,danny,Transportation fees (201112),-173,04 - Yang Huachang,,paid,,,,yes
+10,2012-01-11,641100.09,cash,Wang Hongyan - 201111,-1000,,,paid,,,,yes
+,2012-01-11,641100.09,cash,Wang Hongyan - 201112,-1000,,,,,,,
+11,2012-01-11,641100.04,cash,Yang Huachang - 201112,-2160,,,paid,,,,yes
+12,2012-01-11,641100.10,cash,Meng Xianli - 201112,-500,,,paid,,,,yes
+13,2012-01-11,624400,danny,Transportation fees (201201),-118,04 - Yang Huachang,,paid,,,,no
+14,2012-01-11,645130.04,Bank 2,Yang Huachang - 201112,-340,,,paid,,,,yes
+15,2012-01-17,661600,Bank 2,Online bank usbkey (2),-72,,,paid,,SPD receipt,,no
+16,2012-01-17,614010.01,Bank 2,Zhong Yu 1515 Rental (20120210-20120309),"-3325,6",,,paid,552511,12653960,,no
+17,2012-01-17,614020.01,Bank 2,Zhong Yu 1515 Fees (20120210-20120309),"-1286,05",,,paid,552512,13650090,,no
+18,2012-01-12,625710,cash,Team Lunch,-277,,,paid,,20970236,,no
+,2012-01-17,641100.05,Bank 2,Li Zhe - 201201,"-11015,06",,,paid,552514,4527982,,
+,2012-01-17,645110.05,Bank 2,Li Zhe - 201201,"-3445,97",,,paid,552514,4527982,,
+,2012-01-17,645120.05,Bank 2,Li Zhe - 201201,"-1737,93",,,paid,552514,4527982,,
+,2012-01-17,645130.05,Bank 2,Li Zhe - 201201,"-1185,01",,,paid,552514,4527982,,
+,2012-01-17,622600.04,Bank 2,Li Zhe - 201201,"-749,2",,,paid,552514,4527982,,
+1,2012-01-19,625710,cash,Team Lunch,-306,,,paid,,39668689,,no
+2,2012-01-23,708300.0024,Gcro,Receipt 0007 - S.C.&S (RMB1800.00) - 201202,1800,,,received,-,R0007,-,-
+3,2012-01-20,606400,cash,Batteries ,-294,,,paid,,4973163,,no
+4,2012-01-31,708300.0025,Gcro,Receipt 0007 - LesAchats.fr (RMB5100.00) - 201202,5100,,,received,-,Receipt 0007,,-
+5,2012-01-03,625710,cash,Team Lunch,-607,,,paid,,32818241,,wrong writing
+6,2012-02-02,625710,cash,Team Lunch,-164,,,paid,,5718344,,wrong writing
+7,2012-01-17,625710,cash,Team Lunch,-470,,,paid,,receipt,,
+8,2012-02-07,625710,cash,Team Lunch,-140,,,paid,,17249420,,no
+9,2012-02-07,661600,danny,Signature Witness fee,-200,,,paid,,HSBC receipt,,no
+10,2012-02-07,624400,cash,Taxi,-21,,,paid,,,,no
+11,2012-02-07,614010.02,Gcro,Zhong Yu 1516 Rental (20120210-20120309),"-3325,6",,,paid,,12653992,,
+12,2012-02-07,614020.02,Gcro,Zhong Yu 1516 Fees (20120210-20120309),"-870,25",,,paid,,16274614,,
+13,2012-02-03,695000,Bank 2,SAFE Change,-50,,,paid,552515,10098582,,no
+14,2012-02-03,622600.02,Bank 2,China Solution - 2011 Annual Check,-4000,,,paid,552515,1236690,,no
+15,2012-02-03,695000,Bank 2,stamp carving for custom,-280,,,paid,552515,7264498,,yes
+16,2012-02-03,695000,Bank 2,"Stamp carving for Company, financial and name)",-840,,,paid,552515,7264459,,yes
+17,2012-02-03,695000,Bank 2,Code certificate change,-30,,,paid,552515,1113856335,,yes
+18,2012-02-03,695000,Bank 2,Business license update (address),-120,,,paid,552515,26914987,,yes
+19,2012-02-03,695000,Bank 2,Business license update (name + Rep + Scope),-100,,,paid,552515,3429473,,yes
+20,2012-01-31,624400,danny,Transportation fees (201201),-101,04 - Yang Huachang,,paid,,,,no
+21,2012-01-12,695000,Bank 2,Tax payment (BT+ET+CT),"-7205,3",,,paid,,482097,,no
+22,2012-01-17,661600,Bank 2,Online bank annual service 2012,-200,,,paid,,991339880008,,no
+23,2012-02-06,645130.04,Bank 2,Yang Huachang - 201201,-340,,,paid,,482240,,no
+24,2012-02-09,625710,cash,Team Lunch,-180,,,paid,,20848787,,no
+25,2012-02-14,641100.04,Bank 2,Yang Huachang - 201201,-2160,,,paid,spd999579179462,,,no
+26,2012-02-14,606400,danny,Business Card,-40,,,paid,,6486618,,no
+27,2012-02-13,606400,danny,Printer Fix,-350,,,paid,,11644315,,no
+28,2012-02-16,625710,cash,Team Lunch,-169,,,paid,,36141382,,no
+29,2012-02-21,661600,danny,Change ICBC capital account stamp,-50,,,paid,,,,no
+30,2012-02-21,661600,danny,Printing bank statement and interest slip for capital account,-20,,,paid,,,,no
+31,2012-02-09,760100.0000,Bank 2,Invoice 0007 - SecondBureau (8904.20EUR),"74049,11",,,received,,I0007,,no
+32,2012-02-14,661600,Bank 2,bank transfer fee for Danny's salary (201201),"-0,8",,,paid,spd999570170462,,,no
+33,2012-02-17,760100.0012,Bank 2,Bernard Controls - Digital Communication - Invoice 0009,21164,,,received,,1st payment,,no
+34,2012-02-22,580000,Bank 2,Transfer to Danny,-5000,,,withdrew,134678,,,no
+35,2012-02-22,580000,danny,Transfer from SPD CNY,5000,,,received,,,,
+36,2012-02-22,625720,cash,Business Lunch,-184,,,paid,,4795438,,no
+37,2012-02-24,580000,Bank 2,Transfer to Cash,-5000,,,withdrew,134679,,,no
+38,2012-02-24,580000,cash,Transfer from SPD CNY,5000,,,received,,,,
+39,2012-02-23,606400,danny,Accounting software,-1900,,,paid,,10500657,,no
+40,2012-02-23,641100.09,danny,Wang Hongyan - 201201,-1000,,,paid,,,,no
+41,2012-02-23,641100.10,danny,Meng Xianli - 201201,-500,,,paid,,,,no
+42,2012-02-23,625720,cash,Business Lunch,-187,,,paid,,22876089,,no
+43,2012-02-23,625710,Danny,Team Lunch,-213,,,paid,,,,no
+44,2012-02-24,614010.02,Gcro,Zhong Yu 1516 Rental (20120310-20120409),"-3325,6",,,paid,,58064,,no
+45,2012-02-24,614020.02,Gcro,Zhong Yu 1516 Fees (20120310-20120409),"-870,25",,,paid,,16274663,,no
+46,2012-02-28,580000,Bank 2,bank transfer from ICBC capital account,"29,26",,,received,,,,no
+47,2012-02-28,614010.01,Bank 2,Zhong Yu 1515 Rental (20120310-20120409),"-3325,6",,,paid,,58105,,no
+48,2012-02-28,614020.01,Bank 2,Zhong Yu 1515 Fees (20120310-20120409) + elec (20120106-20120207),"-1279,45",,,paid,,16274662,,no
+1,2012-02-24,625720,cash,Business Lunch,-172,,,paid,,3491238,,no
+2,2012-02-25,625720,cash,Business Lunch,-338,,,paid,,13378893,,no
+3,2012-01-14,626000,Gcro,Mobile Phone Charge,-500,01 - Gilles Crofils,50%,paid,,12081635,,no
+4,2012-02-29,580000,Bank 2,Transfer to Cash,-20000,,,withdrew,134680,,,no
+5,2012-02-29,580000,cash,Transfer from SPD CNY,20000,,,received,,,,no
+6,2012-02-29,760100.0000,Bank EURO,Second Bureau - Consulting - Invoice 0008,"15662,64",,,received,,,,no
+7,2012-03-01,708300.0025,Gcro,Receipt 0008 - LesAchats.fr (RMB5100.00) - 201203,5100,,,received,,R0008,,-
+8,2012-02-28,661600,Bank 2,online bank transfer charge expense for FESCO 201202,-1,,,paid,spd110194240452,,,no
+9,2012-02-28,661600,Bank 2,online bank transfer charge expense for rental transfer 20120310-20120409,-1,,,paid,spd110194240430,,,no
+10,2012-02-28,661600,Bank 2,online bank transfer charge expense for mgt fee transfer 20120310-20120409,-1,,,paid,spd110194240831,,,no
+11,2012-03-01,625710,cash,Team Lunch,-175,,,paid,,39764038,,no
+12,2012-02-28,624400,danny,Transportation fees ,-304,04 - Yang Huachang,,paid,,,,no
+,2012-02-28,641100.05,Bank 2,Li Zhe - 201202,"-14840,05",,,paid,,4538115,,
+,2012-02-28,645110.05,Bank 2,Li Zhe - 201202,"-3445,97",,,paid,,4538115,,
+,2012-02-28,645120.05,Bank 2,Li Zhe - 201202,"-1737,93",,,paid,,4538115,,
+,2012-02-28,645130.05,Bank 2,Li Zhe - 201202,"-2440,02",,,paid,,4538115,,
+,2012-02-28,622600.04,Bank 2,Li Zhe - 201202,"-749,2",,,paid,,4538115,,
+13,2012-03-01,641100.04,Bank 2,Yang Huachang - 201202,-2160,,,paid,spd999570079354,,,no
+14,2012-03-12,641100.10,danny,Meng Xianli - 201202,-500,,,paid,,,,no
+15,2012-03-05,708300.0024,Gcro,Receipt 0009 - S.C.&S (RMB1800.00) - 201203,1800,,,received,-,R0009,-,-
+16,2012-03-03,625720,cash,Business Lunch,-363,,,paid,,5169274,,no
+17,2012-03-04,625720,cash,Business Lunch,-204,,,paid,,6410079,,no
+18,2012-03-06,641100.09,Danny,Wang Hongyan - 201202,-1000,,,paid,,,,no
+19,2012-03-07,645130.04,Bank 2,Yang Huachang - 201202,-340,,,paid,,482471,,no
+20,2012-03-06,604000,Bank 2,GrandCloud,-200,,,paid,,4309901,,no
+21,2012-03-01,661600,Bank 2,bank tranfer expense for Danny salary 201202,"-0,8",,,paid,spd999570079354,,,no
+22,2012-03-07,661600,Bank 2,online bank transfer charge expense for Grandcloud usage,-5,,,paid,,999570170013,,no
+23,2012-03-08,606400,cash,Batteries ,-215,,,paid,,2082931,,no
+24,2012-03-08,625710,cash,Team Lunch,-163,,,paid,,,,
+25,2012-03-08,647000.01,cash,Chinese class traning,-2200,01 - Gilles Crofils,50%,paid,,6572949,,no
+26,2012-03-10,625710,cash,Team Lunch,"-508,2",,,paid,,44205751,,no
+27,2012-03-13,625710,cash,Team Lunch,-196,,,paid,,18558035,,no
+28,2012-03-15,625710,cash,Team Lunch,-180,,,paid,,44240565,,no
+29,2012-03-16,628100,Bank 2,CCIFC membership (2012),-3500,,,paid,SPD 110194220540,901314725,,
+30,2012-03-16,661600,Bank 2,online bank transfer charge for CCIFC payment,-1,,,paid,SPD 110194220540,,,
+31,2012-03-13,623700,Bank 2,CCIFC Connexion advertisement,-4900,,,paid,SPD 110169170223,2897489,,
+32,2012-03-13,661600,Bank 2,online bank transfer charge for Connexion ads order,-1,,,paid,SPD 110169170223,,,
+33,2012-03-21,760000,Bank 2,bank account Interest income (20111221-20120320),"146,05",,,received,,,,
+34,2012-03-21,760000,Bank EURO,bank account Interest income (20111221-20120320),"0,91",,,received,,,,
+35,2012-03-23,614010.01,Bank 2,Zhong Yu 1515 Rental (20120410-20120509),"-3325,6",,,paid,spd110175720001,,,
+36,2012-03-23,661600,Bank 2,online bank transfer charge for office 1515 rental transfer,-1,,,paid,spd110175720001,,,
+37,2012-03-23,614020.01,Bank 2,Zhong Yu 1515 Fees (20120410-20120509) + elec (20120208-20120306),"-1238,75",,,paid,spd110175720002,19242844,,
+38,2012-03-23,661600,Bank 2,online bank transfer charge for Office 1515 mgt and Elec fee,-1,,,paid,spd110175720002,,,
+1,2012-03-26,661600,Bank 2,online bank transfer charge for FESCO transfer,-1,,,paid,#REF!,,,
+2,2012-03-29,580000,Bank 2,Transfer to Cash,-5000,,,withdrew,134681,,,
+3,2012-03-29,580000,cash,Transfer from SPD CNY,5000,,,received,,,,
+4,2012-03-29,614010.02,Gcro,Zhong Yu 1516 Rental (20120410-20120509),"-3325,6",,,paid,,,,
+5,2012-03-29,614020.02,Gcro,Zhong Yu 1516 Fees (20120410-20120509) + door knob repair,"-890,25",,,paid,,19242805,,
+6,2012-03-21,623400,Danny,Gift for Tax officer ,-612,,,paid,,27508862,,
+7,2012-03-29,624400,Danny,Transportation fees ,-311,,,paid,,,,
+8,2012-03-29,618500,cash,CCIFC seminar (social media),-600,,,paid,,2897490,,
+9,2012-03-29,580000,cash,Transfert to Danny's Account,"-784,15",,,received,,,,
+10,2012-03-29,580000,Danny,Transfert from Cash Account,"784,15",,,received,,,,
+11,2012-04-05,708300.0025,Gcro,Receipt 0010 - LesAchats.fr (RMB5100.00) - 201204,5100,,,received,,Receipt 0010,,-
+12,2012-04-09,708300.0024,Gcro,Receipt 0011 - S.C.&S (RMB1800.00) - 201204,1800,,,received,,R0011,,-
+13,2012-02-14,625720,cash,Business Lunch,-216,,,paid,,3481100,,
+14,2012-03-31,625720,cash,Business Lunch,-281,,,paid,,962075,,
+15,2012-04-01,625720,cash,Business Lunch,-232,,,paid,,2547739,,
+16,2012-04-05,625720,cash,Business Lunch,-240,,,paid,,44340785,,
+17,2012-04-07,625720,cash,Business Lunch,-262,,,paid,,522174,,
+18,2012-04-06,625720,cash,Business Lunch,-288,,,paid,,64820,,
+19,2012-04-09,625720,cash,Business Lunch,-215,,,paid,,29882099,,
+20,2012-03-20,606400,Danny,Mouse x1,-109,,,paid,,5704162,,
+21,2012-04-13,625720,cash,Business Lunch,-228,,,paid,,6599208,,
+22,2012-04-16,625720,cash,Business Lunch,-174,,,paid,,2802147,,
+23,2011-04-13,625710,cash,Team Lunch,-243,,,paid,,44457244,,
+24,2012-04-11,625720,cash,Business Lunch,-295,,,paid,,no official invoice ,,
+25,2012-04-12,626000,Bank 2,Internet provider (20120204-20130203),-32000,,,paid,552516,485407,,
+26,2012-04-10,626000,cash,Internet Provider Home,-2000,01 - Gilles Crofils,100%,paid,,1905352,,
+,2012-03-26,641100.05,Bank 2,Li Zhe - 201203,"-4481,71",,,paid,spd 110194240086,4535374,,
+,2012-03-26,645110.05,Bank 2,Li Zhe - 201203,"-2507,97",,,paid,spd 110194240086,4535374,,
+,2012-03-26,645120.05,Bank 2,Li Zhe - 201203,"-799,93",,,paid,spd 110194240086,4535374,,
+,2012-03-26,645115.05,Bank 2,Li Zhe - 201203,-938,,,paid,spd 110194240086,4535374,,
+,2012-03-26,645125.05,Bank 2,Li Zhe - 201203,-938,,,paid,spd 110194240086,4535374,,
+,2012-03-26,645130.05,Bank 2,Li Zhe - 201203,"-30,36",,,paid,spd 110194240086,4535374,,
+,2012-03-26,622600.04,Bank 2,Li Zhe - 201203,"-749,2",,,paid,spd 110194240086,4535374,,
+27,2012-04-13,641100.10,Bank 2,Meng Xianli - 201203,-500,,,paid,110194240398,,,
+28,2012-04-13,661600,Bank 2,bank transfer expense for office cleaning fee,-1,,,paid,110194240398,,,
+29,2012-04-13,641100.04,Bank 2,Yang Huachang - 201203,-2160,,,paid,999570560305,,,
+30,2012-04-13,661600,Bank 2,bank transfer charge for Danny salary,"-0,8",,,paid,999570560305,,,
+31,2012-04-12,645130.04,Bank 2,Yang Huachang - 201203,-340,,,paid,,482719,,
+32,2012-04-10,624400,cash,Transportation fees ,-99,01 - Gilles Crofils,,paid,,,,
+33,2012-04-20,625710,cash,Team Lunch,-213,,,paid,,3941022,,
+34,2012-05-16,760100.0012,Bank 2,Bernard Controls - Digital Communication - Invoice 0012,21164,,,received,,2nd Payment,,
+35,2012-04-17,625600,cash,Business Trip to Shanghai - meal,-286,01 - Gilles Crofils,,paid,,41758363,,
+36,2012-04-17,625600,cash,Business Trip to Shanghai - Taxi,-169,01 - Gilles Crofils,,paid,,30287260,,
+37,2012-04-17,624400,cash,Transportation fees ,-134,01 - Gilles Crofils,,paid,,18507037,,
+38,2012-04-22,625720,cash,Business Lunch,-312,,,paid,,66293,,
+39,2012-04-20,625710,cash,Team Lunch,-287,,,paid,,2773192,,
+40,2012-04-28,625710,cash,Team Lunch,-365,,,paid,,2643188,,
+41,2012-04-25,625100,cash,SH Trip Flight & hotel package,-5470,,,paid,,21086206,,
+1,2012-04-25,614020.01,Bank 2,Zhong Yu 1515 Fees (20120510-20120609) + elec (20120307-20120406) + fix fee,"-1248,85",,,paid,110175720124,22716524,,
+2,2012-04-23,661600,Bank 2,bank transfer charge for office 1515 mgt fee,-1,,,paid,110175720124,,,
+3,2012-04-24,614010.01,Bank 2,Zhong Yu 1515 Rental (20120510-20120609),"-3325,6",,,paid,110175720123,58268,,
+4,2012-04-23,661600,Bank 2,bank transfer charge for rental ,-1,,,paid,110175720123,,,
+5,2012-04-24,661600,Bank 2,bank transfer charge for FESCO,-1,,,paid,#REF!,,,
+6,2012-05-02,614010.02,Gcro,Zhong Yu 1516 Rental (20120510-20120609),"-3325,6",,,paid,,58305,,
+7,2012-05-02,614020.02,Gcro,Zhong Yu 1516 Fees (20120510-20120609),"-870,25",,,paid,,22716548,,
+8,2012-04-28,580000,cash,Transfer to Danny's Account,-2500,,,,,,,
+9,2012-04-28,580000,Danny,Transfer from Cash Account,2500,,,,,,,
+10,2012-05-03,625710,cash,Team Lunch,-218,,,paid,,38935149,,
+11,2012-03-26,606400,Danny,office stationery,-160,,,paid,,12736912,,
+12,2012-05-04,695000,Danny,Im&ex port certificate update by Custom,-50,,,paid,,21678427,,
+13,2012-05-04,624400,Danny,Transportation fees ,-114,04 - Yang Huachang,,paid,,,,
+14,2012-05-10,625710,cash,Team Lunch,-376,,,paid,,3943053,,
+15,2012-05-10,580000,Bank EURO,Transfer to SPD CNY,"-15662,64",,,paid,,,,
+16,2012-05-10,580000,Bank 2,Transfer from SPD EURO,"127262,08",,,received,,,,
+,2012-04-26,641100.05,Bank 2,Li Zhe - 201204,"-8610,82",,,paid,110175720573,19281984,,
+,2012-04-26,645110.05,Bank 2,Li Zhe - 201204,"-2524,67",,,paid,110175720573,19281984,,
+,2012-04-26,645120.05,Bank 2,Li Zhe - 201204,"-805,23",,,paid,110175720573,19281984,,
+,2012-04-26,645115.05,Bank 2,Li Zhe - 201204,-938,,,paid,110175720573,19281984,,
+,2012-04-26,645125.05,Bank 2,Li Zhe - 201204,-938,,,paid,110175720573,19281984,,
+,2012-04-26,645130.05,Bank 2,Li Zhe - 201204,"-583,95",,,paid,110175720573,19281984,,
+,2012-04-26,622600.04,Bank 2,Li Zhe - 201204,"-749,2",,,paid,110175720573,19281984,,
+17,2012-05-15,645130.04,Bank 2,Yang Huachang - 201204,-340,,,paid,,479038,,
+18,2012-05-11,641100.10,Bank 2,Meng Xianli - 201204,-500,,,paid,110169170161,817570,,
+19,2012-05-11,661600,Bank 2,bank transfer charge for office cleaning,-1,,,paid,110169170161,,,
+20,2012-05-11,622600,Bank 2,2011 Audit fee,-3000,,,paid,110169170162,,,
+21,2012-05-11,661600,Bank 2,bank transfer charge for 2011 Audit fee,-1,,,paid,110169170162,,,
+22,2012-05-11,641100.04,Bank 2,Yang Huachang - 201204,-2160,,,paid,999570830127,,,
+23,2012-05-11,661600,Bank 2,bank transfer charge for Danny salary,"-0,8",,,paid,999570830127,,,
+24,2012-05-15,622600.01,Bank 2,RMG International  Business Consulting Company,"-33960,53",,,paid,552518,649018,,
+25,2012-05-16,606400,Danny,stationery + taxation book required by tax office,-595,,,paid,,19285450,,
+26,2012-05-16,624400,Danny,Taxi,-93,04 - Yang Huachang,,paid,,,,
+27,2012-05-16,606400,Danny,delivery fee,-20,,,paid,,,,
+28,2012-05-16,606400,Danny,Business Card,-40,,,paid,,,,
+29,2012-05-16,606500,Danny,mouse * 6,-630,,,paid,,17379966,,
+30,2012-05-21,580000,cash,Transfer to Danny's Account,"-3804,15",,,Transfered,,,,
+31,2012-05-21,580000,Danny,Transfer from Cash Account,"3804,15",,,received,,,,
+32,2012-05-21,606500,Bank 2,Samsung monitor S23B300B*3,-3750,,,paid,552520,10782452,,
+33,2012-05-17,625710,cash,Team Lunch,-303,,,paid,,8104318,,
+34,2012-05-11,580000,Bank 2,Transfer to Cash,-15000,,,withdrew,134682,,,
+35,2012-05-11,580000,cash,Transfer from SPD CNY,15000,,,received,,,,
+36,2012-05-23,614010.02,Gcro,Zhong Yu 1516 Rental (20120610-20120709),"-3325,6",,,paid,,,,
+37,2012-05-23,614020.02,Gcro,Zhong Yu 1516 Fees (20120610-20120709),"-870,25",,,paid,,,,
+38,2012-05-22,614010.01,Bank 2,Zhong Yu 1515 Rental (20120610-20120709),"-3325,6",,,paid,110194240202,58403,,
+39,2012-05-22,661600,Bank 2,online bank transfer charge for office 1515 rental transfer,-1,,,paid,110194240202,,,
+40,2011-05-22,614020.01,Bank 2,Zhong Yu 1515 Fees (20120610-20120709) + elec (20120408-20120506),"-1192,55",,,paid,110194240201,1935297,,
+41,2012-05-22,661600,Bank 2,online bank transfer charge for Office 1515 mgt and Elec fee,-1,,,paid,110194240201,,,
+42,2012-05-25,606500,Bank 2,Thin Client purchase *3,-5610,,,paid,552519,2274654,,
+43,2012-05-21,618500,cash,CCIFC seminar ,-300,,,paid,,,,
+44,2012-05-24,625710,Danny,Team Lunch,-200,,,paid,,certian amount invoice,,
+1,2012-05-24,661600,Bank 2,online bank transfer charge for FESCO transfer,-1,,,paid,#REF!,,,
+2,2012-05-29,760100.0000,Bank EURO,Second Bureau,10000,,,received,IR9133120000062,,,
+3,2012-05-29,606400,Danny,delivery fee,-60,,,paid,,,,
+4,2012-05-31,625710,Danny,Team Lunch,-252,,,paid,,1810418,,
+5,2012-05-25,618500,Danny,reimbursement for Lilin's CCIFC seminar ,-100,,,paid,,2897647,,
+,2012-05-25,641100.05,Bank 2,Li Zhe - 201205,"-6311,09",,,paid,11016917012,22724862,,
+,2012-05-25,645110.05,Bank 2,Li Zhe - 201205,"-2524,67",,,paid,11016917012,22724862,,
+,2012-05-25,645120.05,Bank 2,Li Zhe - 201205,"-805,23",,,paid,11016917012,22724862,,
+,2012-05-25,645115.05,Bank 2,Li Zhe - 201205,-938,,,paid,11016917012,22724862,,
+,2012-05-25,645125.05,Bank 2,Li Zhe - 201205,-938,,,paid,11016917012,22724862,,
+,2012-05-25,645130.05,Bank 2,Li Zhe - 201205,"-195,68",,,paid,11016917012,22724862,,
+,2012-05-25,622600.04,Bank 2,Li Zhe - 201205,"-749,2",,,paid,11016917012,22724862,,
+6,2012-06-01,641100.06,Bank 2,Li Lin - 201205,"-8750,28",,,paid,999570040001,,,
+7,2012-06-01,661600,Bank 2,online bank transfer charge for salary lin,"-0,8",,,paid,999570040001,,,
+8,2012-06-01,641100.07,Bank 2,Romain Binaux - 201205,"-7000,56",,,paid,999570050003,,,
+9,2012-06-01,661600,Bank 2,online bank transfer charge for salary Romain,"-0,8",,,paid,999570050003,,,
+10,2012-05-25,641100.08,Gcro,Zhang Yang - 201205,-4500,,,paid,,,,
+11,2012-06-07,625710,Danny,Team Lunch,-205,,,paid,,,,forward to 1517
+12,2012-06-11,695000,Danny,tax CA annual service fee,-120,,,paid,,4071538,,
+13,2012-06-12,695000,Bank 2,BT+CMT+ state and local education charge + IIT(danny 201205),"-5331,94",,,paid,479208,,,
+14,2012-06-12,645130.04,Bank 2,Yang Huachang - 201205,-340,,,paid,479208,,,
+15,2012-06-12,580000,Bank 2,Transfer to Cash,-20000,,,withdrew,134683,,,
+16,2012-06-12,580000,Cash,Transfer from SPD CNY,20000,,,received,,,,
+17,2012-06-12,641100.04,Bank 2,Yang Huachang - 201205,-2160,,,paid,999570560153,,,
+18,2012-06-12,661600,bank 2,online transfer charge for Danny salary,"-0,8",,,paid,999570560153,,,
+19,2012-06-12,641100.10,Bank 2,Meng Xianli - 201205,-500,,,paid,110169170401,,,
+20,2012-06-12,661600,Bank 2,online transfer charge for Cleaning fee,-1,,,paid,110169170401,,,
+21,2012-06-12,641100.09,Danny,Wang Hongyan - 201203,-1000,,,paid,,,,
+,2012-06-12,641100.09,Danny,Wang Hongyan - 201204,-1000,,,,,,,
+,2012-06-12,641100.09,Danny,Wang Hongyan - 201205,-1000,,,,,,,
+22,2012-06-20,614010.01,Bank 2,Zhong Yu 1515 Rental (20120710-20120809),"-3325,6",,,paid,552521,58498,,
+23,2012-06-20,614020.01,Bank 2,Zhong Yu 1515 Fees (20120710-20120809) + elec (20120505-20120531),"-1207,95",,,paid,110169170282,1991826,,
+24,2012-06-20,661600,Bank 2,online transfer charge for mgt + elec,-1,,,paid,110169170282,,,
+25,2012-06-21,760000,Bank 2,Bank account inerest( 201203-201206),"109,59",,,received,991339880001,,,
+26,2012-06-07,623700,Bank 2,Pinyin Studio - Design Fees,-2000,,,paid,110169170102,10813110,,
+27,2012-06-13,661600,Bank 2,online transfer charge for pinyin payment,-1,,,paid,110169170102,,,
+28,2012-06-12,606500,Bank 2,HP1606 printer ,-1739,04 - Yang Huachang,,paid,999570620378,65443,,
+29,2012-06-14,661600,Bank 2,online transfer charge for printer purchase,"-0,8",,,paid,999570620378,,,
+30,2012-06-15,625710,cash,Team Lunch,-555,,,paid,,1505588,,forward to 1517
+31,2012-06-20,625710,cash,Team Lunch,-196,,,paid,,19364,,forward to 1517
+32,2012-06-15,580000,Bank EURO,Transfer to SPD CNY,-10000,,,Transfered,,,,
+33,2012-06-15,580000,Bank 2,Transfer from SPD EURO,80038,,,received,,,,
+34,2012-06-22,625720,cash,Business Lunch,-228,,,paid,,8139238,,forward to 1517
+35,2012-06-26,580000,cash,Transfer to Danny's Account,"-804,15",,,Transfered,,,,
+36,2012-06-26,580000,Danny,Transfer from Cash Account,"-804,15",,,received,,,,
+37,2012-06-26,614010.02,Gcro,Zhong Yu 1516 Rental (20120710-20120809),"-3325,6",,,paid,,58458,,
+38,2012-06-26,614020.02,Gcro,Zhong Yu 1516 Fees (20120710-20120809),"-870,25",,,paid,,1991821,,
+39,2012-06-25,606400,Danny,Business Card,-300,,,paid,,971323,,
+40,2012-06-28,625720,cash,Business Lunch,-215,,,paid,,4240447,,
+41,2012-07-03,626000,Gcro,Internet shared expense received from office 1517 ,4000,,,received,,,,
+42,2012-07-04,641100.01,Bank 2,Gilles Crofils - 201206,-4800,,,paid,991339850013,,,
+43,2012-07-04,641100.04,Bank 2,Yang Huachang - 201206,"-6619,58",,,paid,991339850013,,,
+44,2012-07-04,641100.06,Bank 2,Li Lin - 201206,-8343,,,paid,991339850013,,,
+45,2012-07-04,641100.05,Bank 2,Li Zhe - 201206,"-5411,09",,,paid,991339850013,,,
+46,2012-07-04,641100.07,Bank 2,Romain Binaux - 201206,"-10360,56",,,paid,991339850013,,,
+47,2012-07-04,641100.10,Bank 2,Meng Xianli - 201206,-500,,,paid,991339850013,,,
+1,2012-06-27,622600.04,Bank 2,Yang Huachang - 201206,"-409,49",,,paid,110169170008,9084199,,
+,2012-06-27,622600.04,Bank 2,Li Zhe - 201206,"-409,49",,,paid,110169170008,9084199,,
+,2012-06-27,622600.04,Bank 2,Li Lin - 201206,"-409,49",,,paid,110169170008,9084199,,
+2,2012-06-27,645115.04,Bank 2 ,Yang Huachang - 201206,-773,,,paid,110169170008,9084201,,
+,2012-06-27,645125.04,Bank 2 ,Yang Huachang - 201206,-773,,,paid,110169170008,9084201,,
+,2012-06-27,645115.05,Bank 2 ,Li Zhe - 201206,-938,,,paid,110169170008,9084201,,
+,2012-06-27,645125.05,Bank 2 ,Li Zhe - 201206,-938,,,paid,110169170008,9084201,,
+,2012-06-27,645115.06,Bank 2 ,Li Lin - 201206,-840,,,paid,110169170008,9084201,,
+,2012-06-27,645125.06,Bank 2 ,Li Lin - 201206,-840,,,paid,110169170008,9084201,,
+3,2012-06-27,661600,Bank 2,Online transfer charge for FESCO fee,-1,,,paid,110169170008,,,
+1,2012-07-06,625710,cash,Team Lunch,-730,,,paid,,14259545,,
+2,2012-07-10,618500,Cash,CCIFC Seminar,-400,,,paid,,2897785,,
+,2012-06-28,645110.04,Bank 2,Yang Huachang - 201206,"-693,6",,,paid,,14064,,
+,2012-06-28,645120.04,Bank 2,Yang Huachang - 201206,"-141,72",,,paid,,14064,,
+,2012-06-28,645110.05,Bank 2,Li Zhe - 201206,"-786,5",,,paid,,14064,,
+,2012-06-28,645120.05,Bank 2,Li Zhe - 201206,"-160,3",,,paid,,14064,,
+,2012-06-28,645110.06,Bank 2,Li Lin - 201206,-700,,,paid,,14064,,
+,2012-06-28,645120.06,Bank 2,Li Lin - 201206,-143,,,paid,,14064,,
+,2012-06-28,645110.04,Bank 2,Yang Huachang - 201206,"-1546,73",,,paid,,21507,,
+,2012-06-28,645120.04,Bank 2,Yang Huachang - 201206,"-568,75",,,paid,,21507,,
+,2012-06-28,645110.05,Bank 2,Li Zhe - 201206,"-1753,9",,,paid,,21507,,
+,2012-06-28,645120.05,Bank 2,Li Zhe - 201206,"-644,93",,,paid,,21507,,
+,2012-06-28,645110.06,Bank 2,Li Lin - 201206,-1561,,,paid,,21507,,
+,2012-06-28,645120.06,Bank 2,Li Lin - 201206,-574,,,paid,,21507,,
+1,2012-07-04,606500,Bank 2,Finger Print lock,-3800,,,paid,110169170361,15089107,,
+2,2012-07-13,625710,cash,Team Lunch,-244,,,paid,,18450011,,
+3,2012-07-16,625720,cash,Business Lunch,-240,,,paid,,2684811,,
+4,2012-07-08,625720,cash,Business Lunch,-422,,,paid,,3776342,,
+5,2012-07-17,625720,cash,Business Lunch,-172,,,paid,,4030413,,
+6,2012-07-19,625720,cash,Business Lunch,-115,,,paid,,14063281,,
+7,2012-07-20,625710,cash,Team Lunch,-244,,,paid,,18450093,,
+8,2012-07-22,625720,cash,Business Lunch,"-596,9",,,paid,,2574330,,
+9,2012-07-04,625720,cash,Business Lunch,-283,,,paid,,9012335,,
+10,2012-07-05,625720,cash,Business Lunch,-309,,,paid,,14283793,,
+11,2012-07-25,606400,Danny,Bidding book printing,-357,,,paid,,1594727,,
+12,2012-07-24,626000,cash,Mobile Phone Charge,-500,01 - Gilles Crofils,50%,paid,,17645012,,
+13,2012-06-08,624400,cash,Transportation fees ,-130,01 - Gilles Crofils,,paid,,many invoices,,
+14,2012-07-25,625720,cash,Business Lunch,-260,,,paid,,14062557,,
+15,2012-07-26,580000,cash,Transfer to Danny's Account,"-2804,15",,,transfered,,,,
+16,2012-07-26,580000,Danny,Transfer from Cash Account,"2804,15",,,received,,,,
+17,2012-07-26,626000,Danny,Phone,-300,,,paid,,16307679,,
+18,2012-07-26,625720,cash,Business Lunch,-323,,,paid,,1165540,,
+19,2012-07-27,645110.11,Bank 2,Ren Lihong - 201206,"-582,19",,,paid,552523,893978,,
+20,2012-07-27,645110.11,Bank 2,Ren Lihong - 201206,"-339,36",,,paid,552522,893977,,
+21,2012-07-27,614010.02,Gcro,Zhong Yu 1516 Rental (20120810-20120909),"-3325,6",,,paid,,201410203,,
+22,2012-07-27,614020.02,Gcro,Zhong Yu 1516 Fees (20120810-20120909),"-870,25",,,paid,,4050156,,
+271,2012-07-27,606400,Danny,Delivery fee,-20,,,paid,,two invoice(02462266/69),,
+272,2012-07-27,614010.01,Bank 2,Zhong Yu 1515 Rental (20120810-20120909),"-3325,6",,,paid,110169170048,1292073,,
+273,2012-07-27,661600,Bank 2,online transfer charge for rental,-1,,,paid,110169170048,,,
+274,2012-07-27,614020.01,Bank 2,Zhong Yu 1515 Fees (20120810-20120909) + elec (20120601-20120631),"-1317,85",,,paid,110169170047,4050157,,
+275,2012-07-27,661600,Bank 2,online transfer charge for mgt + elec,1,,,paid,110169170047,,,
+276,2012-07-27,641100.09,Bank 2,Wang Hongyan - 201206,-1000,,,paid,999570400494,,,
+277,2012-07-27,661600,Bank 2,online transfer charge for accounting fee,"-0,8",,,paid,999570400494,,,
+278,2012-07-23,661600,Bank 2,online transfer charge for FP ,-1,,,paid,110169170361,,,
+,2012-07-23,645115.04,Bank 2 ,Yang Huachang - 201207,-832,,,paid,110169170154,9084198,,
+,2012-07-23,645125.04,Bank 2 ,Yang Huachang - 201207,-832,,,paid,110169170154,9084198,,
+,2012-07-23,645115.05,Bank 2 ,Li Zhe - 201207,-944,,,paid,110169170154,9084198,,
+,2012-07-23,645125.05,Bank 2 ,Li Zhe - 201207,-944,,,paid,110169170154,9084198,,
+,2012-07-23,645115.06,Bank 2 ,Li Lin - 201207,-840,,,paid,110169170154,9084198,,
+,2012-07-23,645125.06,Bank 2 ,Li Lin - 201207,-840,,,paid,110169170154,9084198,,
+,2012-07-23,622600.04,Bank 2,Yang Huachang - 201207,"-409,49",,,paid,110169170154,9084200,,
+,2012-07-23,622600.04,Bank 2,Li Zhe - 201207,"-409,49",,,paid,110169170154,9084200,,
+,2012-07-23,622600.04,Bank 2,Li Lin - 201207,"-409,49",,,paid,110169170154,9084200,,
+1,2012-07-23,661600,Bank 2,online transfer charge for the above two line transfer,-1,,,paid,#REF!,,,
+,2012-07-23,622600.04,Bank 2,Ren Lihong - 201207,-240,,,paid,110169170154,9084200,,
+1,2012-07-25,760100.0000,Bank EURO,Second Bureau,"20837,28",,,received,IR9133120000093,,,
+2,2012-07-25,580000,Bank EURO,Transfer to SPD CNY,"-20837,28",,,transfered,,,,
+3,2012-07-25,580000,Bank 2,Transfer from SPD EURO,"160501,23",,,received,JS91331200001091,,,
+4,2012-07-27,648000,cash,Physical checkup for work permit,"-610,7",01 - Gilles Crofils,,paid,,1188703324,,
+5,2012-07-27,624400,Cash,Transportation fees ,-97,01 - Gilles Crofils,,paid,,,,
+6,2012-07-30,606400,Cash,stationery,-97,,,paid,,3443479,,
+7,2012-07-31,606400,Danny,Printing (Financial statment),-600,,,paid,,2442470,,
+8,2012-07-27,625710,cash,Team Lunch,-174,,,paid,,11923208,,
+9,2012-07-20,625710,cash,Team Lunch,-190,,,paid,,37648674,,
+10,2012-08-01,625720,cash,Business Lunch,-112,,,paid,,11636464,,
+11,2012-08-03,625710,cash,Team Lunch,-365,,,paid,,1510305,,
+12,2012-07-29,606400,Danny,drink water purchase,-380,,,paid,,11763247,,
+,2012-07-13,645130.04,Bank 2,Yang Huachang - 201205,-340,,,paid,,479490,,
+,2012-07-13,645130.05,Bank 2,Li Zhe - 201205,"-195,68",,,paid,,479490,,
+,2012-07-13,645130.06,Bank 2,Li Lin - 201205,"-423,14",,,paid,,479490,,
+,2012-07-13,645130.07,Bank 2,Romain Binaux - 201205,"-1333,44",,,paid,,479490,,
+13,2012-08-01,641100.01,Bank 2,Gilles Crofils - 201207,-4800,,,paid,991339850004,,,
+14,2012-08-01,641100.07,Bank 2,Romain Binaux - 201207,"-8680,56",,,paid,991339850004,,,
+15,2012-08-01,641100.06,Bank 2,Li Lin - 201207,-8343,,,paid,991339850004,,,
+16,2012-08-01,641100.04,Bank 2,Yang Huachang - 201207,"-6566,48",,,paid,991339850004,,,
+17,2012-08-01,641100.05,Bank 2,Li Zhe - 201207,"-10856,42",,,paid,991339850004,,,
+18,2012-08-24,641100.09,Danny,Wang Hongyan - 201207,-1000,,,paid,999570250620,,,
+19,2012-08-01,641100.10,Bank 2,Meng Xianli - 201207,-500,,,paid,991339850004,,,
+20,2012-08-06,580000,Cash,Transfer to Danny's Account,-6000,,,transfered,,,,
+21,2012-08-06,580000,Danny,Transfer from Cash Account,6000,,,received,,,,
+1,2012-08-06,606400,Danny,Car Rental (Foton),-550,,,paid,,6808565,,
+2,2012-08-07,606400,Danny,Printing (Proposal),-393,,,paid,,1594694,,
+3,2012-08-09,760100.0020,Bank 2,Paraland - Website - Prepayment 20%,30000,,,received,999012430831,,,
+4,2012-08-10,625710,Danny,Team Lunch,-330,,,paid,,17334103,,
+5,2012-08-10,625710,Danny,Team Lunch,-48,,,paid,,34158007,,
+6,2012-08-14,606400,Danny,HP ink,-215,,,paid,,1025055,,
+7,2012-08-14,606400,Danny,Calculator,"-67,3",,,paid,,68941134,,
+8,2012-08-17,625710,Danny,Team Lunch,-250,,,paid,,17332919,,
+9,2012-08-17,625710,Danny,Team Lunch,-45,,,paid,,34158091,,
+,2012-08-01,645110.04,Bank 2,Yang Huachang - 201207,"-693,6",,,paid,,14292,,
+,2012-08-01,645120.04,Bank 2,Yang Huachang - 201207,"-141,72",,,paid,,14292,,
+,2012-08-01,645110.05,Bank 2,Li Zhe - 201207,"-786,5",,,paid,,14292,,
+,2012-08-01,645120.05,Bank 2,Li Zhe - 201207,"-160,3",,,paid,,14292,,
+,2012-08-01,645110.06,Bank 2,Li Lin - 201207,-700,,,paid,,14292,,
+,2012-08-01,645120.06,Bank 2,Li Lin - 201207,-143,,,paid,,14292,,
+,2012-08-01,645110.11,Bank 2,Ren Lihong - 201207,"-280,3",,,paid,,14292,,
+,2012-08-01,645120.11,Bank 2,Ren Lihong - 201207,"-59,06",,,paid,,14292,,
+,2012-07-30,645110.04,Bank 2,Yang Huachang - 201207,"-1546,73",,,paid,,21947,,
+,2012-07-30,645120.04,Bank 2,Yang Huachang - 201207,"-568,75",,,paid,,21947,,
+,2012-07-30,645110.05,Bank 2,Li Zhe - 201207,"-1753,9",,,paid,,21947,,
+,2012-07-30,645120.05,Bank 2,Li Zhe - 201207,"-644,93",,,paid,,21947,,
+,2012-07-30,645110.06,Bank 2,Li Lin - 201207,-1561,,,paid,,21947,,
+,2012-07-30,645120.06,Bank 2,Li Lin - 201207,-574,,,paid,,21947,,
+,2012-07-30,645110.11,Bank 2,Ren Lihong - 201207,"-428,93",,,paid,,21947,,
+,2012-07-30,645120.11,Bank 2,Ren Lihong - 201207,"-153,26",,,paid,,21947,,
+,2012-08-10,645130.04,Bank 2,Yang Huachang - 201206,"-229,95",,,paid,,479690,,
+,2012-08-10,645130.05,Bank 2,Li Zhe - 201206,"-95,68",,,paid,,479690,,
+,2012-08-10,645130.06,Bank 2,Li Lin - 201206,-517,,,paid,,479690,,
+,2012-08-10,645130.07,Bank 2,Romain Binaux - 201206,"-1973,44",,,paid,,479690,,
+1,2012-08-23,625710,Danny,Team Lunch,-164,,,paid,,6167414,,
+2,2012-08-24,580000,Danny,Cash transfer to Cash,"-4195,85",,,,,,,
+3,2012-08-24,580000,Cash,Cash transfer from Danny,"4195,85",,,,,,,
+4,2012-08-24,614020.02,Gcro,Zhong Yu 1516 Fees (20120910-20121009),"-870,25",,,paid,,7225156,,
+5,2012-08-24,614010.02,Gcro,Zhong Yu 1516 Rental (20120910-20121009),"-3325,6",,,paid,,1292153,,
+6,2012-08-24,661600,Bank 2,Online transfer charge to accounting fee (201207),"-0,8",,,paid,999570250620,,,
+7,2012-08-27,628100,Bank 2,EUCCC membership fee (201209-201309),-4800,,,paid,110280000419,1100094873,,
+8,2012-08-27,661600,Bank 2,online transfer charge for EUCCC,-1,,,paid,110280000419,,,
+,2012-08-27,622600.04,Bank 2,Yang Huachang - 201208,"-409,49",,,paid,110280000420,751218,,
+,2012-08-27,622600.04,Bank 2,Li Zhe - 201208,"-409,49",,,paid,110280000420,751218,,
+,2012-08-27,622600.04,Bank 2,Li Lin - 201208,"-409,49",,,paid,110280000420,751218,,
+,2012-08-27,622600.04,Bank 2,Ren Lihong - 201208,-240,,,paid,110280000420,751218,,
+1,2012-08-27,661600,Bank 2,Online transfer charge for FESCO fee,-1,,,paid,#REF!,,,
+,2012-08-27,645115.04,Bank 2 ,Yang Huachang - 201208,-832,,,paid,,751217,,
+,2012-08-27,645125.04,Bank 2 ,Yang Huachang - 201208,-832,,,paid,,751217,,
+,2012-08-27,645115.05,Bank 2 ,Li Zhe - 201208,-944,,,paid,,751217,,
+,2012-08-27,645125.05,Bank 2 ,Li Zhe - 201208,-944,,,paid,,751217,,
+,2012-08-27,645115.06,Bank 2 ,Li Lin - 201208,-840,,,paid,,751217,,
+,2012-08-27,645125.06,Bank 2 ,Li Lin - 201208,-840,,,paid,,751217,,
+1,2012-08-31,614010.01,Bank 2,Zhong Yu 1515 Rental(201200910-20121009),"-3325,6",,,paid,110280000215,1292194,,
+2,2012-08-31,661600,Bank 2,online transfer charge for rental,-1,,,paid,110280000215,,,
+3,2012-08-30,614020.01,Bank 2,Zhong Yu 1515 Fees (20120910-20121009) + elec (20120701-20120731),"-1374,25",,,paid,110280000214,7225201,,
+4,2012-08-30,661600,Bank 2,online transfer charge for mgt + elec,-1,,,paid,110280000214,,,
+5,2012-08-31,625710,Danny,Team Lunch,-310,,,paid,,waiting for invoice,,
+6,2012-08-31,625710,Danny,Team Lunch,-50,,,paid,,68609,,
+7,2012-09-01,606500,Bank 2,VAT device,-720,,,paid,55252525,3797587,,
+8,2012-09-01,606500,Bank 2,VAT device annual maintanance,-330,,,paid,55252525,5352779,,
+9,2012-09-01,647000,Bank 2,VAT device training,-1500,,,paid,55252525,5352778,,
+10,2012-09-01,606500,Bank 2,VAT printer ,-2999,,,paid,55252525,5350889,,
+11,2012-09-05,606400,Danny,Document delivery to HK,-30,,,paid,,09/08/2898467,,
+,2012-09-04,641100.01,Bank 2,Gilles Crofils - 201208,-4800,,,paid,991339850005,,,
+,2012-09-04,641100.04,Bank 2,Yang Huachang - 201208,"-6566,48",,,paid,991339850005,,,
+,2012-09-04,641100.05,Bank 2,Li Zhe - 201208,"-7037,39",,,paid,991339850005,,,
+,2012-09-04,641100.06,Bank 2,Li Lin - 201208,"-14384,75",,,paid,991339850005,,,
+,2012-09-04,641100.07,Bank 2,Romain Binaux - 201208,"-12251,4",,,paid,991339850005,,,
+,2012-09-04,641100.09,Bank 2,Wang Hongyan - 201208,-1000,,,paid,991339850005,,,
+,2012-09-04,641100.10,Bank 2,Meng Xianli - 201208,-500,,,paid,991339850005,,,
+1,2012-09-05,760100.0018,Bank 2,Fimasys - Consulting - 201207,"7991,95",,,received,5515116,,,
+2,2012-09-06,580000,Bank 2,Transfer to Danny,-5000,,,withdrewal,,,,
+3,2012-09-06,580000,Danny,Transfer from SPD CNY,5000,,,received,,,,
+4,2012-09-06,606400,Danny,EXPENSES REIMBURSEMENT (201207),-1185,06 - Li Lin,,paid,,,,
+5,2012-09-06,606400,Danny,EXPENSES REIMBURSEMENT (201207),-411,04 - Yang Huachang,,paid,,,,
+6,2012-09-06,625720,cash,Business Lunch,-195,,,paid,,1802016,,
+7,2012-09-07,625710,cash,Team Lunch,-256,,,paid,,5191732,,
+8,2012-09-07,625710,Danny,Team Lunch,-310,,,paid,,1802070,,
+9,2012-09-10,695000,Bank 2,disabled gurantee tax,-514,,,paid,,4392585,,
+10,2012-09-14,625710,Danny,Team Lunch,-206,,,paid,,2245313,,
+11,2012-09-09,625720,cash,Business Lunch,-467,,,paid,,292674,,
+12,2012-09-08,625720,cash,Business Lunch,-336,,,paid,,31934583,,
+13,2012-09-15,625720,cash,Business Lunch,"-565,8",,,paid,,71851,,
+14,2012-09-15,625720,cash,Business Lunch,-302,,,paid,,2692552,,
+15,2012-09-10,625720,cash,Business Lunch,-115,,,paid,,1801251,,
+16,2012-09-18,624400,cash,Transportation fees ,-300,04 - Yang Huachang,,paid,,10010605,,
+17,2012-09-17,626000,Danny,SPLIT Mobile Phone Bill,-400,,,paid,,18752463,,
+,2012-08-28,645110.04,Bank 2,Yang Huachang - 201208,"-1546,73",,,paid,,22356,,
+,2012-08-28,645120.04,Bank 2,Yang Huachang - 201208,"-568,75",,,paid,,22356,,
+,2012-08-28,645110.05,Bank 2,Li Zhe - 201208,"-1753,9",,,paid,,22356,,
+,2012-08-28,645120.05,Bank 2,Li Zhe - 201208,"-644,93",,,paid,,22356,,
+,2012-08-28,645110.06,Bank 2,Li Lin - 201208,-1561,,,paid,,22356,,
+,2012-08-28,645120.06,Bank 2,Li Lin - 201208,-574,,,paid,,22356,,
+,2012-08-28,645110.11,Bank 2,Ren Lihong - 201208,"-428,93",,,paid,,22356,,
+,2012-08-28,645120.11,Bank 2,Ren Lihong - 201208,"-153,26",,,paid,,22356,,
+,2012-09-12,645130.04,Bank 2,Yang Huachang - 201209,"-224,05",,,paid,,479938,,
+,2012-09-12,645130.05,Bank 2,Li Zhe - 201209,"-1145,35",,,paid,,479938,,
+,2012-09-12,645130.06,Bank 2,Li Lin - 201209,-517,,,paid,,479938,,
+,2012-09-12,645130.07,Bank 2,Romain Binaux - 201209,"-1653,44",,,paid,,479938,,
+,2012-09-12,645130.09,Bank 2,Wang Hongyan - 201209,-50,,,paid,,479938,,
+1,2012-09-12,695000,Bank 2,BT+CMT+ state and local education charge (201208),"-6252,6",,,paid,,#REF!,,
+2,2012-09-21,625710,cash,Team Lunch,-410,,,paid,,1513717,,
+,2012-08-30,645110.04,Bank 2,Yang Huachang - 201207,"-693,6",,,paid,,14477,,
+,2012-08-30,645120.04,Bank 2,Yang Huachang - 201207,"-141,72",,,paid,,14477,,
+,2012-08-30,645110.05,Bank 2,Li Zhe - 201207,"-786,5",,,paid,,14477,,
+,2012-08-30,645120.05,Bank 2,Li Zhe - 201207,"-160,3",,,paid,,14477,,
+,2012-08-30,645110.06,Bank 2,Li Lin - 201207,-700,,,paid,,14477,,
+,2012-08-30,645120.06,Bank 2,Li Lin - 201207,-143,,,paid,,14477,,
+,2012-08-30,645110.11,Bank 2,Ren Lihong - 201207,"-280,3",,,paid,,14477,,
+,2012-08-30,645120.11,Bank 2,Ren Lihong - 201207,"-59,06",,,paid,,14477,,
+1,2012-09-25,606400,Danny,Stationery,-139,,,paid,,3583384,,
+2,2012-09-25,580000,Bank 2,Transfer to Cash,-5000,,,withdrewal,134686,,,
+3,2012-09-25,580000,cash,Transfer from SPD CNY,5000,,,,134686,,,
+4,2012-09-25,580000,cash,Transfer to Danny's Account,"-804,15",,,,134686,,,
+5,2012-09-25,580000,Danny,Transfer from Cash Account,"804,15",,,received,,,,
+1,2012-09-25,614020.02,Gcro,Zhong Yu 1516 Fees (20121010-20121109),"-870,25",,,paid,,7225300,,
+2,2012-09-25,614010.02,Gcro,Zhong Yu 1516 Rental (20121010-20121109),"-3325,6",,,paid,,7961810,,
+3,2012-09-24,606400,Danny,Business Cards,-50,,,paid,,10585196,,
+4,2012-09-21,618500,Danny,EUCCC Seminar,-250,06 - Li Lin,,paid,,15340865,,
+5,2012-09-25,625720,cash,Business Lunch,-168,,,paid,,18694670,,
+,2012-09-25,622600.04,Bank 2,Yang Huachang - 201209,"-409,49",,,paid,110429040030,7188782,,
+,2012-09-25,622600.04,Bank 2,Li Zhe - 201209,"-409,49",,,paid,110429040030,7188782,,
+,2012-09-25,622600.04,Bank 2,Li Lin - 201209,"-409,49",,,paid,110429040030,7188782,,
+,2012-09-25,622600.04,Bank 2,Ren Lihong - 201209,-240,,,paid,110429040030,7188782,,
+,2012-09-25,645115.04,Bank 2 ,Yang Huachang - 201209,-832,,,paid,110429040030,7188782,,
+,2012-09-25,645125.04,Bank 2 ,Yang Huachang - 201209,-832,,,paid,110429040030,7188782,,
+,2012-09-25,645115.05,Bank 2 ,Li Zhe - 201209,-944,,,paid,110429040030,7188782,,
+,2012-09-25,645125.05,Bank 2 ,Li Zhe - 201209,-944,,,paid,110429040030,7188782,,
+,2012-09-25,645115.06,Bank 2 ,Li Lin - 201209,-840,,,paid,110429040030,7188782,,
+,2012-09-25,645125.06,Bank 2 ,Li Lin - 201209,-840,,,paid,110429040030,7188782,,
+1,2012-09-25,661600,Bank 2,Online transfer charge for FESCO payment,-1,,,paid,#REF!,,,
+2,2012-09-25,614010.01,Bank 2,Zhong Yu 1515 Rental (20121010-20121109),"-3325,6",,,paid,110429040033,7961809,,
+3,2012-09-25,661600,Bank 2,0nline transfer charge for rental,-1,,,paid,110429040033,,,
+4,2012-09-25,614020.01,Bank 2,Zhong Yu 1515 Fees (20121010-20121109) + elec (20120801-20120831),"-1285,45",,,paid,110429040031,8975765,,
+5,2012-09-25,661600,Bank 2 ,online transfer charge for mgt + elec,-1,,,paid,110429040031,,,
+6,2012-09-21,760000, Bank 2,Bank account interest ( 20120621-20120920),"133,05",,,received,,,,
+7,2012-09-26,760100.0018,Bank 2,Fimasys - Consulting - 201208,"9137,29",,,received,5515121,,,
+8,2012-09-11,618500,Danny,CCIFC Seminar,-100,06 - Li Lin,,paid,,21994868,,
+9,2012-09-26,625720,cash,Business Lunch,-197,,,paid,,2941493,,
+10,2012-09-27,625720,cash,Business Lunch,-348,,,paid,,9073926,,
+11,2012-09-28,625710,cash,Team Lunch,-836,,,paid,,2150456,,
+12,2012-09-28,606400,Danny,EXPENSES REIMBURSEMENT (201209),-369,06 - Li Lin,,paid,,,,
+13,2012-09-28,606400,Danny,EXPENSES REIMBURSEMENT (201209),-622,04 - Yang Huachang,,paid,,,,
+,2012-10-01,641100.01,Bank 2,Gilles Crofils - 201209,-4800,,,paid,,991339880002,,
+,2012-10-01,641100.04,Bank 2,Yang Huachang - 201209,"-6566,48",,,paid,,991339880002,,
+,2012-10-01,641100.05,Bank 2,Li Zhe - 201209,"-15892,52",,,paid,,991339880002,,
+,2012-10-01,641100.06,Bank 2,Li Lin - 201209,-8343,,,paid,,991339880002,,
+,2012-10-01,641100.07,Bank 2,Romain Binaux - 201209,"-12320,38",,,paid,,991339880002,,
+,2012-10-01,641100.09,Bank 2,Wang Hongyan - 201209,-1000,,,paid,,991339880002,,
+,2012-10-01,641100.10,Bank 2,Meng Xianli - 201209,-500,,,paid,,991339880002,,
+1,2012-09-30,625720,cash,Business Lunch,-309,,,paid,,484794,,
+2,2012-10-01,625720,cash,Business Lunch,-418,,,paid,,10490591,,
+3,2012-10-03,625720,cash,Business Lunch,-227,,,paid,,6491141,,
+,2012-09-28,645110.04,Bank 2,Yang Huachang - 201209,"-693,6",,,paid,,14746,,
+,2012-09-28,645120.04,Bank 2,Yang Huachang - 201209,"-141,72",,,paid,,14746,,
+,2012-09-28,645110.05,Bank 2,Li Zhe - 201209,"-786,5",,,paid,,14746,,
+,2012-09-28,645120.05,Bank 2,Li Zhe - 201209,"-160,3",,,paid,,14746,,
+,2012-09-28,645110.06,Bank 2,Li Lin - 201209,-700,,,paid,,14746,,
+,2012-09-28,645120.06,Bank 2,Li Lin - 201209,-143,,,paid,,14746,,
+,2012-09-28,645110.11,Bank 2,Ren Lihong - 201209,"-280,3",,,paid,,14746,,
+,2012-09-28,645120.11,Bank 2,Ren Lihong - 201209,"-59,06",,,paid,,14746,,
+,2012-09-28,645110.04,Bank 2,Yang Huachang - 201208,"-1546,73",,,paid,,22899,,
+,2012-09-28,645120.04,Bank 2,Yang Huachang - 201208,"-568,75",,,paid,,22899,,
+,2012-09-28,645110.05,Bank 2,Li Zhe - 201208,"-1753,9",,,paid,,22899,,
+,2012-09-28,645120.05,Bank 2,Li Zhe - 201208,"-644,93",,,paid,,22899,,
+,2012-09-28,645110.06,Bank 2,Li Lin - 201208,-1561,,,paid,,22899,,
+,2012-09-28,645120.06,Bank 2,Li Lin - 201208,-574,,,paid,,22899,,
+,2012-09-28,645110.11,Bank 2,Ren Lihong - 201208,"-428,93",,,paid,,22899,,
+,2012-09-28,645120.11,Bank 2,Ren Lihong - 201208,"-153,26",,,paid,,22899,,
+1,2012-10-10,695200,Bank 2,VAT payment for 201209,"-681,76",,,paid,,562062,,
+2,2012-10-11,695000,Bank 2,CMT + state and local education charge (201209),"-81,81",,,paid,,562100,,
+,2012-10-11,645130.04,Bank 2,Yang Huachang - 201208,"-224,05",,,paid,,,,
+,2012-10-11,645130.05,Bank 2,Li Zhe - 201208,"-276,38",,,paid,,,,
+,2012-10-11,645130.06,Bank 2,Li Lin - 201208,"-2288,25",,,paid,,,,
+,2012-10-11,645130.07,Bank 2,Romain Binaux - 201208,"-2333,6",,,paid,,,,
+,2012-10-11,645130.09,Bank 2,Wang Hongyan - 201208,-50,,,paid,,,,
+1,2012-10-11,760100.0018,Bank 2,Fimasys - Consulting - 201209,"5438,14",,,received,5515122,,,
+2,2012-10-11,760100.0000,Bank EURO,Second Bureau - ,"12487,84",,,received,IR9133120000114,,,
+3,2012-10-11,580000,Bank EURO,Transfer to SPD CNY,"-12487,84",,,transferred,JS91331233331492,,,
+4,2012-10-11,580000,Bank 2,Transfer from SPD EURO,"100492,15",,,received,JS91331233331492,,,
+5,2012-10-15,606400,Danny,Printing paper,"-135,8",,,paid,,16235221,,
+6,2012-10-17,606400,Danny,Printer ink,-184,,,paid,,waiting for invoice,,
+7,2012-10-17,606400,Danny,Contract printing ,-135,,,paid,,3768531,,
+8,2012-10-11,625710,cash,Team Lunch,-277,,,paid,,0236102(receipt),,
+9,2012-10-15,625720,cash,Business Lunch,-232,,,paid,,2129348,,
+10,2012-10-17,625720,cash,Business Lunch,-211,,,paid,,15202097,,
+11,2012-10-17,625720,cash,Business Lunch,-812,,,paid,,485660,,
+12,2012-10-19,625710,cash,Team Lunch,-400,,,paid,,1514215,,
+13,2012-10-22,614010.01,Bank 2,Zhong Yu 1515 Rental (20121110-20121209),"-3325,6",,,,110194240008,7961851,,
+14,2012-10-22,661600,Bank 2,online transfer charge for rental,-1,,,,110194240008,,,
+15,2012-10-22,614020.01,Bank 2,Zhong Yu 1515 Fees (20121110-20121209) + elec (20120901-20120931),"-1235,05",,,paid,110429040064,8975836,,
+16,2012-12-22,661600,Bank 2,online transfer charge for mgt + elec,-1,,,paid,110429040064,,,
+,2012-10-22,622600.04,Bank 2,Yang Huachang - 201210,"-409,49",,,paid,110429040065,10040674,,
+,2012-10-22,622600.04,Bank 2,Li Zhe - 201210,"-409,49",,,paid,110429040065,10040674,,
+,2012-10-22,622600.04,Bank 2,Li Lin - 201210,"-409,49",,,paid,110429040065,10040674,,
+,2012-10-22,622600.04,Bank 2,Ren Lihong - 201210,-240,,,paid,110429040065,10040674,,
+1,2012-10-22,661600,Bank 2,Online transfer charge for FESCO payment,-1,,,paid,,,,
+2,2012-10-29,580000,Bank 2,Transfer to Cash,-20000,,,withdrew,134687,,,
+3,2012-10-29,580000,Cash,Transfer from SPD CNY,20000,,,transferred ,134687,,,
+1,2012-10-29,614020.02,Gcro,Zhong Yu 1516 Fees (20121110-20121209),"-870,25",,,paid,,8975835,,
+2,2012-10-29,614010.02,Gcro,Zhong Yu 1516 Rental (20121110-20121209),"-3325,6",,,paid,,7961852,,
+3,2012-10-19,606400,Cash,USBKEY subswitch,-29,,,paid,,22024003,,
+4,2012-10-26,625710,Danny,Team Lunch,-435,Li Zhe,,paid,,2334873,,
+5,2012-10-10,647000.01,Cash,Chinese class traning,-1370,01 - Gilles Crofils,50%,paid,,3186721,,using stationery invoice
+6,2012-10-11,606400,Cash,Document translation,-160,01 - Gilles Crofils,100%,paid,,2486867,,
+7,2012-10-28,606400,Cash,stationery,-112,,,paid,,5703446,,
+8,2012-10-25,625720,Cash,Business Lunch,-216,,,paid,,6491357,,
+9,2012-10-26,625720,Cash,Business Lunch ,-360,,,paid,,3125387,,
+10,2012-10-27,625720,Cash,Business Lunch,-395,,,paid,,2334947,,
+11,2012-10-30,580000,Bank 2,Transfer to Danny,-10000,,,withdrew,134688,,,
+12,2012-10-30,580000,Danny,Transfer from SPD CNY,10000,,,transferred,134688,,,
+1,2012-10-29,648000,Danny,F visa renewal,-784,07 - Romain Binaux,,paid,,,,
+2,2012-10-29,606400,Danny,EXPENSES REIMBURSEMENT (201210),-392,06 - Li Lin,,paid,,,,
+3,2012-10-29,606400,Danny,EXPENSES REIMBURSEMENT (201210),-232,04 - Yang Huachang,,paid,,,,
+,2012-10-22,645115.04,Bank 2 ,Yang Huachang - 201210,-832,,,paid,110429040065,10040673,,
+,2012-10-22,645125.04,Bank 2 ,Yang Huachang - 201210,-832,,,paid,110429040065,10040673,,
+,2012-10-22,645115.05,Bank 2 ,Li Zhe - 201210,-944,,,paid,110429040065,10040673,,
+,2012-10-22,645125.05,Bank 2 ,Li Zhe - 201210,-944,,,paid,110429040065,10040673,,
+,2012-10-22,645115.06,Bank 2 ,Li Lin - 201210,-840,,,paid,110429040065,10040673,,
+,2012-10-22,645125.06,Bank 2 ,Li Lin - 201210,-840,,,paid,110429040065,10040673,,
+,2012-11-01,641100.01,Bank 2,Gilles Crofils - 201210,-4800,,,paid,,,,
+,2012-11-01,641100.04,Bank 2,Yang Huachang - 201210,"-6566,48",,,paid,,,,
+,2012-11-01,641100.05,Bank 2,Li Zhe - 201210,"-11760,33",,,paid,,,,
+,2012-11-01,641100.06,Bank 2,Li Lin - 201210,-8343,,,paid,,,,
+,2012-11-01,641100.07,Bank 2,Romain Binaux - 201210,"-10640,28",,,paid,,,,
+,2012-11-01,641100.09,Bank 2,Wang Hongyan - 201210,-1000,,,paid,,,,
+,2012-11-01,641100.10,Bank 2,Meng Xianli - 201210,-500,,,paid,,,,
+1,2012-11-01,626000,Danny,Phone,-200,,,paid,,16318413,,
+2,2012-11-02,625710,Cash,Team Lunch,-352,,,paid,,12088580,,
