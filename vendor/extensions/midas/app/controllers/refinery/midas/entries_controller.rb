@@ -22,7 +22,11 @@ module Refinery
     protected
 
       def find_all_entries
-        @entries = Entry.order('position ASC')
+        @entries = Entry.order('valid_after ASC')
+        if params['account_id']
+          @entries = @entries.where(:midas_account_id => params['account_id'])
+        end
+
       end
 
       def find_page

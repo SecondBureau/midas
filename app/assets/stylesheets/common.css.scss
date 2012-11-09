@@ -1,7 +1,26 @@
+$dark_grey: #333;
+$grey: #7D7874;
+$light_grey: #9B9591;
+$red: #9A0606;
+$green: green;
+
+.pointer {
+  cursor: pointer;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.navbar .nav > li > a.home-link {
+  padding:4px 0px 5px 0px;
+}
+
+
 .green {
-  color: green;
+  color: $green;
 }
 
 .red {
-  color: red;
+  color: $red;
 }

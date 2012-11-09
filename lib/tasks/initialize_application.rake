@@ -9,30 +9,30 @@ task :init_midas_data => :environment do
   I18n.locale = :en
 
   include ActionView::Helpers::TextHelper
-  
-  
+
+
   # Users, Roles & Groups
   Refinery::User.all.each {|u| u.destroy }
   Refinery::Role.all.each {|r| r.destroy }
-  
+
   # Roles
   %w[Refinery Superuser].each {|r| Refinery::Role.[](r.downcase.to_sym)}
-  
+
   # SuperAdmin
   admin = Refinery::User.new(:username => 'gilles', :password => 'secret', :password_confirmation => 'secret', :firstname => 'Gilles', :lastname => 'Crofils', :email => 'gilles@secondbureau.com')
   admin.roles = ['Refinery', 'Superuser'].collect { |r| Refinery::Role[r.downcase.to_sym] }
   admin.save! # we need to save it first.
   admin.plugins = Refinery::Plugins.registered.collect(&:name)
-  
+
   # Financial Officer
   danny = Refinery::User.new(:username => 'danny', :password => 'secret', :password_confirmation => 'secret', :firstname => 'Danny', :lastname => 'Yang', :email => 'danny@secondbureau.com')
   danny.roles = ['Refinery'].collect { |r| Refinery::Role[r.downcase.to_sym] }
   danny.save! # we need to save it first.
   danny.plugins = ['entries']
-  
+
   # Categories
    Refinery::Midas::Category.all.each {|c| c.destroy }
-  
+
   ['604000', 'Achat Etudes et Prestation de Services',
   '606400', 'Stationary',
   '606500', 'Hardware',
@@ -147,12 +147,12 @@ task :init_midas_data => :environment do
   '760100.0020', 'Paraland',
   '760100.0000', 'Second Bureau',
   '708300', 'Locations diverses',
-  '708300.0024', 'SC & C',
-  '708300.0025', 'Them',
+  '708300.0024', 'SC & S Transport',
+  '708300.0025', 'lesachats.fr',
   '580000', 'internal transfer'].each_slice(2)  do |c, t|
     Refinery::Midas::Category.create!(:code => c, :title => t)
   end
-  
+
   # Accounts
    Refinery::Midas::Account.all.each {|a| a.destroy }
    [  'Cash',               '',               true,   'cny',  false,  'Cash',   0,          '2012-12-01',   nil,            'All cash operations with official invoice',
@@ -164,24 +164,24 @@ task :init_midas_data => :environment do
       'HSBC EURO Savings',  '817-154149-838', true,   'eur',  false,  'Bank',   1,          '2011-12-01',   nil,            'HSBC Lalaso Hongkong',
       'HSBC HKD Savings',   '817-154149-838', true,   'hkd',  false,  'Bank',   33187,      '2011-12-01',   nil,            'HSBC Lalaso Hongkong',
     ].each_slice(10)  do |title, number, active, currency, confidential, group, opening_balance_in_cents, opened_on, closed_on, description|
-       Refinery::Midas::Account.create!(  :title => title, 
+       Refinery::Midas::Account.create!(  :title => title,
                                           :number => number,
-                                          :description => description, 
-                                          :active => active, 
-                                          :currency => currency, 
-                                          :confidential => confidential, 
-                                          :group => group, 
+                                          :description => description,
+                                          :active => active,
+                                          :currency => currency,
+                                          :confidential => confidential,
+                                          :group => group,
                                           :opening_balance_in_cents => opening_balance_in_cents,
                                           :opened_on => Date.parse(opened_on),
                                           :closed_on => closed_on.nil? ? nil : Date.parse(closed_on))
     end
-   
+
    # Entries
    Refinery::Midas::Entry.all.each {|e| e.destroy }
-   
-   [ 'HSBC EURO Savings',   '760100.0000',  'eur',    3600000,    '2010-12-16',   'Facture xxx',  
+
+   [ 'HSBC EURO Savings',   '760100.0000',  'eur',    3600000,    '2010-12-16',   'Facture xxx',
      'HSBC EURO Savings',   '580000',     'eur',    -3550000,   '2010-12-21',   'Capital Injection to ICBC CNY',
-     'HSBC EURO Savings',   '661600',     'eur',    -4670,      '2010-12-21',   'Frais de transfert HSBC',   
+     'HSBC EURO Savings',   '661600',     'eur',    -4670,      '2010-12-21',   'Frais de transfert HSBC',
      'HSBC EURO Savings',   '760000',     'eur',    7,          '2010-12-28',   'Bank Interests',
      'HSBC EURO Savings',   '661600',     'eur',    -12084,     '2011-07-30',   'Bank Fees',
      'HSBC EURO Savings',   '580000',     'eur',    -3305,      '2011-11-07',   'Transfer to HSBC HKD Savings',
@@ -238,8 +238,8 @@ task :init_midas_data => :environment do
                                         :title => title
                                       )
   end
-  
-  
+
+
   i = 0
   CSV.foreach(Rails.root.join('db', 'seeds', 'entries.csv')) do |id, date, category, account, title, amount, employee, ratio, status, num1, num2, docid, accountant|
     i += 1
@@ -266,7 +266,7 @@ task :init_midas_data => :environment do
         Refinery::Midas::Entry.create!(  :account => midas_account,
                                       :category => midas_category,
                                       :currency => midas_account.currency,
-                                      :src_amount_in_cents => (amount.gsub(' ','').to_f * 100),
+                                      :src_amount_in_cents => (amount.gsub(',','.').to_f * 100).to_i,
                                       :valid_after => Date.parse(date),
                                       :title => title
                                     )
@@ -274,8 +274,8 @@ task :init_midas_data => :environment do
         puts "****************  Erreur #{e} parsing #{i} #{id}, #{date}, #{category}, #{account}, #{title}, #{amount}, #{midas_account}, #{midas_category}"
       end
   end
-  
+
 end
-  
-  
+
+
  end

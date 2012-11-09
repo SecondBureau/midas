@@ -1,6 +1,24 @@
 - content_for :body do
-  %ul#entries
-    - @entries.each do |entry|
-      %li
-        = link_to entry.currency, refinery.midas_entry_path(entry)
+
+  %ul
+    - Refinery::Midas::Account.all.each do |account|
+      %li= link_to account.title, refinery.midas_entries_path(:account_id => account.id)
+
+  - balance = 0.0
+  - if params['account_id']
+    - balance = Refinery::Midas::Account.find(params['account_id']).opening_balance_in_cents
+
+  #entries
+    %table.table.table-hover.table-striped
+      %tbody
+        - @entries.each do |entry|
+          - balance += entry.amount_in_cents
+          %tr
+            %td= entry.valid_after
+            %td= link_to entry.category.title, refinery.midas_entry_path(entry)
+            %td= link_to entry.account.title, refinery.midas_entry_path(entry)
+            %td= link_to entry.title, refinery.midas_entry_path(entry)
+            %td= entry.currency.upcase
+            %td{:style => 'text-align:right'}= number_with_precision(entry.amount, :precision => 2, :separator => ',', :delimiter => '.')
+            %td{:style => 'text-align:right'}= number_with_precision(balance / 100.0, :precision => 2, :separator => ',', :delimiter => '.')
 = render '/refinery/content_page'

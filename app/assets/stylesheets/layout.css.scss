@@ -1,0 +1,103 @@
+
+
+.footer .navbar-inner {
+    @include background(linear-gradient(#9A0606, #850101) left repeat);
+    border-color: #252525;
+}
+
+.footer center.powered_by {
+  padding-top:10px;
+}
+
+.container .content .row {
+  padding-bottom: 60px;
+}
+
+.navbar .nav > li > a.locale-switcher {
+  padding:10px 15px;
+}
+
+.sidebar {
+  margin: 10px 0;
+}
+
+
+.light-grey{
+  background: $light_grey;
+}
+
+.shadow{
+  @include box-shadow(1px 2px 2px #333);
+}
+
+#body_content {
+  padding: 0 20px 0 20px;
+}
+
+#demo_info {
+  z-index: 99;
+  position: absolute;
+  left:20px;
+  top:50px;
+  width:200px;
+  height:100px;
+  text-align:center;
+  padding: 10px;
+  color: $red;
+  font-size:15px;
+  background: white;
+  border: solid 2px black;
+}
+
+#expired_info {
+  z-index: 99;
+  position: absolute;
+  left:20px;
+  top:50px;
+  width:200px;
+  height:100px;
+  text-align:center;
+  padding: 10px;
+  color: red;
+  font-size:15px;
+  background: white;
+  border: solid 2px black;
+}
+
+
+/* Bugfix */
+.icon-white {
+  color:#fff;
+}
+
+.collapse {
+  overflow: hidden !important;
+}
+
+/* Customization */
+h1 { font-size: 30px; line-height: 36px; }
+h2 { font-size: 24px; line-height: 36px; }
+h3 { font-size: 18px; line-height: 38px; }
+h4 { font-size: 16px; line-height: 18px; }
+h5 { font-size: 14px; line-height: 18px; }
+
+@media (max-width: 480px) {
+
+  body {
+    padding-left:0;
+    padding-right:0;
+  }
+
+  .navbar-fixed-top, .navbar-fixed-bottom {
+      margin-left: 0;
+      margin-right: 0;
+  }
+
+  p { font-size: 14px; line-height: 20px; }
+  h1 { font-size: 26px; line-height: 32px; }
+  h2 { font-size: 20px; line-height: 22px; }
+  h3 { font-size: 18px; line-height: 22px; }
+  h4 { font-size: 16px; line-height: 18px; }
+  h5 { font-size: 16px; line-height: 18px; }
+
+}

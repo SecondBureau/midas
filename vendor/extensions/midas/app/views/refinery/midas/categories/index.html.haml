@@ -1,6 +1,29 @@
 - content_for :body do
-  %ul#categories
-    - @categories.each do |category|
-      %li
-        = link_to category.title, refinery.midas_category_path(category)
+  #categories
+    %table.table.table-hover.table-striped
+      %theader
+        %tr
+          %td Compte
+          %td Compte
+          %td Janv
+          %td Fev
+          %td Mar
+          %td Apr
+          %td Mai
+          %td Jun
+          %td Jul
+          %td Aug
+          %td Sep
+          %td Oct
+          %td Nov
+          %td Dec
+      %tbody
+        - @categories.each do |category|
+          %tr
+            %td= link_to category.code, refinery.midas_category_path(category)
+            %td= link_to category.title, refinery.midas_category_path(category)
+            - (1..12).each do |month|
+              - beginning_of_month = Date.parse("2012-#{month}-1")
+              - amount = category.entries.where('valid_after >= ? and valid_after <= ?', beginning_of_month, beginning_of_month.end_of_month).sum(:amount_in_cents) / 100.0
+              %td{:align => 'right'}= amount.eql?(0.0) ? '' : amount
 = render '/refinery/content_page'

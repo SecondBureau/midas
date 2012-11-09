@@ -1,0 +1,6 @@
+%li.dropdown
+  = link_to_switch_locale(I18n.locale.to_s, true)
+  %ul{:class => "dropdown-menu", :role => "menu",  :"aria-labelledby" => "locales"}
+    - ::Refinery::I18n.frontend_locales.map do |locale|
+      - if !locale.eql?(I18n.locale)
+        %li= link_to_switch_locale(locale)
