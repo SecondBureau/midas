@@ -7,16 +7,10 @@
     = entry.title.truncate(40, :separator => ' ')
   %span.label.label-info.account
     = entry.account.title
+  - unless entry.reconciliation_code.nil?
+    %span.label.label-info.account
+      = entry.reconciliation_code
   %span.actions
-    = link_to refinery_icon_tag("application_go.png"), refinery.midas_entry_path(entry), |
-      :title => t('.view_live_html'),                                                    |
-      :target => "_blank"                                                                |
-    -#
-    = link_to refinery_icon_tag("application_edit.png"), refinery.edit_midas_admin_entry_path(entry), |
-      :title => t('.edit')                                                                            |
-    -#
-    = link_to refinery_icon_tag("delete.png"), refinery.midas_admin_entry_path(entry),       |
-      :class => "cancel confirm-delete",                                                     |
-      :title => t('.delete'),                                                                |
-      :confirm => t('message', :scope => 'refinery.admin.delete', :title => entry.currency), |
-      :method => :delete                                                                     |
+    -#= link_to refinery_icon_tag("application_go.png"), refinery.midas_entry_path(entry), :title => t('.view_live_html'), :target => "_blank"
+    = link_to refinery_icon_tag("application_edit.png"), refinery.edit_midas_admin_entry_path(entry), :title => t('.edit')
+    = link_to(refinery_icon_tag("delete.png"), refinery.midas_admin_entry_path(entry), :class => "cancel confirm-delete", :title => t('.delete'), :confirm => t('message', :scope => 'refinery.admin.delete', :title => entry.title), :method => :delete) if entry.reconciliation_code.nil?

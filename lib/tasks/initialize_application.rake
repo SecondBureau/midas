@@ -150,7 +150,17 @@ task :init_midas_data => :environment do
   '708300.0024', 'SC & S Transport',
   '708300.0025', 'lesachats.fr',
   '580000', 'internal transfer'].each_slice(2)  do |c, t|
-    Refinery::Midas::Category.create!(:code => c, :title => t)
+    
+    category,subcategory = c.split('.')
+    if subcategory.nil?
+      parent = Refinery::Midas::Category.create!(:code => c, :title => t)
+      c = "#{c}.0"
+    else
+      parent = Refinery::Midas::Category.find_by_code(category)
+    end
+    
+    Refinery::Midas::Category.create!(:code => "#{c}", :title => t, :parent_id => parent.id)
+        
   end
 
   # Accounts
@@ -164,7 +174,7 @@ task :init_midas_data => :environment do
       'HSBC EURO Savings',  '817-154149-838', true,   'eur',  false,  'Bank',   1,          '2011-12-01',   nil,            'HSBC Lalaso Hongkong',
       'HSBC HKD Savings',   '817-154149-838', true,   'hkd',  false,  'Bank',   33187,      '2011-12-01',   nil,            'HSBC Lalaso Hongkong',
     ].each_slice(10)  do |title, number, active, currency, confidential, group, opening_balance_in_cents, opened_on, closed_on, description|
-       Refinery::Midas::Account.create!(  :title => title,
+       r = Refinery::Midas::Account.new(  :title => title,
                                           :number => number,
                                           :description => description,
                                           :active => active,
@@ -174,6 +184,10 @@ task :init_midas_data => :environment do
                                           :opening_balance_in_cents => opening_balance_in_cents,
                                           :opened_on => Date.parse(opened_on),
                                           :closed_on => closed_on.nil? ? nil : Date.parse(closed_on))
+      r.reconciliated_on = Date.parse(opened_on)
+      r.reconciliated_in_cents = opening_balance_in_cents
+      r.reconciliated_at = Time.now
+      r.save!
     end
 
    # Entries
@@ -228,6 +242,8 @@ task :init_midas_data => :environment do
      'HSBC HKD Savings',    '661600',     'hkd',    102118,     '2012-04-25',   'Transfer from HSBC EURO Savings',
      'HSBC HKD Savings',    '661600',     'hkd',    38484,      '2012-10-30',   'Transfer from HSBC EURO Savings'
      ].each_slice(6) do |account, category, currency, src_amount_in_cents, valid_after, title|
+       c,s = category.split('.')
+       category = "#{c}.0" if s.nil?
        midas_account = Refinery::Midas::Account.find_by_title(account)
        midas_category = Refinery::Midas::Category.find_by_code(category)
        Refinery::Midas::Entry.create!(  :account => midas_account,
@@ -255,6 +271,9 @@ task :init_midas_data => :environment do
       else nil
       end
 
+    c,s = category.split('.')
+    category = "#{c}.0" if s.nil?
+       
     midas_account = Refinery::Midas::Account.find_by_title(account_title) unless account_title.nil?
     midas_category = Refinery::Midas::Category.find_by_code(category)
 
@@ -266,16 +285,30 @@ task :init_midas_data => :environment do
         Refinery::Midas::Entry.create!(  :account => midas_account,
                                       :category => midas_category,
                                       :currency => midas_account.currency,
-                                      :src_amount_in_cents => (amount.gsub(',','.').to_f * 100).to_i,
+                                      :src_amount_in_cents => amount.split(',').each_slice(2).collect{|a,b| "#{a}#{(b||'').ljust(2, '0')}"}.first,
                                       :valid_after => Date.parse(date),
                                       :title => title
                                     )
       rescue Exception => e
         puts "****************  Erreur #{e} parsing #{i} #{id}, #{date}, #{category}, #{account}, #{title}, #{amount}, #{midas_account}, #{midas_category}"
       end
-  end
+    end
+ end
 
-end
+ [  'SPD CNY',            '2012-11-01', 47349.32,
+    'HSBC EURO Savings',  '2012-09-30', 6305.2,
+    'HSBC HKD Savings',   '2012-10-30', 0.4,
+    'ICBC CNY',           '2011-12-31', 0.0,
+    'SPD EURO',           '2012-11-10', 0.91
+   ].each_slice(3) do |account, reconciliation_date, reconciation_amount|
+     midas_account = Refinery::Midas::Account.find_by_title(account)
+     if midas_account.balance(reconciliation_date).eql?(reconciation_amount)
+       entry_ids = midas_account.entries.where('valid_after <= ?',reconciliation_date).collect(&:id)
+       midas_account.reconciliate entry_ids, reconciliation_date
+       midas_account.save!
+    end
+   end
+
 
 
  end

@@ -21,7 +21,7 @@
           %tr
             %td= link_to account.title, refinery.midas_account_path(account)
             - (1..12).each do |month|
-              - beginning_of_month = Date.parse("2012-#{month}-1")
+              - beginning_of_month = Date.parse("#{params[:year] || '2012'}-#{month}-1")
               - amount = account.entries.where('valid_after >= ? and valid_after <= ?', beginning_of_month, beginning_of_month.end_of_month).sum(:amount_in_cents) / 100.0
               %td{:align => 'right'}= amount.eql?(0.0) ? '' : amount
 = render '/refinery/content_page'

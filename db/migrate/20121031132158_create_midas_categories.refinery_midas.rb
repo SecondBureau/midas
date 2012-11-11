@@ -7,11 +7,14 @@ class CreateMidasCategories < ActiveRecord::Migration
       t.string :code
       t.text :description
       t.integer :position
+      t.integer :parent_id
 
       t.timestamps
     end
 
     Refinery::Midas::Category.create_translation_table! :title => :string, :description => :text
+    
+    add_index :refinery_midas_categories, :parent_id
 
   end
 

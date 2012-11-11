@@ -99,6 +99,9 @@ ActiveRecord::Schema.define(:version => 20121031135339) do
     t.integer  "position"
     t.date     "last_entry"
     t.integer  "balance_in_cents",         :default => 0
+    t.date     "reconciliated_on"
+    t.datetime "reconciliated_at"
+    t.integer  "reconciliated_in_cents",   :default => 0
     t.datetime "created_at",                              :null => false
     t.datetime "updated_at",                              :null => false
   end
@@ -108,9 +111,12 @@ ActiveRecord::Schema.define(:version => 20121031135339) do
     t.string   "code"
     t.text     "description"
     t.integer  "position"
+    t.integer  "parent_id"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
+
+  add_index "refinery_midas_categories", ["parent_id"], :name => "index_refinery_midas_categories_on_parent_id"
 
   create_table "refinery_midas_category_translations", :force => true do |t|
     t.integer  "refinery_midas_category_id"
@@ -137,6 +143,8 @@ ActiveRecord::Schema.define(:version => 20121031135339) do
     t.string   "acountant_status"
     t.date     "valid_after"
     t.integer  "position"
+    t.string   "reconciliation_code"
+    t.datetime "reconciliated_at"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
   end

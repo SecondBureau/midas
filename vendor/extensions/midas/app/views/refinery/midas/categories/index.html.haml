@@ -17,13 +17,47 @@
           %td Oct
           %td Nov
           %td Dec
+          %td
       %tbody
+        - prev_classes = {}
         - @categories.each do |category|
+          
+          - 3.downto(1).each do |classe_length|
+            - classe = category.code[0..(classe_length - 1)]
+            - unless classe.eql?(prev_classes[classe_length]) ||  prev_classes[classe_length].nil?
+              %tr
+                %td= prev_classes[classe_length]
+                %td xx
+                - (1..12).each do |month|
+                  - beginning_of_month = Date.parse("2012-#{month}-1")
+                  - amount = Refinery::Midas::Category.joins(:entries).where("substr(code, 1, #{classe_length}) = '#{prev_classes[classe_length]}'").where('valid_after >= ? and valid_after <= ?', beginning_of_month, beginning_of_month.end_of_month).sum(:amount_in_cents) / 100.0 rescue 0.0
+                  %td{:align => 'right'}= amount.eql?(0.0) ? '' : number_with_precision(amount, :precision => 0, :separator => ',', :delimiter => '.')
+                %td
+
+          - beginning_of_period = Date.parse("2012-1-1")      
+          - end_of_period = Date.parse("2012-12-31")
+          - total = category.entries.where('valid_after >= ? and valid_after <= ?', beginning_of_period, end_of_period).sum(:amount_in_cents)
+          - unless total.eql?(0)
+            %tr
+              %td= link_to category.code, refinery.midas_category_path(category)
+              %td= link_to "#{category.parent.title} - #{category.title}", refinery.midas_category_path(category)
+              - (1..12).each do |month|
+                - beginning_of_month = Date.parse("2012-#{month}-1")
+                - amount = category.entries.where('valid_after >= ? and valid_after <= ?', beginning_of_month, beginning_of_month.end_of_month).sum(:amount_in_cents) / 100.0
+                %td{:align => 'right'}= amount.eql?(0.0) ? '' : number_with_precision(amount, :precision => 0, :separator => ',', :delimiter => '.')
+              %td= number_with_precision(total / 100.0, :precision => 0, :separator => ',', :delimiter => '.')
+              
+          - 3.downto(1).each do |classe_length|
+            - prev_classes[classe_length] = category.code[0..(classe_length - 1)]
+            
+        - 3.downto(1).each do |classe_length|
           %tr
-            %td= link_to category.code, refinery.midas_category_path(category)
-            %td= link_to category.title, refinery.midas_category_path(category)
+            %td= prev_classes[classe_length]
+            %td xx
             - (1..12).each do |month|
               - beginning_of_month = Date.parse("2012-#{month}-1")
-              - amount = category.entries.where('valid_after >= ? and valid_after <= ?', beginning_of_month, beginning_of_month.end_of_month).sum(:amount_in_cents) / 100.0
-              %td{:align => 'right'}= amount.eql?(0.0) ? '' : amount
+              - amount = Refinery::Midas::Category.joins(:entries).where("substr(code, 1, #{classe_length}) = '#{prev_classes[classe_length]}'").where('valid_after >= ? and valid_after <= ?', beginning_of_month, beginning_of_month.end_of_month).sum(:amount_in_cents) / 100.0 rescue 0.0
+              %td{:align => 'right'}= amount.eql?(0.0) ? '' : number_with_precision(amount, :precision => 0, :separator => ',', :delimiter => '.')
+            %td
+
 = render '/refinery/content_page'

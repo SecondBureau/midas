@@ -38,7 +38,19 @@ li.entry {
   }
   .title {
     display: inline-block;
-    width:250px;
+    width:200px;
+    white-space: nowrap;
+  }
+  
+  .category_code {
+    display: inline-block;
+    width:70px;
+    white-space: nowrap;
+  }
+  
+  .category_title {
+    display: inline-block;
+    width:100px;
     white-space: nowrap;
   }
 }

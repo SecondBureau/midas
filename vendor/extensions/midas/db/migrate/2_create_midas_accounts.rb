@@ -15,6 +15,9 @@ class CreateMidasAccounts < ActiveRecord::Migration
       t.integer :position
       t.date :last_entry
       t.integer :balance_in_cents, :default => 0
+      t.date :reconciliated_on
+      t.datetime :reconciliated_at
+      t.integer :reconciliated_in_cents, :default => 0
 
       t.timestamps
     end

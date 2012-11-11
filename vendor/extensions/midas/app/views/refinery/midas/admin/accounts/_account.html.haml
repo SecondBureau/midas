@@ -13,13 +13,10 @@
             refinery.edit_midas_admin_account_path(account, :switch_locale => translation.locale), |
             :class => 'locale'                                                                     |
   %span.actions
-    = link_to refinery_icon_tag("application_go.png"), refinery.midas_account_path(account), |
-      :title => t('.view_live_html'),                                                        |
-      :target => "_blank"                                                                    |
-    -#
-    = link_to refinery_icon_tag("application_edit.png"), refinery.edit_midas_admin_account_path(account), |
-      :title => t('.edit')                                                                                |
-    -#
+    = link_to refinery_icon_tag("application_go.png"), refinery.midas_admin_account_reconciliation_path(account), :title => t('.view_live_html')
+
+    = link_to refinery_icon_tag("application_edit.png"), refinery.edit_midas_admin_account_path(account), :title => t('.edit')
+
     = link_to refinery_icon_tag("delete.png"), refinery.midas_admin_account_path(account),  |
       :class => "cancel confirm-delete",                                                    |
       :title => t('.delete'),                                                               |

@@ -21,6 +21,7 @@ Refinery::Core::Engine.routes.append do
         end
       end
       resources :accounts, :except => :show do
+        get :reconciliation
         collection do
           post :update_positions
         end

@@ -14,6 +14,8 @@ class CreateMidasEntries < ActiveRecord::Migration
       t.string :acountant_status
       t.date :valid_after
       t.integer :position
+      t.string :reconciliation_code
+      t.datetime :reconciliated_at
 
       t.timestamps
     end

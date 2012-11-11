@@ -6,8 +6,7 @@ module Refinery
       before_filter :find_page
 
       def index
-        # you can use meta fields from your model instead (e.g. browser_title)
-        # by swapping @page for @category in the line below:
+        @categories = Category.subcategories.order('code ASC')
         present(@page)
       end
 
@@ -22,7 +21,7 @@ module Refinery
     protected
 
       def find_all_categories
-        @categories = Category.order('position ASC')
+        @categories = Category.order('code ASC')
       end
 
       def find_page

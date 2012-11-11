@@ -1,0 +1,51 @@
+%section#records
+  = form_for [refinery, :midas_admin, @account] do |f|
+    %ul
+      - @account.entries.where('reconciliation_code is null').order('valid_after asc').each do |entry|
+        %li{:class => "clearfix entry #{cycle("on", "on-hover")}", :id => dom_id(entry)}
+          %div{:id => "amount#{entry.id}", :class => 'hidden'}
+            = entry.amount
+          %span.valid_after
+            = entry.valid_after
+          %span.category_code
+            = entry.category.code
+          %span.category_title
+            = entry.category.title.truncate(15, :separator => ' ')
+          %span.title
+            = entry.title.truncate(30, :separator => ' ')
+          %span.amount{:class => entry.src_amount_in_cents < 0 ? 'red' : 'green'}
+            = number_with_precision(entry.amount, :precision => 2, :separator => ',', :delimiter => '.')
+          %span.checkbox
+            = f.check_box :reconciliated_entries, {:multiple => true}, entry.id, nil
+        
+    = f.text_field :reconciliation_code 
+    = f.submit
+    
+:javascript
+  function updateSum() {
+    var sum = #{@account.reconciliated};
+    $("input:checked").each(function () {
+      var value = Number($("#amount" + $(this).val()).text());
+      if (!isNaN(value)) sum += value;
+    })
+    $(".reconciliated").text(accounting.formatNumber(sum,2));
+  }
+  $(":checkbox").click(updateSum);
+  
+  
+%aside#actions
+  = @account.title
+  %span.label.label-info= @account.currency.upcase
+  %ul
+    %li
+      Previous Balance : 
+      = number_with_precision(@account.reconciliated, :precision => 2, :separator => ',', :delimiter => '.')
+    %li
+      Current Balance :
+      %span.reconciliated
+        = number_with_precision(@account.reconciliated, :precision => 2, :separator => ',', :delimiter => '.')
+    %li
+      Account Balance :
+      = number_with_precision(@account.balance, :precision => 2, :separator => ',', :delimiter => '.')
+      
+  
