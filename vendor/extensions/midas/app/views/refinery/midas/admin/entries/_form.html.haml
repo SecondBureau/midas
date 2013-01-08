@@ -1,40 +1,8 @@
-= form_for [refinery, :midas_admin, @entry] do |f|
-  = render '/refinery/admin/error_messages', |
-    :object => @entry,                       |
-    :include_object_name => true             |
-  .field
-    = f.label :midas_category_id
-    = f.number_field :midas_category_id
-  .field
-    = f.label :midas_account_id
-    = f.number_field :midas_account_id
-  .field
-    = f.label :currency
-    = f.text_field :currency
-  .field
-    = f.label :src_amount_in_cents
-    = f.number_field :src_amount_in_cents
-  .field
-    = f.label :amount_in_cents
-    = f.number_field :amount_in_cents
-  .field
-    = f.label :status
-    = f.text_field :status
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :invoice
-    = f.text_field :invoice
-  .field
-    = f.label :cheque
-    = f.text_field :cheque
-  .field
-    = f.label :acountant_status
-    = f.text_field :acountant_status
-  .field
-    = f.label :valid_after
-    = f.date_select :valid_after
+= bootstrap_form_for [refinery, :midas_admin, @entry] do |f|
+  = render '/refinery/admin/error_messages', :object => @entry, :include_object_name => true
+  = f.text_field :title
+  = f.collection_select :midas_category_id, Refinery::Midas::Category.all, :id, :title
+  
   = render '/refinery/admin/form_actions', :f => f,                                                    |
     :continue_editing => false,                                                                        |
     :delete_title => t('delete', :scope => 'refinery.entries.admin.entries.entry'),                    |

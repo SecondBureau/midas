@@ -13,6 +13,8 @@ group :development do
  gem 'heroku_san'
  gem 'taps'
  gem 'pry'
+ gem "better_errors"
+ gem "binding_of_caller"
 end
 
 group :development, :test do
@@ -23,7 +25,7 @@ group :development, :test do
   gem 'launchy'
   gem 'growl'
   #gem 'ruby-growl'
-  gem 'libnotify'
+  #gem 'libnotify'
   gem 'turn', :require => false
 end
 
@@ -48,6 +50,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 2.0.3'
 gem "twitter-bootstrap-rails"
 gem 'bootstrap-will_paginate'
+gem 'bootstrap_forms'
 gem 'jquery-ui-rails'
 gem 'bourbon'
 gem 'nokogiri'
