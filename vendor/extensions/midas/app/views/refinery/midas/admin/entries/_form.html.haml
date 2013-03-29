@@ -1,9 +1,50 @@
-= bootstrap_form_for [refinery, :midas_admin, @entry] do |f|
+= twitter_bootstrap_form_for [refinery, :midas_admin, @entry] do |f|
   = render '/refinery/admin/error_messages', :object => @entry, :include_object_name => true
-  = f.text_field :title
-  = f.collection_select :midas_category_id, Refinery::Midas::Category.all, :id, :title
   
-  = render '/refinery/admin/form_actions', :f => f,                                                    |
-    :continue_editing => false,                                                                        |
-    :delete_title => t('delete', :scope => 'refinery.entries.admin.entries.entry'),                    |
-    :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @entry.currency) |
+  %div{:style=>'float:left; width:48%'}
+    %fieldset
+      %legend General
+      = f.text_field :title
+      = f.text_field :invoice
+      -#= f.collection_select :midas_category_id, Refinery::Midas::Category.all, :id, :title, {}, {:class => "chzn-select"}
+
+
+    %fieldset
+      %legend Amount
+      .control-group
+        %label{:class=>"control-label", :for=>"entry_amount_in_cents"}
+          Currency
+        %select{:required=>"required", :name=>"entry[currency]"}
+          %option cny
+          %option eur
+          %option hkd
+          %option usd
+      = f.text_field :src_amount
+
+
+    %fieldset
+      %legend Reconciliation
+      = f.text_field :reconciliation_code
+      = f.text_field :reconciliated_at, :class => 'datetimepicker', :"data-format" => "yyyy-MM-dd", :add_on => :append do
+        %span.add-on
+          %i.icon-calendar
+
+  %div{:style=>'float:right; width:50%'}
+    %fieldset
+      %legend Other
+      = f.text_field :status
+      = f.text_field :cheque
+
+      = f.text_field :valid_after, :class => 'datetimepicker', :"data-format" => "yyyy-MM-dd", :add_on => :append do
+        %span.add-on
+          %i.icon-calendar
+
+      = f.text_field :acountant_status
+      = f.text_field :position
+      -#= f.collection_select :midas_account_id, Refinery::Midas::Account.all, :id, :title, {}, {:class => "chzn-select"}
+
+  %div{:style=>'clear:both'}
+    = render '/refinery/admin/form_actions', :f => f,                                                    |
+      :continue_editing => false,                                                                        |
+      :delete_title => t('delete', :scope => 'refinery.entries.admin.entries.entry'),                    |
+      :delete_confirmation => t('message', :scope => 'refinery.admin.delete', :title => @entry.currency) |

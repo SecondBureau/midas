@@ -41,6 +41,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
+  gem "font-awesome-sass-rails", "~> 2.0.0.0"
 end
 
 # editing-rendering
@@ -51,11 +52,13 @@ gem 'bootstrap-sass', '~> 2.0.3'
 gem "twitter-bootstrap-rails"
 gem 'bootstrap-will_paginate'
 gem 'bootstrap_forms'
+gem 'twitter_bootstrap_form_for'
 gem 'jquery-ui-rails'
 gem 'bourbon'
 gem 'nokogiri'
 gem 'sanitize'
 gem 'deface'
+gem 'chosen-rails'
 
 # PDF Export
 #gem "doc_raptor"

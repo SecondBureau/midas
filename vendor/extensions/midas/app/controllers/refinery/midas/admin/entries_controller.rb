@@ -10,7 +10,6 @@ module Refinery
         def add_flash_message
           flash[:error] = @entry.errors.messages.values.join('<br/>') if @entry.errors.messages.any?
         end
-        
 
       end
     end
