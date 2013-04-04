@@ -15,6 +15,7 @@ module Refinery
       validates_presence_of :title, :currency, :account, :category, :valid_after
       validates_inclusion_of :currency, :in => Refinery::Midas.config.devises, :message => "currency %s is not allowed."
 
+      before_validation :set_currency
       before_save :update_amount_in_cents
       before_save :update_reconciliated_at, :if => :reconciliation_code_changed?
       
@@ -26,7 +27,7 @@ module Refinery
       
 
       def src_amount
-        src_amount_in_cents.to_d / 100 if price_in_cents
+        src_amount_in_cents.to_d / 100 if src_amount_in_cents
       end
       
       def src_amount=(value)
@@ -40,6 +41,10 @@ module Refinery
       
       def amount=(value)
         src_amount_in_cents = value * 100
+      end
+      
+      def set_currency
+      	self.currency = self.account.currency
       end
       
       
@@ -62,12 +67,6 @@ module Refinery
       def protect_reconcilated
         errors[:base] << "reconcilated record, can not be destroy"
         false
-      end
-
-      protected
-      
-      def src_amount
-        src_amount_in_cents / 100.0
       end
 
     end

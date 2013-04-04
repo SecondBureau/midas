@@ -18,7 +18,26 @@ select {
   margin-bottom:0px;
 }
 
-
+.chzn-drop {
+  top:29px!important;
+  width:245px!important;
+  border-color: #CCCCCC!important;
+}
+.chzn-container-single .chzn-single {
+  background: #FFFFFF!important;
+  border: 1px solid #CCCCCC!important;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset!important;
+  transition: border 0.2s linear 0s, box-shadow 0.2s linear 0s!important;
+  border-radius: 3px 3px 3px 3px;
+  color: #7D7874;
+  display: inline-block;
+  font-size: 13px;
+  height: 20px;
+  line-height: 20px;
+  margin-bottom: 3px;
+  padding: 5px 6px;
+  width: 233px;
+}
 
 li.account {
   .title {
