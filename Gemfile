@@ -42,7 +42,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
-  gem "font-awesome-sass-rails", "~> 2.0.0.0"
+  
 end
 
 # editing-rendering
@@ -60,6 +60,7 @@ gem 'nokogiri'
 gem 'sanitize'
 gem 'deface'
 gem 'chosen-rails'
+gem "font-awesome-sass-rails", "~> 2.0.0.0"
 
 # PDF Export
 #gem "doc_raptor"
