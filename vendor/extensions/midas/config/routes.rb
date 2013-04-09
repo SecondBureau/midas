@@ -18,6 +18,7 @@ Refinery::Core::Engine.routes.append do
       resources :entries, :except => :show do
         collection do
           post :update_positions
+          put :reconciliate
         end
       end
       resources :accounts, :except => :show do
