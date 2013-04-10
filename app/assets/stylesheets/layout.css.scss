@@ -21,17 +21,21 @@
   margin: 10px 0;
 }
 
+.white {
+  background:white;
+}
 
 .light-grey{
   background: $light_grey;
 }
 
 .shadow{
-  @include box-shadow(1px 2px 2px #333);
+  @include box-shadow(1px 2px 2px #999);
 }
 
 #body_content {
   padding: 0 20px 0 20px;
+  margin-top: 70px;
 }
 
 #demo_info {

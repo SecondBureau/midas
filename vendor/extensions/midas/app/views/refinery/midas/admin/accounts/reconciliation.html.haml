@@ -1,51 +1,66 @@
-%section#records
-  = form_for [refinery, :midas_admin, @account] do |f|
-    %ul
-      - @account.entries.where('reconciliation_code is null').order('valid_after asc').each do |entry|
-        %li{:class => "clearfix entry #{cycle("on", "on-hover")}", :id => dom_id(entry)}
-          %div{:id => "amount#{entry.id}", :class => 'hidden'}
-            = entry.amount
-          %span.valid_after
-            = entry.valid_after
-          %span.category_code
-            = entry.category.code
-          %span.category_title
-            = entry.category.title.truncate(15, :separator => ' ')
-          %span.title
-            = entry.title.truncate(30, :separator => ' ')
-          %span.amount{:class => entry.src_amount_in_cents < 0 ? 'red' : 'green'}
-            = number_with_precision(entry.amount, :precision => 2, :separator => ',', :delimiter => '.')
-          %span.checkbox
-            = f.check_box :reconciliated_entries, {:multiple => true}, entry.id, nil
-        
-    = f.text_field :reconciliation_code 
-    = f.submit
+= form_tag refinery.reconciliate_midas_admin_entries_path, method: :put do
+  %table.index_table.table-striped#records
+    %thead>
+      %tr
+        %th Valid after
+        %th Category Code
+        %th Category Title
+        %th Title
+        %th Amount
+        %th
+    - @account.entries.where('reconciliation_code is null').order('valid_after asc').each do |entry|
+      %tr{:id => "amount#{entry.id}", :rel => "#{entry.amount}"}
+        %td= entry.valid_after
+        %td= entry.category.code
+        %td= entry.category.title
+        %td= entry.title
+        %td{:class => entry.src_amount_in_cents < 0 ? 'red' : 'green'}
+          = number_with_precision(entry.amount, :precision => 2, :separator => ',', :delimiter => '.')
+        %td= check_box_tag "entry_ids[]", entry.id
     
-:javascript
-  function updateSum() {
-    var sum = #{@account.reconciliated};
-    $("input:checked").each(function () {
-      var value = Number($("#amount" + $(this).val()).text());
-      if (!isNaN(value)) sum += value;
-    })
-    $(".reconciliated").text(accounting.formatNumber(sum,2));
-  }
-  $(":checkbox").click(updateSum);
-  
-  
-%aside#actions
-  = @account.title
-  %span.label.label-info= @account.currency.upcase
-  %ul
-    %li
-      Previous Balance : 
-      = number_with_precision(@account.reconciliated, :precision => 2, :separator => ',', :delimiter => '.')
-    %li
-      Current Balance :
-      %span.reconciliated
-        = number_with_precision(@account.reconciliated, :precision => 2, :separator => ',', :delimiter => '.')
-    %li
-      Account Balance :
-      = number_with_precision(@account.balance, :precision => 2, :separator => ',', :delimiter => '.')
+  :javascript
+    function updateSum() {
+      $('.green_bg').removeClass('green_bg');
+      var sum = #{@account.reconciliated};
+      $("input:checked").each(function () {
+        var value = Number($("#amount" + $(this).val()).attr('rel'));
+        if (!isNaN(value)) sum += value;
+        $("#amount" + $(this).val() +" > td").addClass('green_bg');
+      })
+      $(".reconciliated").text(accounting.formatNumber(sum,2));
+    }
+    $(":checkbox").click(updateSum);
+    
+    function submitForm() {
+      if ($("input[name=reconciliation_code]").val().length > 0)
+        $('form').submit();
+      else {
+        $("input[name=reconciliation_code]").css('background-color', '#fdeaea');
+      }
+    }
+    
+    
+  %aside#actions{:style=>'position:fixed;right:6px;top:111px;'}
+    .panel
+      %h3
+        = "Account : #{@account.title}"
+        %span.label.label-info= @account.currency.upcase
+      %div{:style=>'padding:10px;'}
+        %div
+          %label Previous Balance : 
+          = number_with_precision(@account.reconciliated, :precision => 2, :separator => ',', :delimiter => '.')
+        %div
+          %label Current Balance :
+          %span.reconciliated
+            = number_with_precision(@account.reconciliated, :precision => 2, :separator => ',', :delimiter => '.')
+        %div
+          %label Account Balance :
+          = number_with_precision(@account.balance, :precision => 2, :separator => ',', :delimiter => '.')
+        %div
+          %label Reconciliation code :
+          = text_field_tag "reconciliation_code", nil, :style => 'width:auto;'
+        %div
+          %label &nbsp
+          = button_tag "Validate", :type => "button", :onclick => "javascript:submitForm();", :disable_with => "Please wait..."
       
   
