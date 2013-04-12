@@ -1,8 +1,9 @@
 
 
 .footer .navbar-inner {
-    @include background(linear-gradient(#9A0606, #850101) left repeat);
-    border-color: #252525;
+  background:none;
+  border:none;
+  box-shadow:none!important;
 }
 
 .footer center.powered_by {
