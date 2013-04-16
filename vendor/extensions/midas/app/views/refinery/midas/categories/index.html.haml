@@ -47,7 +47,7 @@
                     = truncate(title, :length => 30, :omission => '...')
                 - (1..12).each do |month|
                   - beginning_of_month = Date.parse("#{year}-#{month}-1")
-                  - amount = Refinery::Midas::Category.joins(:entries).where("substr(code, 1, #{classe_length}) = '#{prev_classes[classe_length]}'").where('valid_after >= ? and valid_after <= ?', beginning_of_month, beginning_of_month.end_of_month).sum(:amount_in_cents) / 100.0 rescue 0.0
+                  - amount = Refinery::Midas::Category.joins(:entries).where("substr(code, 1, #{classe_length}) = '#{prev_classes[classe_length]}'").where('valid_after >= ? and valid_after <= ?', beginning_of_month, beginning_of_month.end_of_month).sum(:amount_in_cents).to_i / 100.0 rescue 0.0
                   %td{:align => 'right'}
                     %div
                       %span{:title => beginning_of_month.strftime("%B %Y")}
