@@ -9,14 +9,13 @@
       %label Category
       .input
         = select_tag("entry[midas_category_id]", option_groups_from_collection_for_select(Refinery::Midas::Category.where(:parent_id => nil).order("title ASC").all, :children, :title, :id, :title, @entry.midas_category_id), :class => 'chzn-select')
-    -#= f.collection_select :midas_category_id, 'Category', Refinery::Midas::Category.where(:parent_id => nil).all, :id, :title, {:include_blank => false}, :class => 'chzn-select'
     = f.text_field :valid_after, :class => 'datetimepicker', :"data-format" => "yyyy-MM-dd", :add_on => :append do
       %span.add-on
         %i.icon-calendar
 
   %fieldset
     %legend Amount
-    = f.collection_select :midas_account_id, 'Account', Refinery::Midas::Account.all, :id, :title, {}, :class => "chzn-select"
+    = f.collection_select :midas_account_id, 'Account', Refinery::Midas::Account.all, :id, :title_and_currency, {}, :class => "chzn-select"
     = f.text_field :src_amount, "Amount"
 
 

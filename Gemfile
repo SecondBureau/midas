@@ -62,6 +62,9 @@ gem 'deface'
 gem 'chosen-rails'
 gem "font-awesome-sass-rails", "~> 2.0.0.0"
 
+# Currency rate exchange
+gem "exchange", "~> 1.0.4"
+
 # PDF Export
 #gem "doc_raptor"
 

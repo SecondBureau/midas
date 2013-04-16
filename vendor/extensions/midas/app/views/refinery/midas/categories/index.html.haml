@@ -90,6 +90,9 @@
                           %td
                             %span{:class => entry.amount < 0 ? 'red' : 'green'}
                               = entry.amount
+                            - if entry.amount_in_cents != entry.src_amount_in_cents
+                              %div{:style => "font-size:10px;line-height: 8px;"}
+                                = "(#{entry.src_amount_in_cents/100} #{entry.currency.upcase!})"
                           %td= entry.valid_after.strftime("%d/%m/%Y")
               %td{:align => 'right', :style=>'background:#FAFAFA;'}= number_with_precision(total / 100.0, :precision => 0, :separator => ',', :delimiter => '.')
               - 3.downto(1).each do |classe_length|

@@ -56,8 +56,7 @@ module Refinery
       end
       
       def update_amount_in_cents
-        # TODO:Conversion
-        self.amount_in_cents = src_amount_in_cents
+        self.amount_in_cents = src_amount_in_cents.in(currency.to_sym).to(:cny)
       end
       
       def update_reconciliated_at

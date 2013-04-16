@@ -22,6 +22,11 @@ module Refinery
       validates :currency, :presence => true
       validates_inclusion_of :currency, :in => Refinery::Midas.config.devises, :message => "currency %s is not allowed."
       
+      
+      def title_and_currency
+        "#{title} (#{currency.upcase!})"
+      end
+      
       def balance(date=nil)
         if date.nil? 
           balance_in_cents / 100.0
