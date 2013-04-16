@@ -94,6 +94,8 @@ GEM
       rack
     erubis (2.7.0)
     eventmachine (1.0.0)
+    exchange (1.0.4)
+      nokogiri (>= 1.0.0)
     excon (0.16.7)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -360,6 +362,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   dalli
   deface
+  exchange (~> 1.0.4)
   factory_girl_rails
   fog
   font-awesome-sass-rails (~> 2.0.0.0)
