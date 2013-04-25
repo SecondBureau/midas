@@ -27,7 +27,7 @@ module Refinery
       
 
       def src_amount
-        src_amount_in_cents.to_d / 100 if src_amount_in_cents.present?
+        BigDecimal(src_amount_in_cents.to_s) / 100 if src_amount_in_cents?
       end
       
       def src_amount=(value)
