@@ -27,7 +27,7 @@ module Refinery
       
 
       def src_amount
-        src_amount_in_cents.to_d / 100 if src_amount_in_cents
+        src_amount_in_cents.to_d / 100 if src_amount_in_cents.present?
       end
       
       def src_amount=(value)
