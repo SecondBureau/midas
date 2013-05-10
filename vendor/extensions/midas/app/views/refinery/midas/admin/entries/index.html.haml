@@ -2,4 +2,5 @@
   = render 'records'
 %aside#actions
   = render 'actions'
+  = render 'form'
 = render '/refinery/admin/make_sortable', :tree => false if !searching? and ::Refinery::Midas::Admin::EntriesController.sortable? and ::Refinery::Midas::Entry.count > 1

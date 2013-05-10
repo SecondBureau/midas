@@ -5,6 +5,8 @@ module Refinery
         
         after_filter :add_flash_message, :only => :destroy
         
+        before_filter :new, :only => :index
+        
         crudify :'refinery/midas/entry', :xhr_paging => true, :order => "valid_after DESC", :sortable => false
         
         def add_flash_message
