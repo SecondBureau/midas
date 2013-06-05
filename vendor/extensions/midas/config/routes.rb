@@ -27,6 +27,16 @@ Refinery::Core::Engine.routes.append do
           post :update_positions
         end
       end
+      resources :salaries do
+        collection do
+          get :month_report
+          post :update_event
+        end
+      end
+      resources :employees, :except => :show do
+      end
+      resources :rates, :except => :show do
+      end
     end
   end
 

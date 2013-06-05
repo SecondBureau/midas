@@ -1,0 +1,9 @@
+= will_paginate @rates
+%table.index_table
+  %thead
+    %tr
+      %th Period
+      %th iit_threshold_cn
+      %th iit_threshold_foreign
+      %th{:width=>"70px"} Actions
+  = render :partial => 'rate', :collection => @rates

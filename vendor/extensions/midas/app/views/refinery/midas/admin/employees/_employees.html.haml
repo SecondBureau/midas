@@ -1,0 +1,9 @@
+= will_paginate @employees
+%table.index_table
+  %thead
+    %tr
+      %th Nom
+      %th{:width=>"70px"} Foreigner
+      %th{:width=>"70px"} Service
+      %th{:width=>"70px"} Actions
+  = render :partial => 'employee', :collection => @employees

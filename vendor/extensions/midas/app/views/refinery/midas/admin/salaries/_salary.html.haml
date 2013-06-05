@@ -1,0 +1,45 @@
+%tr{:class=>"<%= cycle('even', 'odd') -%>"}
+  %td=salary.period
+  %td=salary.employee.name
+  %td.money=salary.monthly
+  %td.money=salary.total_bonus
+  %td.money=salary.fesco
+  %td.money=salary.insurance_benchmark
+  %td.money=salary.housing_fund_benchmark
+  %td.icon
+    - if salary.check_at != nil
+      %i.icon-star
+    - else
+      %i.icon-star-empty
+  %td.icon
+    - if salary.salary_at != nil
+      %i.icon-star
+    - else
+      %i.icon-star-empty
+  %td.icon
+    - if salary.social_tax_at != nil
+      %i.icon-star
+    - else
+      %i.icon-star-empty
+  %td.icon
+    - if salary.house_fund_at != nil
+      %i.icon-star
+    - else
+      %i.icon-star-empty
+  %td.icon
+    - if salary.fesco_at != nil
+      %i.icon-star
+    - else
+      %i.icon-star-empty
+  %td.icon
+    - if salary.iit_at != nil
+      %i.icon-star
+    - else
+      %i.icon-star-empty
+
+  %td
+    = link_to refinery_icon_tag("application_edit.png"), refinery.edit_midas_admin_salary_path(salary), :title => t('.edit')
+    - if salary.check_at == nil
+      = link_to(refinery_icon_tag("delete.png"), refinery.midas_admin_salary_path(salary), :class => "cancel confirm-delete", :title => t('.delete'), :confirm => t('message', :scope => 'refinery.admin.delete', :title => salary.period), :method => :delete)
+
+    

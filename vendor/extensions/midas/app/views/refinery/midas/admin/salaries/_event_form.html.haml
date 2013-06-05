@@ -1,0 +1,15 @@
+- if salary[event] == nil
+  = form_tag(refinery.update_event_midas_admin_salaries_path, :method => "post") do
+    %input{:type => "hidden", :name => "event", :value => event}
+    %input{:type => "hidden", :name => "year", :value => "#{@date.year}"}
+    %input{:type => "hidden", :name => "month", :value => "#{@date.month}"}
+    .input.input-append
+      %input.datetimepicker{:"data-format"=>"yyyy-MM-dd", :type => "text", :name => "date"}
+      %span.add-on
+        %i.icon-calendar
+    %button.btn.btn-success
+      = button_name
+- else
+  %div{:style=>'margin-bottom:20px'}
+    %i.icon-ok
+    = "#{event_name} on #{@salaries.first[event].strftime("%m/%d/%Y")}"

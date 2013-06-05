@@ -7,6 +7,12 @@ en:
         title: Accounts
       categories:
         title: Categories
+      employees:
+        title: Employees
+      salaries:
+        title: Salaries
+      rates:
+        title: Rates
     midas:
       admin:
         entries:

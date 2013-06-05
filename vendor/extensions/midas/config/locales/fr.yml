@@ -7,6 +7,12 @@ fr:
         title: Accounts
       categories:
         title: Categories
+      employees:
+        title: Employés
+      salaries:
+        title: Salaires
+      rates:
+        title: Taux
     midas:
       admin:
         entries:

@@ -1,0 +1,40 @@
+= twitter_bootstrap_form_for [refinery, :midas_admin, @salary] do |f|
+  = render '/refinery/admin/error_messages', :object => @salary, :include_object_name => true
+  
+  %div{:style=>"width:49%;float:left;"}
+    %fieldset
+      %legend General
+      %label Employee
+      .input
+        = select_tag("salary[employee_id]", options_from_collection_for_select(Refinery::Midas::Employee.all, :id, :name, @salary.employee_id), :disabled => @salary.is_checked, :class => 'chzn-select')
+
+      = f.text_field :period, :class => 'monthpicker', :"data-format" => "yyyy-MM-dd", :add_on => :append, :disabled => @salary.is_checked do
+        %span.add-on
+          %i.icon-calendar
+
+      %legend Salary
+      = f.text_field :monthly, :disabled => @salary.is_checked
+      = f.text_field :quaterly_bonus, :disabled => @salary.is_checked
+      = f.text_field :exceptional_bonus, :disabled => @salary.is_checked
+      = f.text_field :annual_bonus, :disabled => @salary.is_checked
+      
+      %legend Social
+      = f.text_field :fesco, :disabled => @salary.is_checked
+      = f.text_field :insurance_benchmark, :disabled => @salary.is_checked
+      = f.text_field :housing_fund_benchmark, :disabled => @salary.is_checked
+
+  %div{:style=>"width:49%;float:right;"}
+    %fieldset
+      %legend Status
+      = f.text_field :check_at, :disabled => "disabled"
+      = f.text_field :salary_at, :disabled => "disabled"
+      = f.text_field :social_tax_at, :disabled => "disabled"
+      = f.text_field :house_fund_at, :disabled => "disabled"
+      = f.text_field :fesco_at, :disabled => "disabled"
+      = f.text_field :iit_at, :disabled => "disabled"
+
+
+  %div{:style=>'clear:both'}
+    = render '/refinery/admin/form_actions', :f => f,                                                    |
+      :continue_editing => false,                                                                        |
+      :delete_title => t('delete', :scope => 'refinery.entries.admin.entries.entry')

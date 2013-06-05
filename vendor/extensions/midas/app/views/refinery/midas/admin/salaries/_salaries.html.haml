@@ -1,0 +1,19 @@
+= will_paginate @salaries
+%table.index_table
+  %thead
+    %tr
+      %th Period
+      %th Employee
+      %th Monthly
+      %th Bonus
+      %th Fesco
+      %th Insurance Bk
+      %th House Fund Bk
+      %th CK
+      %th PD
+      %th ST
+      %th HF
+      %th FC
+      %th II
+      %th{:width=>"70px"} Actions
+  = render :partial => 'salary', :collection => @salaries

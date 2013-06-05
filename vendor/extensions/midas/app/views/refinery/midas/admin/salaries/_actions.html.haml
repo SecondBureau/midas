@@ -1,0 +1,29 @@
+.panel
+  %h3 Month report
+  = form_tag(refinery.month_report_midas_admin_salaries_path, :style => "padding:10px", :method => "get") do
+    .input.input-append{:style=>"display:inline;margin-right:10px;"}
+      %input.monthpicker{:"data-format"=>"yyyy-MM-dd", :type => "text", :name => "date", :style=>"padding:4px 6px; font-size: 12px; border-radius:inherit;"}
+      %span.add-on
+        %i.icon-calendar
+    %button.btn.btn-success
+      Go
+
+%ul
+  - if ::Refinery::Midas::Admin::SalariesController.searchable?
+    %li
+      = render '/refinery/admin/search', :url => refinery.midas_admin_salaries_path
+  %li
+    = link_to t('.create_new'), refinery.new_midas_admin_salary_path, |
+      :class => "add_icon"                                           |
+  - if !searching? && ::Refinery::Midas::Admin::EntriesController.sortable? && ::Refinery::Midas::Salary.any?
+    %li
+      = link_to t('.reorder', :what => "Salaries"), |
+        refinery.midas_admin_salaries_path,         |
+        :id => "reorder_action",                   |
+        :class => "reorder_icon"                   |
+      -#
+      = link_to t('.reorder_done', :what => "Salaries"), |
+        refinery.midas_admin_salaries_path,              |
+        :id => "reorder_action_done",                   |
+        :style => "display: none;",                     |
+        :class => "reorder_icon"                        |

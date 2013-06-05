@@ -1,0 +1,19 @@
+%ul
+  - if ::Refinery::Midas::Admin::RatesController.searchable?
+    %li
+      = render '/refinery/admin/search', :url => refinery.midas_admin_rates_path
+  %li
+    = link_to t('.create_new'), refinery.new_midas_admin_rate_path, |
+      :class => "add_icon"                                           |
+  - if !searching? && ::Refinery::Midas::Admin::RatesController.sortable? && ::Refinery::Midas::Rate.any?
+    %li
+      = link_to t('.reorder', :what => "Rates"), |
+        refinery.midas_admin_rates_path,         |
+        :id => "reorder_action",                   |
+        :class => "reorder_icon"                   |
+      -#
+      = link_to t('.reorder_done', :what => "Rates"), |
+        refinery.midas_admin_rates_path,              |
+        :id => "reorder_action_done",                   |
+        :style => "display: none;",                     |
+        :class => "reorder_icon"                        |

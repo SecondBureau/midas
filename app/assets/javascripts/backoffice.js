@@ -9,6 +9,15 @@ $(document).ready(function(){
     pickTime: false
   });
 
+  $('.monthpicker').parent().datetimepicker({
+    language: 'en',
+    pickTime: false,
+    viewMode: 1,
+    minViewMode: 1
+  });
+
+
+
   $('.show_entries_details').click(function(){
     if ($(this).next().css('display') == 'none')
     {

@@ -1,0 +1,63 @@
+#title_bar{:style=>"margin-top:-30px;margin-left: -15px;margin-right: -15px;"}
+  #titlebar_left
+    %span.breadcrumb
+      Payroll
+    .title_bar_title
+      = "#{@date.strftime("%B %Y")}"
+
+.panel.month_report_actions
+  %h3 Actions
+  %div{:style=>"padding:10px"}
+    = render :partial => "event_form", :locals => {:salary => @salaries.first, :event => "check_at", :button_name => "Check", :event_name => "Checked"}
+    - if @salaries.first.is_checked
+      = render :partial => "event_form", :locals => {:salary => @salaries.first, :event => "salary_at", :button_name => "Paid", :event_name => "Salary paid"}
+      = render :partial => "event_form", :locals => {:salary => @salaries.first, :event => "social_tax_at", :button_name => "Social Tax", :event_name => "Social Tax paid"}
+      = render :partial => "event_form", :locals => {:salary => @salaries.first, :event => "house_fund_at", :button_name => "House Fund", :event_name => "House Fund paid"}
+      = render :partial => "event_form", :locals => {:salary => @salaries.first, :event => "fesco_at", :button_name => "Fesco", :event_name => "Fesco paid"}
+      = render :partial => "event_form", :locals => {:salary => @salaries.first, :event => "iit_at", :button_name => "IIT", :event_name => "IIT paid"}
+
+%div{:style=>"margin-right:400px;"}
+  %table.index_table
+    %thead
+      %tr
+        %th
+        - @salaries.each do |salary|
+          %th{:style=>'text-align:center'}= salary.employee.name
+    %tr
+      %td Gross
+      - @salaries.each do |salary|
+        %td.money= salary.monthly
+    %tr
+      %td Bonus
+      - @salaries.each do |salary|
+        %td.money= salary.total_bonus
+    %tr
+      %td Social tax
+      - @salaries.each do |salary|
+        - insurance_benchmark = [salary.insurance_benchmark, @rate[:max_insurance_benchmark]].min
+        %td.money
+          = @rate.medic_employee_fixed + (insurance_benchmark * @rate.insurance_employer_rate / 100).round(2) + (insurance_benchmark * @rate.insurance_employee_rate / 100).round(2)
+
+    %tr
+      %td House fund
+      - @salaries.each do |salary|
+        - if salary.employee.foreigner
+          %td.money 0
+        - else
+          - housing_fund_benchmark = [salary.housing_fund_benchmark, @rate[:max_housing_fund_benchmark]].min
+          %td.money
+            = (housing_fund_benchmark * @rate[:housing_fund_employer_rate] / 100) + (housing_fund_benchmark * @rate[:housing_fund_employee_rate] / 100)
+    %tr
+      %td Fesco
+      - @salaries.each do |salary|
+        %td.money
+    %tr
+      %td IIT
+      - @salaries.each do |salary|
+        %td.money
+          = iit_amount(salary, @rate, false)
+    %tr
+      %td Bonus IIT
+      - @salaries.each do |salary|
+        %td.money
+          = iit_amount(salary, @rate, true)

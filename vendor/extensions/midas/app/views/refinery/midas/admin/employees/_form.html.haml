@@ -1,0 +1,17 @@
+= twitter_bootstrap_form_for [refinery, :midas_admin, @employee] do |f|
+  = render '/refinery/admin/error_messages', :object => @employee, :include_object_name => true
+  
+
+  %fieldset
+    %legend General
+    %label Category
+    .input
+      = select_tag("employee[midas_category_id]", option_groups_from_collection_for_select(Refinery::Midas::Category.where(:parent_id => nil).order("title ASC").all, :children, :title, :id, :title, @employee.midas_category_id), :class => 'chzn-select')
+    = f.toggles 'Type' do
+      = f.check_box :foreigner, 'Foreigner'
+      = f.check_box :service, 'Service'
+
+  %div{:style=>'clear:both'}
+    = render '/refinery/admin/form_actions', :f => f,                                                    |
+      :continue_editing => false,                                                                        |
+      :delete_title => t('delete', :scope => 'refinery.entries.admin.entries.entry')                     |

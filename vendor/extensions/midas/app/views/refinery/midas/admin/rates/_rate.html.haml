@@ -1,0 +1,9 @@
+%tr{:class=>"<%= cycle('even', 'odd') -%>"}
+  %td=rate.period
+  %td=rate.iit_threshold_cn
+  %td=rate.iit_threshold_foreign
+  %td
+    = link_to refinery_icon_tag("application_edit.png"), refinery.edit_midas_admin_rate_path(rate), :title => t('.edit')
+    = link_to(refinery_icon_tag("delete.png"), refinery.midas_admin_rate_path(rate), :class => "cancel confirm-delete", :title => t('.delete'), :confirm => t('message', :scope => 'refinery.admin.delete', :title => rate.period), :method => :delete)
+
+    

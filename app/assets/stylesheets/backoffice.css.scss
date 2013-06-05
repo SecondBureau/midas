@@ -97,3 +97,43 @@ li.entry {
     white-space: nowrap;
   }
 }
+
+.inputs-list {
+  list-style:none;
+  > li > label {
+    display: inline;
+    float: none;
+  }
+}
+
+.index_table a {
+  border-bottom:none!important;
+}
+
+.index_table td.money {
+  text-align:right;
+}
+
+.index_table td.icon {
+  text-align:center;
+}
+
+.panel input[type="text"] {
+    padding:4px 6px!important; 
+    font-size: 12px!important; 
+    border-radius:inherit!important;
+}
+
+.month_report_actions {
+  float:right;
+  > h3 {
+    margin-top:0px
+  }
+  .input {
+    display:inline;
+    margin-right:10px;
+  }
+  button {
+    width:100px; 
+  }
+}

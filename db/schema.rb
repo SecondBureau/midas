@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121031135339) do
+ActiveRecord::Schema.define(:version => 20130528034256) do
 
   create_table "accounts", :force => true do |t|
     t.string   "label"
@@ -130,6 +130,14 @@ ActiveRecord::Schema.define(:version => 20121031135339) do
   add_index "refinery_midas_category_translations", ["locale"], :name => "index_refinery_midas_category_translations_on_locale"
   add_index "refinery_midas_category_translations", ["refinery_midas_category_id"], :name => "index_1eaeee25a5ee3f7034fa97feabdb14b033488de6"
 
+  create_table "refinery_midas_employees", :force => true do |t|
+    t.boolean  "foreigner"
+    t.boolean  "service"
+    t.integer  "midas_category_id"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
   create_table "refinery_midas_entries", :force => true do |t|
     t.integer  "midas_category_id"
     t.integer  "midas_account_id"
@@ -147,6 +155,45 @@ ActiveRecord::Schema.define(:version => 20121031135339) do
     t.datetime "reconciliated_at"
     t.datetime "created_at",          :null => false
     t.datetime "updated_at",          :null => false
+  end
+
+  create_table "refinery_midas_rates", :force => true do |t|
+    t.date     "period"
+    t.integer  "iit_threshold_cn",           :default => 0
+    t.integer  "iit_threshold_foreign",      :default => 0
+    t.string   "rates"
+    t.float    "pension_employer_rate",      :default => 0.0
+    t.float    "pension_employee_rate",      :default => 0.0
+    t.float    "medic_employer_rate",        :default => 0.0
+    t.float    "medic_employee_rate",        :default => 0.0
+    t.integer  "medic_employee_fixed",       :default => 0
+    t.float    "unemployment_employer_rate", :default => 0.0
+    t.float    "unemployment_employee_rate", :default => 0.0
+    t.float    "maternity_employer_rate",    :default => 0.0
+    t.float    "maternity_employee_rate",    :default => 0.0
+    t.float    "occupational_employer_rate", :default => 0.0
+    t.float    "occupational_employee_rate", :default => 0.0
+    t.float    "housing_fund_employer_rate", :default => 0.0
+    t.float    "housing_fund_employee_rate", :default => 0.0
+    t.integer  "max_insurance_benchmark",    :default => 0
+    t.integer  "max_housing_fund_benchmark", :default => 0
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
+  end
+
+  create_table "refinery_midas_salaries", :force => true do |t|
+    t.date     "period"
+    t.integer  "monthly_in_cents",           :default => 0
+    t.integer  "quaterly_bonus_in_cents",    :default => 0
+    t.integer  "exceptional_bonus_in_cents", :default => 0
+    t.integer  "annual_bonus_in_cents",      :default => 0
+    t.integer  "fesco_in_cents",             :default => 0
+    t.integer  "benchmark_one_in_cents",     :default => 0
+    t.integer  "benchmark_two_in_cents",     :default => 0
+    t.string   "status"
+    t.integer  "employee_id"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
   end
 
   create_table "refinery_page_part_translations", :force => true do |t|

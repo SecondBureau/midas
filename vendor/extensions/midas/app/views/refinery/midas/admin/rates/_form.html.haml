@@ -1,0 +1,57 @@
+= twitter_bootstrap_form_for [refinery, :midas_admin, @rate] do |f|
+  = render '/refinery/admin/error_messages', :object => @rate, :include_object_name => true
+  
+  
+  %div{:style=>"width:49%;float:left"}
+    %fieldset
+      %legend General
+      = f.text_field :period, :class => 'monthpicker', :"data-format" => "yyyy-MM-dd", :add_on => :append do
+        %span.add-on
+          %i.icon-calendar
+      
+    %fieldset
+      %legend Threshold
+      = f.text_field :iit_threshold_cn
+      = f.text_field :iit_threshold_foreign
+
+    %fieldset
+      %legend Benchmarks
+      = f.text_field :max_insurance_benchmark
+      = f.text_field :max_housing_fund_benchmark
+    
+    %fieldset
+      %legend Account
+      = f.collection_select :account_id, 'Account', Refinery::Midas::Account.all, :id, :title_and_currency, {}, :class => "chzn-select"
+
+    %fieldset
+      %legend Categories
+      = f.collection_select :salary_category_id, 'Salary', Refinery::Midas::Category.where("code NOT LIKE '%.%'").order("title ASC").all, :id, :title, {}, :class => "chzn-select"
+      = f.collection_select :employer_social_tax_category_id, 'Employer Social Tax', Refinery::Midas::Category.where("code NOT LIKE '%.%'").order("title ASC").all, :id, :title, {}, :class => "chzn-select"
+      = f.collection_select :employee_social_tax_category_id, 'Employee Social Tax', Refinery::Midas::Category.where("code NOT LIKE '%.%'").order("title ASC").all, :id, :title, {}, :class => "chzn-select"
+      = f.collection_select :employer_housing_fund_category_id, 'Employer Housing Fund', Refinery::Midas::Category.where("code NOT LIKE '%.%'").order("title ASC").all, :id, :title, {}, :class => "chzn-select"
+      = f.collection_select :employee_housing_fund_category_id, 'Employee Housing Fund', Refinery::Midas::Category.where("code NOT LIKE '%.%'").order("title ASC").all, :id, :title, {}, :class => "chzn-select"
+      = f.collection_select :fesco_category_id, 'Fesco', Refinery::Midas::Category.where("code NOT LIKE '%.%'").order("title ASC").all, :id, :title, {}, :class => "chzn-select"
+      = f.collection_select :iit_category_id, 'IIT', Refinery::Midas::Category.where("code NOT LIKE '%.%'").order("title ASC").all, :id, :title, {}, :class => "chzn-select"
+
+  %div{:style=>"width:49%;float:right"}
+    %fieldset
+      %legend Rates
+      = f.text_field :pension_employer_rate
+      = f.text_field :pension_employee_rate
+      = f.text_field :medic_employer_rate
+      = f.text_field :medic_employee_rate
+      = f.text_field :medic_employee_fixed
+      = f.text_field :unemployment_employer_rate
+      = f.text_field :unemployment_employee_rate
+      = f.text_field :maternity_employer_rate
+      = f.text_field :maternity_employee_rate
+      = f.text_field :occupational_employer_rate
+      = f.text_field :occupational_employee_rate
+      = f.text_field :housing_fund_employer_rate
+      = f.text_field :housing_fund_employee_rate
+      = f.text_area :rates, :rows => 7
+
+  %div{:style=>'clear:both'}
+    = render '/refinery/admin/form_actions', :f => f,                                                    |
+      :continue_editing => false,                                                                        |
+      :delete_title => t('delete', :scope => 'refinery.entries.admin.rates.entry')

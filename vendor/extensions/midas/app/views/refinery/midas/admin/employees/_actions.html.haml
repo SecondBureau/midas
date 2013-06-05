@@ -1,0 +1,19 @@
+%ul
+  - if ::Refinery::Midas::Admin::EmployeesController.searchable?
+    %li
+      = render '/refinery/admin/search', :url => refinery.midas_admin_employees_path
+  %li
+    = link_to t('.create_new'), refinery.new_midas_admin_employee_path, |
+      :class => "add_icon"                                           |
+  - if !searching? && ::Refinery::Midas::Admin::EmployeesController.sortable? && ::Refinery::Midas::Employee.any?
+    %li
+      = link_to t('.reorder', :what => "Employees"), |
+        refinery.midas_admin_employees_path,         |
+        :id => "reorder_action",                   |
+        :class => "reorder_icon"                   |
+      -#
+      = link_to t('.reorder_done', :what => "Employees"), |
+        refinery.midas_admin_employees_path,              |
+        :id => "reorder_action_done",                   |
+        :style => "display: none;",                     |
+        :class => "reorder_icon"                        |
